@@ -12,7 +12,7 @@ bool Ranking::add_player(const string& name) {
 	map<string,Statistics>::iterator it = stats.find(name);
 	if (it == stats.end()) {
 		Player p(name);
-		p.set_ranking(ranking.size());
+		p.set_ranking(ranking.size()+1);
 		ranking.push_back(p);
 		stats[name];
 		return true;
