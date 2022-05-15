@@ -11,7 +11,9 @@ Ranking::Ranking() {
 bool Ranking::add_player(const string& name) {
 	map<string,Statistics>::iterator it = stats.find(name);
 	if (it == stats.end()) {
-		ranking.push_back(Player(name));
+		Player p(name);
+		p.set_ranking(ranking.size());
+		ranking.push_back(p);
 		stats[name];
 		return true;
 	}
@@ -24,9 +26,17 @@ bool Ranking::remove_player(const string& name) {
 		int i = get_ranking(name)-1;
 		ranking.erase(ranking.begin()+i);
 		stats.erase(it);
+		update_ranking(i, ranking.size());
 		return true;
 	}
 	return false;
+}
+
+void Ranking::update_ranking(int i, int j) {
+	while (i < j) {
+		ranking[i].set_ranking(i+1);
+		++i;
+	}
 }
 
 bool Ranking::remove_player(int n) {
@@ -40,15 +50,14 @@ bool Ranking::remove_player(int n) {
 }
 
 /*
-bool cmp(const pair<Player,int>& a, const pair<Player,int>& b) {
-	if (a.first.get_points() == b.first.get_points()) {
-		return a.second < b.second;
-	}
-	return a.first.get_points() > b.first.get_points();
+bool cmp(const Player& a, const Player& b) {
+	if (a.get_points() == b.get_points()) return a.get_ranking() < b.get_ranking();
+	else return a.get_points() > b.get_points();
 }
 */
 
 bool cmp(const Player& a, const Player& b) {
+	if (a.get_points() == b.get_points()) return a.get_ranking() < b.get_ranking();
 	return a.get_points() > b.get_points();
 }
 
@@ -68,61 +77,55 @@ int Ranking::get_ranking(const string& name) const {
 	return -1;
 }
 
-/*
-void Ranking::update_player(const string& name, const Statistics& result) {
-	int i = get_ranking(name) - 1;
-	if (i >= 0) {
-		ranking[i].set_points(ranking[i].get_points() + result.get_points());
-		stats[name].add_stats(result);
-	}
-}
-*/
-
 void Ranking::add_tournament_results(const map<string, int>& old, const map<string, Statistics>& results) {
-	/*
-	map<string,Statistics>::const_iterator it1 = results.begin();
-	while (it1 != results.end()) {
-		update_player(it1->first, it1->second);
-		++it1;
+	set<int> visited;
+	if (old.size() > 0) {
+		map<string,int>::const_iterator it1 = old.begin();
+		while (it1 != old.end()) {
+			int i = get_ranking(it1->first) - 1;
+			ranking[i].set_tmp_points(ranking[i].get_tmp_points() - it1->second);
+			visited.insert(visited.end(), i);
+			++it1;
+		}
 	}
-	old.size();
-	map<string,int>::const_iterator it2 = old.begin();
-	while (it2 != old.end()) {
-		Statistics st;
-		st.set_points(-it2->second);
-		update_player(it2->first, st);
-		++it2;
-	}
-	sort_ranking();
-	*/
-	//results.size();
-	/*
-	map<string,Statistics>::const_iterator it1 = results.begin();
-	while (it1 != results.end()) {
-		it1->second.print_statistics();
-		++it1;
-	}
-	*/
-	/*
-	map<string,int>::const_iterator it1 = old.begin();
-	while (it1 != old.end()) {
-		int i = get_ranking(it1->first);
-		ranking[i].set_points(it1->second);
-		++it1;
-	}
-	*/
-	old.size();
+
 	map<string,Statistics>::const_iterator it2 = results.begin();
 	while (it2 != results.end()) {
-		map<string,Statistics>::iterator it = stats.find(it2->first);
-		if (it != stats.end()) it->second.add_stats(it2->second);
+		int i = get_ranking(it2->first) - 1;
+		ranking[i].set_tmp_points(ranking[i].get_tmp_points() + it2->second.get_points());
+		visited.insert(i);
 		++it2;
 	}
-	//sort_ranking();
+
+	set<int>::iterator it = visited.begin();
+	while (it != visited.end()) {
+		ranking[*it].update_player();
+		++it;
+	}
+	
+	sort_ranking();
+
+	if (old.size() > 0) {
+		map<string,int>::const_iterator it1 = old.begin();
+		while (it1 != old.end()) {
+			map<string,Statistics>::iterator it = stats.find(it1->first);
+			it->second.set_points(it->second.get_points() - it1->second);
+			++it1;
+		}
+	}
+
+	it2 = results.begin();
+	while (it2 != results.end()) {
+		map<string,Statistics>::iterator it = stats.find(it2->first);
+		it->second.add_stats(it2->second);
+		++it2;
+	}
 }
 
 void Ranking::sort_ranking() {
 	sort(ranking.begin(), ranking.end(), cmp);
+	int n = ranking.size();
+	for (int i = 0; i < n; ++i) ranking[i].set_ranking(i+1);
 }
 
 string Ranking::get_name(int n) const {

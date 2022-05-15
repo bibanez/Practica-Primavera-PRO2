@@ -32,6 +32,13 @@ class Ranking
 		 */
 		//bool cmp(const Player& a, const Player& b) const;
 
+		/** @brief Corrige el ranking dentro de los Players en un intervalo
+		 *	\pre `0 <= i < j <= ranking.size()`
+		 *	\post Se actualizan los rankings de los jugadores en el intervalo
+		 *	`[i,j)`
+		 */
+		void update_ranking(int i, int j);
+
 		/** @brief Ordena los jugadores en el ranking
 		 *	\pre _cierto_
 		 *	\post El vector `ranking` está ordenado en orden decreciente de

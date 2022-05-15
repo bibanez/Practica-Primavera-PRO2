@@ -17,7 +17,7 @@ using namespace std;
 class Player {
 	private:
 		string name;
-		int points, tmp;
+		int points, tmp, ranking;
 
 	public:
 
@@ -69,11 +69,16 @@ class Player {
 		void set_points(int n);
 
 		/** @brief Canviar puntuación temporal
-		 *	\pre _cierto
+		 *	\pre _cierto_
 		 *	\post Canvia el valor en `this->tmp`
 		 */
 		void set_tmp_points(int n);
 
+		/** @brief Canviar el ranking
+		 *	\pre `1 <= n`
+		 *	\post Canvia el valor de `this->ranking`
+		 */
+		void set_ranking(int n);
 		/** @brief Mueve el valor de `tmp` a `points`
 		 *	\pre _cierto_
 		 *	\post `points` contiene el previo valor de `tmp`
@@ -100,6 +105,12 @@ class Player {
 		 *	\post Retorna los puntos temporales del jugador
 		 */
 		int get_tmp_points() const;
+
+		/** @brief Obtener el ranking del jugador
+		 *	\pre _cierto_
+		 *	\post Retorna el ranking (puede que sea temporal) del jugador
+		 */
+		int get_ranking() const;
 
 };
 
