@@ -103,6 +103,15 @@ class Ranking
 		 */
 		void add_tournament_results(const map<string, int>& old, const map<string, Statistics>& results);
 
+		/** @brief Resta puntos de un diccionario de jugadores
+		 *	Esta función es útil para la eliminación de torneos, restar los
+		 *	puntos que los jugadores habían ganado en la última edición.
+		 *	\pre Todos los valores `key` de `res` se encuentran en 
+		 *	`this->ranking`.
+		 *	\post Se actualiza el ranking y las estadísticas de los jugadores
+		 *	restando los resultados en `res`
+		 */
+		void remove_tournament_results(const map<string,int>& res);
 		
 		// Consultoras	
 

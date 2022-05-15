@@ -61,7 +61,7 @@ class Tournaments
 		 *	\post Elimina el torneo con identificador 't'. Si no existe, 
 		 *	retorna false.
 		 */
-		bool remove_tournament(const string& t); // Ranking& r
+		bool remove_tournament(const string& t, Ranking& r); // Ranking& r
 
 		/** @brief Empieza un torneo
 		 *	\pre Los jugadores en 'players' estan ordenados por orden creciente

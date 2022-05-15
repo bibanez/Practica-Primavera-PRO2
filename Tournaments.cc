@@ -21,9 +21,19 @@ bool Tournaments::add_tournament(const string& t, int c) {
 	return tournaments.insert(pair<string, Tournament>(t, Tournament(c))).second;
 }
 
-bool Tournaments::remove_tournament(const string& t) { // Ranking& r
+bool Tournaments::remove_tournament(const string& t, Ranking& r) { // Ranking& r
 	map<string, Tournament>::iterator it = tournaments.find(t);
 	if (it != tournaments.end()) {
+		r.count_players();
+		map<string,int> old = it->second.get_old_results();
+		/*
+		map<string,int>::const_iterator res = old.begin();
+		while (res != old.end()) {
+			cout << res->first << ' ' << res->second << endl;
+			++res;
+		}
+		*/
+		r.remove_tournament_results(old);
 		tournaments.erase(it);
 		return true;
 	}

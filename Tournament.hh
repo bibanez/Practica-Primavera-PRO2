@@ -156,6 +156,13 @@ class Tournament
 		 */
 		bool has_started() const;
 
+		/** @brief Obtiene los resultados del torneo en un diccionario
+		 *	\pre _cierto_
+		 *	\post Retorna un mapa con llaves los nombres de los jugadores y
+		 *	valores sus puntuaciones en la última edición del torneo.
+		 */
+		map<string,int> get_old_results() const;
+
 
 		// Escritoras
 		

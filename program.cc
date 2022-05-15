@@ -80,6 +80,7 @@ int main() {
 			cin >> p;
 			cout << '#' << op << ' ' << p << endl;
 			if (ranking.remove_player(p)) {
+				tournaments.remove_player(p);
 				cout << ranking.count_players() << endl;
 			}
 			else cout << "error: el jugador no existe" << endl;
@@ -88,7 +89,7 @@ int main() {
 			string t;
 			cin >> t;
 			cout << '#' << op << ' ' << t << endl;
-			if (not tournaments.remove_tournament(t))
+			if (not tournaments.remove_tournament(t, ranking))
 				cout << "error: el torneo no existe" << endl;
 			else cout << tournaments.count_tournaments() << endl;
 		}

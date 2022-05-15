@@ -10,10 +10,13 @@ Tournament::Tournament(int c) {
 
 void Tournament::start_tournament(const vector<string>& players) {
 	started = true;
-	names = players;
 	old_results.clear();
 	int n = stats.size();
-	for (int i = 0; i < n; ++i) old_results[names[i]] = stats[i].get_points();
+	for (int i = 0; i < n; ++i) {
+		//cout << "AL JUGADOR " << names[i] << " ES RESTARAN " << stats[i].get_points() << " PUNTS" << endl;
+		old_results.insert(pair<string,int>(names[i],stats[i].get_points()));
+	}
+	names = players;
 	Statistics st;
 	st.set_tournaments(1);
 	stats = vector<Statistics>(players.size(), st);
@@ -42,6 +45,13 @@ bool Tournament::remove_player_from_results(const string& name) {
 		return true;
 	}
 	else return false;
+}
+
+map<string,int> Tournament::get_old_results() const {
+	map<string,int> res;
+	int n = stats.size();
+	for (int i = 0; i < n; ++i) res[names[i]] = stats[i].get_points();
+	return res;
 }
 
 int Tournament::get_category() const {
