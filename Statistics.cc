@@ -67,6 +67,11 @@ void Statistics::set_sets_lost(int n) {
 	sets_lost = n;
 }
 
+void Statistics::clear() {
+	tournaments = points = matches_won = matches_lost = sets_won = 
+		sets_lost = games_won = games_lost = 0;
+}
+
 int Statistics::get_points() const {
 	return points;
 }

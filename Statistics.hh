@@ -100,6 +100,11 @@ class Statistics
 		 */
 		void set_tournaments(int n);
 		
+		/** @brief Limpia las estadisticas
+		 *	\pre _cierto_
+		 *	\post Todos los campos contienen 0
+		 */
+		void clear();
 		// Consultoras
 
 		/** @brief Obtener puntos
