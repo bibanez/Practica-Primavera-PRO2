@@ -867,10 +867,10 @@ Wimbledon Grand_Slam
 62 Chardy 45
 63 Wawrinka 45
 64 Garin 45
-65 Paire 20
-66 Raonic 10
-67 Tiafoe 0
-68 Fritz 0
+65 Fritz 45
+66 Paire 20
+67 Raonic 10
+68 Tiafoe 0
 #lj
 68
 Alcaraz Rk:9 Ps:480 Ts:4 WM:7 LM:4 WS:15 LS:10 WG:137 LG:117
@@ -896,7 +896,7 @@ Duckworth Rk:55 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
 Evans Rk:53 Ps:45 Ts:2 WM:1 LM:2 WS:2 LS:2 WG:17 LG:20
 Federer Rk:36 Ps:135 Ts:3 WM:2 LM:3 WS:0 LS:0 WG:0 LG:0
 Fognini Rk:14 Ps:290 Ts:4 WM:4 LM:4 WS:6 LS:9 WG:64 LG:83
-Fritz Rk:68 Ps:0 Ts:1 WM:0 LM:1 WS:0 LS:2 WG:2 LG:12
+Fritz Rk:65 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:2 WG:2 LG:12
 Fucsovics Rk:23 Ps:180 Ts:4 WM:4 LM:4 WS:8 LS:9 WG:84 LG:84
 Garin Rk:64 Ps:45 Ts:2 WM:0 LM:2 WS:0 LS:2 WG:10 LG:13
 Gasquet Rk:13 Ps:315 Ts:3 WM:5 LM:3 WS:6 LS:7 WG:57 LG:68
@@ -923,20 +923,20 @@ Nishikori Rk:37 Ps:110 Ts:4 WM:1 LM:4 WS:0 LS:8 WG:14 LG:49
 Nishioka Rk:59 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
 Norrie Rk:29 Ps:135 Ts:4 WM:3 LM:4 WS:4 LS:8 WG:59 LG:67
 Opelka Rk:40 Ps:90 Ts:4 WM:1 LM:4 WS:3 LS:6 WG:42 LG:50
-Paire Rk:65 Ps:20 Ts:2 WM:0 LM:2 WS:0 LS:4 WG:8 LG:24
+Paire Rk:66 Ps:20 Ts:2 WM:0 LM:2 WS:0 LS:4 WG:8 LG:24
 Paul Rk:54 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
 Popyrin Rk:45 Ps:90 Ts:2 WM:0 LM:2 WS:0 LS:0 WG:0 LG:0
 Pospisil Rk:47 Ps:90 Ts:2 WM:0 LM:2 WS:0 LS:2 WG:5 LG:12
 Querrey Rk:60 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
 Ramos Rk:18 Ps:240 Ts:4 WM:2 LM:4 WS:4 LS:7 WG:57 LG:62
-Raonic Rk:66 Ps:10 Ts:1 WM:0 LM:1 WS:0 LS:2 WG:7 LG:12
+Raonic Rk:67 Ps:10 Ts:1 WM:0 LM:1 WS:0 LS:2 WG:7 LG:12
 Rublev Rk:25 Ps:180 Ts:4 WM:5 LM:4 WS:9 LS:7 WG:89 LG:82
 Ruud Rk:15 Ps:270 Ts:4 WM:5 LM:4 WS:6 LS:6 WG:59 LG:65
 Schwartzman Rk:38 Ps:90 Ts:4 WM:2 LM:4 WS:5 LS:6 WG:52 LG:51
 Shapovalov Rk:39 Ps:90 Ts:4 WM:1 LM:4 WS:3 LS:6 WG:47 LG:50
 Sinner Rk:30 Ps:135 Ts:4 WM:3 LM:4 WS:7 LS:7 WG:64 LG:61
 Sonego Rk:27 Ps:135 Ts:4 WM:3 LM:4 WS:5 LS:9 WG:61 LG:69
-Tiafoe Rk:67 Ps:0 Ts:1 WM:1 LM:1 WS:3 LS:2 WG:27 LG:24
+Tiafoe Rk:68 Ps:0 Ts:1 WM:1 LM:1 WS:3 LS:2 WG:27 LG:24
 Tsitsipas Rk:4 Ps:765 Ts:4 WM:9 LM:3 WS:17 LS:9 WG:145 LG:122
 Vesely Rk:61 Ps:45 Ts:1 WM:0 LM:1 WS:0 LS:0 WG:0 LG:0
 Wawrinka Rk:63 Ps:45 Ts:1 WM:1 LM:1 WS:2 LS:0 WG:12 LG:7

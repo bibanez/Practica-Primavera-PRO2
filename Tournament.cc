@@ -44,7 +44,16 @@ bool Tournament::remove_player_from_results(const string& name) {
 		old_results.erase(it);
 		return true;
 	}
-	else return false;
+	else {
+		int n = stats.size();
+		for (int i = 0; i < n; ++i) {
+			if (names[i] == name) {
+				stats[i].clear();
+				return true;
+			}
+		}
+		return false;
+	}
 }
 
 map<string,int> Tournament::get_old_results() const {
