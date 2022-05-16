@@ -28,6 +28,5 @@ tar: program.cc Player.cc Player.hh Statistics.cc Statistics.hh Categories.cc Ca
 	tar -cvf practica.tar program.cc Player.cc Player.hh Statistics.cc Statistics.hh Categories.cc Categories.hh Tournament.cc Tournament.hh Ranking.cc Ranking.hh Tournaments.cc Tournaments.hh Makefile
 
 clean:
-	rm *.x
 	rm *.exe
 	rm *.o

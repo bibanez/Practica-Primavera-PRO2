@@ -1,0 +1,13 @@
+digraph "Ranking.cc"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="Ranking.cc",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Ranking.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_ranking_8hh.html",tooltip="Especificación de la clase Ranking."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Statistics.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_statistics_8hh.html",tooltip="Especificación de la clase Statistics."];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Player.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_player_8hh.html",tooltip="Especificación de la clase Player."];
+}

@@ -1,0 +1,31 @@
+\hypertarget{_ranking_8cc}{}\doxysection{Referencia del Archivo Ranking.\+cc}
+\label{_ranking_8cc}\index{Ranking.cc@{Ranking.cc}}
+{\ttfamily \#include \char`\"{}Ranking.\+hh\char`\"{}}\newline
+Dependencia gráfica adjunta para Ranking.\+cc\+:
+% FIG 0
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_ranking_8cc_a204a1f534d605d13af877bceed13a49e}{cmp}} (const \mbox{\hyperlink{class_player}{Player}} \&a, const \mbox{\hyperlink{class_player}{Player}} \&b)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{_ranking_8cc_a204a1f534d605d13af877bceed13a49e}\label{_ranking_8cc_a204a1f534d605d13af877bceed13a49e}} 
+\index{Ranking.cc@{Ranking.cc}!cmp@{cmp}}
+\index{cmp@{cmp}!Ranking.cc@{Ranking.cc}}
+\doxysubsubsection{\texorpdfstring{cmp()}{cmp()}}
+{\footnotesize\ttfamily bool cmp (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_player}{Player}} \&}]{a,  }\item[{const \mbox{\hyperlink{class_player}{Player}} \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea \mbox{\hyperlink{_ranking_8cc_source_l00060}{60}} del archivo \mbox{\hyperlink{_ranking_8cc_source}{Ranking.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060                                            \{}
+\DoxyCodeLine{00061   \textcolor{keywordflow}{if} (a.\mbox{\hyperlink{class_player_af62cff981efa727fcb650e463e13e019}{get\_points}}() == b.\mbox{\hyperlink{class_player_af62cff981efa727fcb650e463e13e019}{get\_points}}()) \textcolor{keywordflow}{return} a.\mbox{\hyperlink{class_player_ae2d04c85bd624be8b2d19e11206b1a16}{get\_ranking}}() < b.\mbox{\hyperlink{class_player_ae2d04c85bd624be8b2d19e11206b1a16}{get\_ranking}}();}
+\DoxyCodeLine{00062   \textcolor{keywordflow}{return} a.\mbox{\hyperlink{class_player_af62cff981efa727fcb650e463e13e019}{get\_points}}() > b.\mbox{\hyperlink{class_player_af62cff981efa727fcb650e463e13e019}{get\_points}}();}
+\DoxyCodeLine{00063 \}}
+
+\end{DoxyCode}

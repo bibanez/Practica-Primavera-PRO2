@@ -1,0 +1,572 @@
+\hypertarget{class_ranking}{}\doxysection{Referencia de la Clase Ranking}
+\label{class_ranking}\index{Ranking@{Ranking}}
+
+
+Contiene el ranking y las estadísticas de los jugadores en un circuito. Implementa también las funciones necesarias para actualizar este ranking con los resultados de torneos.  
+
+
+
+
+{\ttfamily \#include $<$Ranking.\+hh$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ranking_a7b1142b455d06f3d455d796ed329118f}{Ranking}} ()
+\begin{DoxyCompactList}\small\item\em Creadora. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ranking_a11edd6bdb619ca3cfb63b891522b882d}{add\+\_\+player}} (const string \&name)
+\begin{DoxyCompactList}\small\item\em Añade un jugador. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ranking_aaa4eb88f2f5f6478940923ee49a9f596}{remove\+\_\+player}} (const string \&name)
+\begin{DoxyCompactList}\small\item\em Elimina un jugador. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ranking_a76f06c55d7fb35eaba2dabf3b64d8b03}{remove\+\_\+player}} (int n)
+\begin{DoxyCompactList}\small\item\em Elimina un jugador por su ranking. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ranking_a63dff39266b00b2078fb0b7e900d53e7}{add\+\_\+tournament\+\_\+results}} (const map$<$ string, int $>$ \&old, const map$<$ string, \mbox{\hyperlink{class_statistics}{Statistics}} $>$ \&results)
+\begin{DoxyCompactList}\small\item\em Actualiza un jugador después de un torneo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ranking_a9a08cb7ad56d41c6504c21d6fce9b348}{remove\+\_\+tournament\+\_\+results}} (const map$<$ string, int $>$ \&res)
+\begin{DoxyCompactList}\small\item\em Resta puntos de un diccionario de jugadores Esta función es útil para la eliminación de torneos, restar los puntos que los jugadores habían ganado en la última edición. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_ranking_a1db0c257fd2ceda3d4771ef1bdbe27d5}{get\+\_\+name}} (int n) const
+\begin{DoxyCompactList}\small\item\em Obtiene el nombre asociado al jugador con ranking \textquotesingle{}n\textquotesingle{}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_ranking_ac34919621a76529cc800125179f94ad8}{get\+\_\+ranking}} (const string \&name) const
+\begin{DoxyCompactList}\small\item\em Obtener el ranking asociado al jugador con id \textquotesingle{}name\textquotesingle{}. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_ranking_a0217927ec1a3c9c038a39668c51921da}{get\+\_\+names\+\_\+from\+\_\+rankings}} (const vector$<$ int $>$ \&rankings) const
+\begin{DoxyCompactList}\small\item\em Obtiene un vector con los nombres asociados a rankings. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_ranking_aaa7f5ae061d8fb73a7342511a3cd2906}{count\+\_\+players}} () const
+\begin{DoxyCompactList}\small\item\em Obtener el número de jugadores. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ranking_ab5aee24457c107c1890499d0ac592183}{read\+\_\+players}} (int P)
+\begin{DoxyCompactList}\small\item\em Lee jugadores del canal de entrada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ranking_a034b202d0e04c1f06a85e647f4f35930}{list\+\_\+ranking}} ()
+\begin{DoxyCompactList}\small\item\em Imprime el ranking. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ranking_a43da3834b2db0c9c6cfcf14a4f3d9ab5}{list\+\_\+players}} ()
+\begin{DoxyCompactList}\small\item\em Imprime los jugadores. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ranking_ac9a2fd8a4bd6b45e9ecbd47ea16d5352}{consult\+\_\+player}} (const string \&name)
+\begin{DoxyCompactList}\small\item\em Imprime un jugador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Contiene el ranking y las estadísticas de los jugadores en un circuito. Implementa también las funciones necesarias para actualizar este ranking con los resultados de torneos. 
+
+Definición en la línea \mbox{\hyperlink{_ranking_8hh_source_l00023}{23}} del archivo \mbox{\hyperlink{_ranking_8hh_source}{Ranking.\+hh}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_ranking_a7b1142b455d06f3d455d796ed329118f}\label{class_ranking_a7b1142b455d06f3d455d796ed329118f}} 
+\index{Ranking@{Ranking}!Ranking@{Ranking}}
+\index{Ranking@{Ranking}!Ranking@{Ranking}}
+\doxysubsubsection{\texorpdfstring{Ranking()}{Ranking()}}
+{\footnotesize\ttfamily Ranking\+::\+Ranking (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Crea un ranking con 0 jugadores 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ranking_8cc_source_l00005}{5}} del archivo \mbox{\hyperlink{_ranking_8cc_source}{Ranking.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005                  \{}
+\DoxyCodeLine{00006   stats = map<string, Statistics>();}
+\DoxyCodeLine{00007   ranking = vector<Player>();}
+\DoxyCodeLine{00008 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_ranking_a11edd6bdb619ca3cfb63b891522b882d}\label{class_ranking_a11edd6bdb619ca3cfb63b891522b882d}} 
+\index{Ranking@{Ranking}!add\_player@{add\_player}}
+\index{add\_player@{add\_player}!Ranking@{Ranking}}
+\doxysubsubsection{\texorpdfstring{add\_player()}{add\_player()}}
+{\footnotesize\ttfamily bool Ranking\+::add\+\_\+player (\begin{DoxyParamCaption}\item[{const string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Añade un jugador. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Añade un jugador con nombre \textquotesingle{}name\textquotesingle{} y el último ranking. Se añade en el diccionario de estadísticas con todas a 0. Retorna \textquotesingle{}false\textquotesingle{} si el ranking ya contiene un jugador con el mismo nombre \textquotesingle{}name\textquotesingle{}. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ranking_8cc_source_l00011}{11}} del archivo \mbox{\hyperlink{_ranking_8cc_source}{Ranking.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011                                            \{}
+\DoxyCodeLine{00012   map<string,Statistics>::iterator it = stats.find(name);}
+\DoxyCodeLine{00013   \textcolor{keywordflow}{if} (it == stats.end()) \{}
+\DoxyCodeLine{00014     \mbox{\hyperlink{class_player}{Player}} p(name);}
+\DoxyCodeLine{00015     p.set\_ranking(ranking.size()+1);}
+\DoxyCodeLine{00016     ranking.push\_back(p);}
+\DoxyCodeLine{00017     stats[name];}
+\DoxyCodeLine{00018     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00019   \}}
+\DoxyCodeLine{00020   \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00021 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_ranking_a63dff39266b00b2078fb0b7e900d53e7}\label{class_ranking_a63dff39266b00b2078fb0b7e900d53e7}} 
+\index{Ranking@{Ranking}!add\_tournament\_results@{add\_tournament\_results}}
+\index{add\_tournament\_results@{add\_tournament\_results}!Ranking@{Ranking}}
+\doxysubsubsection{\texorpdfstring{add\_tournament\_results()}{add\_tournament\_results()}}
+{\footnotesize\ttfamily void Ranking\+::add\+\_\+tournament\+\_\+results (\begin{DoxyParamCaption}\item[{const map$<$ string, int $>$ \&}]{old,  }\item[{const map$<$ string, \mbox{\hyperlink{class_statistics}{Statistics}} $>$ \&}]{results }\end{DoxyParamCaption})}
+
+
+
+Actualiza un jugador después de un torneo. 
+
+\begin{DoxyPrecond}{Precondición}
+El ranking contiene un jugador con nombre \textquotesingle{}name\textquotesingle{}. \textquotesingle{}result\textquotesingle{} contiene en el campo de \textquotesingle{}tournaments\textquotesingle{} un solo elemento con el identificador del torneo que ha disputado. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se actualiza el ranking del jugador después de sumarle los los puntos en \textquotesingle{}result.\+get\+\_\+points()\textquotesingle{}. Se suman las estadísticas contenidas en \textquotesingle{}result\textquotesingle{} a las estadísticas del jugador con nombre \textquotesingle{}name\textquotesingle{}. Si el jugador no había disputado el torneo en \textquotesingle{}result.\+first\+\_\+tournament()\textquotesingle{}, se le añade a las estadísticas.
+\end{DoxyPostcond}
+Añade los resultados de un torneo \begin{DoxyPrecond}{Precondición}
+Todos los valores {\ttfamily key} de {\ttfamily old} y {\ttfamily results} se encuentran en {\ttfamily this-\/\texorpdfstring{$>$}{>}ranking}. El mapa {\ttfamily old} contiene las puntuaciones que se van a restar (de la anterior edición del torneo) y el mapa {\ttfamily results} las nuevas estadísticas que se van a sumar. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se actualizan las estadísticas y el ranking con los resultados del torneo. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ranking_8cc_source_l00081}{81}} del archivo \mbox{\hyperlink{_ranking_8cc_source}{Ranking.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081                                                                                                         \{}
+\DoxyCodeLine{00082   set<int> visited;}
+\DoxyCodeLine{00083   \textcolor{keywordflow}{if} (old.size() > 0) \{}
+\DoxyCodeLine{00084     map<string,int>::const\_iterator it1 = old.begin();}
+\DoxyCodeLine{00085     \textcolor{keywordflow}{while} (it1 != old.end()) \{}
+\DoxyCodeLine{00086       \textcolor{comment}{//cout << "{}S'HAN DE RESTAR "{} << it1-\/>second << "{} PUNTS AL JUGADOR "{} << it1-\/>first << endl;}}
+\DoxyCodeLine{00087       \textcolor{keywordtype}{int} i = \mbox{\hyperlink{class_ranking_ac34919621a76529cc800125179f94ad8}{get\_ranking}}(it1-\/>first) -\/ 1;}
+\DoxyCodeLine{00088       \textcolor{keywordflow}{if} (i != -\/2) \{}
+\DoxyCodeLine{00089         ranking[i].set\_tmp\_points(ranking[i].get\_tmp\_points() -\/ it1-\/>second);}
+\DoxyCodeLine{00090         visited.insert(visited.end(), i);}
+\DoxyCodeLine{00091       \}}
+\DoxyCodeLine{00092       ++it1;}
+\DoxyCodeLine{00093     \}}
+\DoxyCodeLine{00094   \}}
+\DoxyCodeLine{00095 }
+\DoxyCodeLine{00096   \textcolor{keywordflow}{if} (results.size() > 0) \{}
+\DoxyCodeLine{00097     map<string,Statistics>::const\_iterator it2 = results.begin();}
+\DoxyCodeLine{00098     \textcolor{keywordflow}{while} (it2 != results.end()) \{}
+\DoxyCodeLine{00099       \textcolor{keywordtype}{int} i = \mbox{\hyperlink{class_ranking_ac34919621a76529cc800125179f94ad8}{get\_ranking}}(it2-\/>first) -\/ 1;}
+\DoxyCodeLine{00100       \textcolor{keywordflow}{if} (i != -\/2) \{}
+\DoxyCodeLine{00101         ranking[i].set\_tmp\_points(ranking[i].get\_tmp\_points() + it2-\/>second.get\_points());}
+\DoxyCodeLine{00102         visited.insert(i);}
+\DoxyCodeLine{00103       \}}
+\DoxyCodeLine{00104       ++it2;}
+\DoxyCodeLine{00105     \}}
+\DoxyCodeLine{00106   \}}
+\DoxyCodeLine{00107 }
+\DoxyCodeLine{00108   set<int>::iterator it = visited.begin();}
+\DoxyCodeLine{00109   \textcolor{keywordflow}{while} (it != visited.end()) \{}
+\DoxyCodeLine{00110     ranking[*it].update\_player();}
+\DoxyCodeLine{00111     ++it;}
+\DoxyCodeLine{00112   \}}
+\DoxyCodeLine{00113   }
+\DoxyCodeLine{00114   sort\_ranking();}
+\DoxyCodeLine{00115 }
+\DoxyCodeLine{00116   \textcolor{keywordflow}{if} (old.size() > 0) \{}
+\DoxyCodeLine{00117     map<string,int>::const\_iterator it1 = old.begin();}
+\DoxyCodeLine{00118     \textcolor{keywordflow}{while} (it1 != old.end()) \{}
+\DoxyCodeLine{00119       map<string,Statistics>::iterator it = stats.find(it1-\/>first);}
+\DoxyCodeLine{00120       \textcolor{keywordflow}{if} (it != stats.end()) it-\/>second.set\_points(it-\/>second.get\_points() -\/ it1-\/>second);}
+\DoxyCodeLine{00121       ++it1;}
+\DoxyCodeLine{00122     \}}
+\DoxyCodeLine{00123   \}}
+\DoxyCodeLine{00124 }
+\DoxyCodeLine{00125   \textcolor{keywordflow}{if} (results.size() > 0) \{}
+\DoxyCodeLine{00126     map<string,Statistics>::const\_iterator it2 = results.begin();}
+\DoxyCodeLine{00127     it2 = results.begin();}
+\DoxyCodeLine{00128     \textcolor{keywordflow}{while} (it2 != results.end()) \{}
+\DoxyCodeLine{00129       map<string,Statistics>::iterator it = stats.find(it2-\/>first);}
+\DoxyCodeLine{00130       \textcolor{keywordflow}{if} (it != stats.end()) it-\/>second.add\_stats(it2-\/>second);}
+\DoxyCodeLine{00131       ++it2;}
+\DoxyCodeLine{00132     \}}
+\DoxyCodeLine{00133   \}}
+\DoxyCodeLine{00134 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_ranking_ac9a2fd8a4bd6b45e9ecbd47ea16d5352}\label{class_ranking_ac9a2fd8a4bd6b45e9ecbd47ea16d5352}} 
+\index{Ranking@{Ranking}!consult\_player@{consult\_player}}
+\index{consult\_player@{consult\_player}!Ranking@{Ranking}}
+\doxysubsubsection{\texorpdfstring{consult\_player()}{consult\_player()}}
+{\footnotesize\ttfamily bool Ranking\+::consult\+\_\+player (\begin{DoxyParamCaption}\item[{const string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Imprime un jugador. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Imprime el nombre, la posición en el ranking, los puntos y el resto de estadísticas del jugador con nombre \textquotesingle{}name\textquotesingle{}. Si no hay ningún jugador con el nombre \textquotesingle{}name\textquotesingle{}, retorna falso. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ranking_8cc_source_l00204}{204}} del archivo \mbox{\hyperlink{_ranking_8cc_source}{Ranking.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00204                                                \{}
+\DoxyCodeLine{00205   map<string,Statistics>::iterator it = stats.find(name);}
+\DoxyCodeLine{00206   \textcolor{keywordflow}{if} (it != stats.end()) \{}
+\DoxyCodeLine{00207     cout << name << \textcolor{stringliteral}{"{} Rk:"{}} << \mbox{\hyperlink{class_ranking_ac34919621a76529cc800125179f94ad8}{get\_ranking}}(name) << \textcolor{charliteral}{' '};}
+\DoxyCodeLine{00208     it-\/>second.print\_statistics();}
+\DoxyCodeLine{00209     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00210   \}}
+\DoxyCodeLine{00211   \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00212 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_ranking_aaa7f5ae061d8fb73a7342511a3cd2906}\label{class_ranking_aaa7f5ae061d8fb73a7342511a3cd2906}} 
+\index{Ranking@{Ranking}!count\_players@{count\_players}}
+\index{count\_players@{count\_players}!Ranking@{Ranking}}
+\doxysubsubsection{\texorpdfstring{count\_players()}{count\_players()}}
+{\footnotesize\ttfamily int Ranking\+::count\+\_\+players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtener el número de jugadores. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna el número de jugadores en el ranking. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ranking_8cc_source_l00065}{65}} del archivo \mbox{\hyperlink{_ranking_8cc_source}{Ranking.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065                                  \{}
+\DoxyCodeLine{00066   \textcolor{keywordflow}{return} ranking.size();}
+\DoxyCodeLine{00067 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_ranking_a1db0c257fd2ceda3d4771ef1bdbe27d5}\label{class_ranking_a1db0c257fd2ceda3d4771ef1bdbe27d5}} 
+\index{Ranking@{Ranking}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!Ranking@{Ranking}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily string Ranking\+::get\+\_\+name (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption}) const}
+
+
+
+Obtiene el nombre asociado al jugador con ranking \textquotesingle{}n\textquotesingle{}. 
+
+\begin{DoxyPrecond}{Precondición}
+{\ttfamily n \texorpdfstring{$<$}{<}= P = ranking.\+size()} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna el nombre del jugador con ranking \textquotesingle{}n\textquotesingle{} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ranking_8cc_source_l00167}{167}} del archivo \mbox{\hyperlink{_ranking_8cc_source}{Ranking.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00167                                     \{}
+\DoxyCodeLine{00168   \textcolor{keywordflow}{return} ranking[n-\/1].get\_name();}
+\DoxyCodeLine{00169 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_ranking_a0217927ec1a3c9c038a39668c51921da}\label{class_ranking_a0217927ec1a3c9c038a39668c51921da}} 
+\index{Ranking@{Ranking}!get\_names\_from\_rankings@{get\_names\_from\_rankings}}
+\index{get\_names\_from\_rankings@{get\_names\_from\_rankings}!Ranking@{Ranking}}
+\doxysubsubsection{\texorpdfstring{get\_names\_from\_rankings()}{get\_names\_from\_rankings()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Ranking\+::get\+\_\+names\+\_\+from\+\_\+rankings (\begin{DoxyParamCaption}\item[{const vector$<$ int $>$ \&}]{rankings }\end{DoxyParamCaption}) const}
+
+
+
+Obtiene un vector con los nombres asociados a rankings. 
+
+\begin{DoxyPrecond}{Precondición}
+rankings.\+size() \texorpdfstring{$<$}{<}= P = ranking.\+size(). No hay ningún ranking repetido en el vector \textquotesingle{}rankings\textquotesingle{}. El vector rankings está ordenado por orden creciente. El último valor de rankings es menor o igual al tamaño del ranking. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna un vector de nombres con cada índice \textquotesingle{}i\textquotesingle{} asociado al jugador con ranking \textquotesingle{}rankings\mbox{[}i\mbox{]}\textquotesingle{} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ranking_8cc_source_l00171}{171}} del archivo \mbox{\hyperlink{_ranking_8cc_source}{Ranking.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00171                                                                                  \{}
+\DoxyCodeLine{00172   \textcolor{keywordtype}{int} n = rankings.size();}
+\DoxyCodeLine{00173   vector<string> names(n);}
+\DoxyCodeLine{00174   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{00175     names[i] = \mbox{\hyperlink{class_ranking_a1db0c257fd2ceda3d4771ef1bdbe27d5}{get\_name}}(rankings[i]);}
+\DoxyCodeLine{00176   \}}
+\DoxyCodeLine{00177   \textcolor{keywordflow}{return} names;}
+\DoxyCodeLine{00178 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_ranking_ac34919621a76529cc800125179f94ad8}\label{class_ranking_ac34919621a76529cc800125179f94ad8}} 
+\index{Ranking@{Ranking}!get\_ranking@{get\_ranking}}
+\index{get\_ranking@{get\_ranking}!Ranking@{Ranking}}
+\doxysubsubsection{\texorpdfstring{get\_ranking()}{get\_ranking()}}
+{\footnotesize\ttfamily int Ranking\+::get\+\_\+ranking (\begin{DoxyParamCaption}\item[{const string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Obtener el ranking asociado al jugador con id \textquotesingle{}name\textquotesingle{}. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Si el jugador con id \textquotesingle{}name\textquotesingle{} no existe, retorna -\/1. Si no, retorna la posición en el ranking de modo que el jugador que esté en primera posición retorna 1. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ranking_8cc_source_l00069}{69}} del archivo \mbox{\hyperlink{_ranking_8cc_source}{Ranking.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00069                                                  \{}
+\DoxyCodeLine{00070   map<string, Statistics>::const\_iterator it1 = stats.find(name);}
+\DoxyCodeLine{00071   \textcolor{keywordflow}{if} (it1 != stats.end()) \{}
+\DoxyCodeLine{00072     \textcolor{keywordtype}{int} p = it1-\/>second.get\_points();}
+\DoxyCodeLine{00073     vector<Player>::const\_iterator it2;}
+\DoxyCodeLine{00074     it2 = lower\_bound(ranking.begin(), ranking.end(), \mbox{\hyperlink{class_player}{Player}}(p), \mbox{\hyperlink{_ranking_8cc_a204a1f534d605d13af877bceed13a49e}{cmp}});}
+\DoxyCodeLine{00075     \textcolor{keywordflow}{while} (it2-\/>get\_name() != name and it2-\/>get\_points() == p) ++it2;}
+\DoxyCodeLine{00076     \textcolor{keywordflow}{return} (it2 -\/ ranking.begin()) + 1;}
+\DoxyCodeLine{00077   \}}
+\DoxyCodeLine{00078   \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{00079 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_ranking_a43da3834b2db0c9c6cfcf14a4f3d9ab5}\label{class_ranking_a43da3834b2db0c9c6cfcf14a4f3d9ab5}} 
+\index{Ranking@{Ranking}!list\_players@{list\_players}}
+\index{list\_players@{list\_players}!Ranking@{Ranking}}
+\doxysubsubsection{\texorpdfstring{list\_players()}{list\_players()}}
+{\footnotesize\ttfamily void Ranking\+::list\+\_\+players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime los jugadores. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Imprime los jugadores por orden creciente de identificador (nombre), con el nombre, la posición en el ranking, los puntos y el resto de estadísticas. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ranking_8cc_source_l00195}{195}} del archivo \mbox{\hyperlink{_ranking_8cc_source}{Ranking.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00195                            \{}
+\DoxyCodeLine{00196   cout << stats.size() << endl;}
+\DoxyCodeLine{00197   map<string, Statistics>::const\_iterator it = stats.begin();}
+\DoxyCodeLine{00198   \textcolor{keywordflow}{while} (it != stats.end()) \{}
+\DoxyCodeLine{00199     \mbox{\hyperlink{class_ranking_ac9a2fd8a4bd6b45e9ecbd47ea16d5352}{consult\_player}}(it-\/>first);}
+\DoxyCodeLine{00200     ++it;}
+\DoxyCodeLine{00201   \}}
+\DoxyCodeLine{00202 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_ranking_a034b202d0e04c1f06a85e647f4f35930}\label{class_ranking_a034b202d0e04c1f06a85e647f4f35930}} 
+\index{Ranking@{Ranking}!list\_ranking@{list\_ranking}}
+\index{list\_ranking@{list\_ranking}!Ranking@{Ranking}}
+\doxysubsubsection{\texorpdfstring{list\_ranking()}{list\_ranking()}}
+{\footnotesize\ttfamily void Ranking\+::list\+\_\+ranking (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime el ranking. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Imprime el ranking por orden creciente, con la posición, el nombre y los puntos de cada jugador. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ranking_8cc_source_l00188}{188}} del archivo \mbox{\hyperlink{_ranking_8cc_source}{Ranking.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00188                            \{}
+\DoxyCodeLine{00189   \textcolor{keywordtype}{int} n = ranking.size();}
+\DoxyCodeLine{00190   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{00191     cout << i+1 << \textcolor{charliteral}{' '} << ranking[i].get\_name() << \textcolor{charliteral}{' '} << ranking[i].get\_points() << endl;}
+\DoxyCodeLine{00192   \}}
+\DoxyCodeLine{00193 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_ranking_ab5aee24457c107c1890499d0ac592183}\label{class_ranking_ab5aee24457c107c1890499d0ac592183}} 
+\index{Ranking@{Ranking}!read\_players@{read\_players}}
+\index{read\_players@{read\_players}!Ranking@{Ranking}}
+\doxysubsubsection{\texorpdfstring{read\_players()}{read\_players()}}
+{\footnotesize\ttfamily void Ranking\+::read\+\_\+players (\begin{DoxyParamCaption}\item[{int}]{P }\end{DoxyParamCaption})}
+
+
+
+Lee jugadores del canal de entrada. 
+
+\begin{DoxyPrecond}{Precondición}
+P \texorpdfstring{$>$}{>}= 0; En el canal de entrada hay P strings que corresponden a los P identificadores de los jugadores 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se añaden P jugadores al ranking con 0 puntos 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ranking_8cc_source_l00180}{180}} del archivo \mbox{\hyperlink{_ranking_8cc_source}{Ranking.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00180                                 \{}
+\DoxyCodeLine{00181   \textcolor{keywordflow}{while} (P-\/-\/) \{}
+\DoxyCodeLine{00182     \textcolor{keywordtype}{string} s;}
+\DoxyCodeLine{00183     cin >> s;}
+\DoxyCodeLine{00184     \mbox{\hyperlink{class_ranking_a11edd6bdb619ca3cfb63b891522b882d}{add\_player}}(s);}
+\DoxyCodeLine{00185   \}}
+\DoxyCodeLine{00186 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_ranking_aaa4eb88f2f5f6478940923ee49a9f596}\label{class_ranking_aaa4eb88f2f5f6478940923ee49a9f596}} 
+\index{Ranking@{Ranking}!remove\_player@{remove\_player}}
+\index{remove\_player@{remove\_player}!Ranking@{Ranking}}
+\doxysubsubsection{\texorpdfstring{remove\_player()}{remove\_player()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Ranking\+::remove\+\_\+player (\begin{DoxyParamCaption}\item[{const string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Elimina un jugador. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Elimina al jugador con nombre \textquotesingle{}name\textquotesingle{} del ranking y el diccionario de estadísticas. Retorna \textquotesingle{}false\textquotesingle{} si el ranking no contiene ningún jugador con nombre \textquotesingle{}name\textquotesingle{}. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ranking_8cc_source_l00023}{23}} del archivo \mbox{\hyperlink{_ranking_8cc_source}{Ranking.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023                                               \{}
+\DoxyCodeLine{00024   map<string, Statistics>::iterator it = stats.find(name);}
+\DoxyCodeLine{00025   \textcolor{keywordflow}{if} (it != stats.end()) \{}
+\DoxyCodeLine{00026     \textcolor{keywordtype}{int} i = \mbox{\hyperlink{class_ranking_ac34919621a76529cc800125179f94ad8}{get\_ranking}}(name)-\/1;}
+\DoxyCodeLine{00027     ranking.erase(ranking.begin()+i);}
+\DoxyCodeLine{00028     stats.erase(it);}
+\DoxyCodeLine{00029     update\_ranking(i, ranking.size());}
+\DoxyCodeLine{00030     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00031   \}}
+\DoxyCodeLine{00032   \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00033 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_ranking_a76f06c55d7fb35eaba2dabf3b64d8b03}\label{class_ranking_a76f06c55d7fb35eaba2dabf3b64d8b03}} 
+\index{Ranking@{Ranking}!remove\_player@{remove\_player}}
+\index{remove\_player@{remove\_player}!Ranking@{Ranking}}
+\doxysubsubsection{\texorpdfstring{remove\_player()}{remove\_player()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Ranking\+::remove\+\_\+player (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Elimina un jugador por su ranking. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna falso si el jugador con rango n no está en el ranking 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ranking_8cc_source_l00042}{42}} del archivo \mbox{\hyperlink{_ranking_8cc_source}{Ranking.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042                                  \{}
+\DoxyCodeLine{00043   \textcolor{keywordflow}{if} (1 <= n and n <= ranking.size()) \{}
+\DoxyCodeLine{00044     -\/-\/n;}
+\DoxyCodeLine{00045     stats.erase(ranking[n].\mbox{\hyperlink{class_ranking_a1db0c257fd2ceda3d4771ef1bdbe27d5}{get\_name}}());}
+\DoxyCodeLine{00046     ranking.erase(ranking.begin()+n);}
+\DoxyCodeLine{00047     update\_ranking(n, ranking.size());}
+\DoxyCodeLine{00048     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00049   \}}
+\DoxyCodeLine{00050   \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00051 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_ranking_a9a08cb7ad56d41c6504c21d6fce9b348}\label{class_ranking_a9a08cb7ad56d41c6504c21d6fce9b348}} 
+\index{Ranking@{Ranking}!remove\_tournament\_results@{remove\_tournament\_results}}
+\index{remove\_tournament\_results@{remove\_tournament\_results}!Ranking@{Ranking}}
+\doxysubsubsection{\texorpdfstring{remove\_tournament\_results()}{remove\_tournament\_results()}}
+{\footnotesize\ttfamily void Ranking\+::remove\+\_\+tournament\+\_\+results (\begin{DoxyParamCaption}\item[{const map$<$ string, int $>$ \&}]{res }\end{DoxyParamCaption})}
+
+
+
+Resta puntos de un diccionario de jugadores Esta función es útil para la eliminación de torneos, restar los puntos que los jugadores habían ganado en la última edición. 
+
+\begin{DoxyPrecond}{Precondición}
+Todos los valores {\ttfamily key} de {\ttfamily res} se encuentran en {\ttfamily this-\/\texorpdfstring{$>$}{>}ranking}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se actualiza el ranking y las estadísticas de los jugadores restando los resultados en {\ttfamily res} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_ranking_8cc_source_l00136}{136}} del archivo \mbox{\hyperlink{_ranking_8cc_source}{Ranking.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00136                                                                   \{}
+\DoxyCodeLine{00137   \textcolor{keywordflow}{if} (res.size() > 0) \{}
+\DoxyCodeLine{00138     vector<int> visited;}
+\DoxyCodeLine{00139 }
+\DoxyCodeLine{00140     map<string,int>::const\_iterator it = res.begin();}
+\DoxyCodeLine{00141     \textcolor{keywordflow}{while} (it != res.end()) \{}
+\DoxyCodeLine{00142       \textcolor{keywordtype}{int} i = \mbox{\hyperlink{class_ranking_ac34919621a76529cc800125179f94ad8}{get\_ranking}}(it-\/>first) -\/ 1;}
+\DoxyCodeLine{00143       \textcolor{keywordflow}{if} (i != -\/2) \{}
+\DoxyCodeLine{00144         \textcolor{keywordtype}{int} points = ranking[i].get\_points() -\/ it-\/>second;}
+\DoxyCodeLine{00145         \textcolor{comment}{//cout << it-\/>first << "{} LOSES "{} << it-\/>second << "{} POINTS"{} << endl;}}
+\DoxyCodeLine{00146         ranking[i].set\_tmp\_points(points);}
+\DoxyCodeLine{00147         map<string,Statistics>::iterator it1 = stats.find(it-\/>first);}
+\DoxyCodeLine{00148         it1-\/>second.set\_points(points);}
+\DoxyCodeLine{00149         visited.push\_back(i);}
+\DoxyCodeLine{00150       \}}
+\DoxyCodeLine{00151       ++it;}
+\DoxyCodeLine{00152     \}}
+\DoxyCodeLine{00153 }
+\DoxyCodeLine{00154     \textcolor{keywordtype}{int} n = visited.size();}
+\DoxyCodeLine{00155     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) ranking[visited[i]].update\_player();}
+\DoxyCodeLine{00156 }
+\DoxyCodeLine{00157     sort\_ranking();}
+\DoxyCodeLine{00158   \}}
+\DoxyCodeLine{00159 \}}
+
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_ranking_8hh}{Ranking.\+hh}}\item 
+\mbox{\hyperlink{_ranking_8cc}{Ranking.\+cc}}\end{DoxyCompactItemize}

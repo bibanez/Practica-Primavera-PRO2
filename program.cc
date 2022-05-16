@@ -116,6 +116,7 @@ int main() {
 		}
 		else if (op == "listar_jugadores" or op == "lj") {
 			cout << '#' << op << endl;
+			cout << ranking.count_players() << endl;
 			ranking.list_players();
 		}
 		else if (op == "consultar_jugador" or op == "cj") {

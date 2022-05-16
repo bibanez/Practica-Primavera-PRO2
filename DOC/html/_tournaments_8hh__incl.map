@@ -1,0 +1,8 @@
+<map id="Tournaments.hh" name="Tournaments.hh">
+<area shape="rect" id="node1" title="Especificación de la clase Tournaments." alt="" coords="132,5,256,32"/>
+<area shape="rect" id="node2" href="$_tournament_8hh.html" title="Especificación de la clase Tournament." alt="" coords="5,80,124,107"/>
+<area shape="rect" id="node4" href="$_ranking_8hh.html" title="Especificación de la clase Ranking." alt="" coords="149,80,239,107"/>
+<area shape="rect" id="node6" href="$_categories_8hh.html" title="Especificación de la clase Categories." alt="" coords="263,80,373,107"/>
+<area shape="rect" id="node3" href="$_statistics_8hh.html" title="Especificación de la clase Statistics." alt="" coords="27,155,121,181"/>
+<area shape="rect" id="node5" href="$_player_8hh.html" title="Especificación de la clase Player." alt="" coords="155,155,233,181"/>
+</map>

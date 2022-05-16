@@ -1,0 +1,122 @@
+\hypertarget{_statistics_8cc_source}{}\doxysection{Statistics.\+cc}
+\mbox{\hyperlink{_statistics_8cc}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_statistics_8hh}{Statistics.hh}}"{}}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00002}00002 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00005}\mbox{\hyperlink{class_statistics_a60ddd90a571ed4c3ce8c0f6317a36d63}{00005}} \mbox{\hyperlink{class_statistics_a60ddd90a571ed4c3ce8c0f6317a36d63}{Statistics::Statistics}}() \{}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00006}00006   tournaments = points = matches\_won = matches\_lost = sets\_won = }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00007}00007     sets\_lost = games\_won = games\_lost = 0;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00008}00008 \}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00010}\mbox{\hyperlink{class_statistics_a00267ff63545946e7068e1b70137050d}{00010}} \mbox{\hyperlink{class_statistics_a60ddd90a571ed4c3ce8c0f6317a36d63}{Statistics::Statistics}}(\textcolor{keywordtype}{int} t) \{}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00011}00011   points = matches\_won = matches\_lost = sets\_won = }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00012}00012     sets\_lost = games\_won = games\_lost = 0;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00013}00013   tournaments = t;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00014}00014 \}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00016}00016 \textcolor{comment}{/*Statistics::Statistics(const Statistics\& original) \{}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00017}00017 \textcolor{comment}{  tournaments = original.tournaments;}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00018}00018 \textcolor{comment}{  points = original.points;}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00019}00019 \textcolor{comment}{  matches\_won = original.matches\_won;}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00020}00020 \textcolor{comment}{  matches\_lost = original.matches\_lost;}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00021}00021 \textcolor{comment}{  sets\_won = original.sets\_won;}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00022}00022 \textcolor{comment}{  sets\_lost = original.sets\_lost;}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00023}00023 \textcolor{comment}{  games\_won = original.games\_won;}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00024}00024 \textcolor{comment}{  games\_lost = original.games\_lost;}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00025}00025 \textcolor{comment}{\}*/}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00027}\mbox{\hyperlink{class_statistics_a3e2e905f930be0f993d0187ed8388206}{00027}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_statistics_a3e2e905f930be0f993d0187ed8388206}{Statistics::add\_stats}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_statistics}{Statistics}}\& stats) \{}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00028}00028   tournaments += stats.tournaments;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00029}00029   points += stats.points;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00030}00030   matches\_won += stats.matches\_won;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00031}00031   matches\_lost += stats.matches\_lost;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00032}00032   sets\_won += stats.sets\_won;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00033}00033   sets\_lost += stats.sets\_lost;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00034}00034   games\_won += stats.games\_won;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00035}00035   games\_lost += stats.games\_lost;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00036}00036 \}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00038}\mbox{\hyperlink{class_statistics_a5dd7afe22bc74689387a27315a6039b7}{00038}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_statistics_a5dd7afe22bc74689387a27315a6039b7}{Statistics::set\_points}}(\textcolor{keywordtype}{int} n) \{}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00039}00039   points = n;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00040}00040 \}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00042}\mbox{\hyperlink{class_statistics_a41f54794e71c50102dc5cfb5d40297d9}{00042}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_statistics_a41f54794e71c50102dc5cfb5d40297d9}{Statistics::set\_tournaments}}(\textcolor{keywordtype}{int} n) \{}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00043}00043   tournaments = n;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00044}00044 \}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00046}\mbox{\hyperlink{class_statistics_a09c9fe8d7059df6aab872513228eb0c8}{00046}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_statistics_a09c9fe8d7059df6aab872513228eb0c8}{Statistics::set\_matches\_won}}(\textcolor{keywordtype}{int} n) \{}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00047}00047   matches\_won = n;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00048}00048 \}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00050}\mbox{\hyperlink{class_statistics_a3e10891474345b61c7904bbd04af19e5}{00050}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_statistics_a3e10891474345b61c7904bbd04af19e5}{Statistics::set\_matches\_lost}}(\textcolor{keywordtype}{int} n) \{}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00051}00051   matches\_lost = n;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00052}00052 \}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00054}\mbox{\hyperlink{class_statistics_a365f32c4787f2efac6e3b0b9872c2910}{00054}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_statistics_a365f32c4787f2efac6e3b0b9872c2910}{Statistics::set\_games\_won}}(\textcolor{keywordtype}{int} n) \{}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00055}00055   games\_won = n;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00056}00056 \}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00058}\mbox{\hyperlink{class_statistics_a08824e077af9a690352935cae5c0e8ac}{00058}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_statistics_a08824e077af9a690352935cae5c0e8ac}{Statistics::set\_games\_lost}}(\textcolor{keywordtype}{int} n) \{}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00059}00059   games\_lost = n;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00060}00060 \}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00062}\mbox{\hyperlink{class_statistics_a812bb705484b4bbf1cd71808dc2e15b0}{00062}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_statistics_a812bb705484b4bbf1cd71808dc2e15b0}{Statistics::set\_sets\_won}}(\textcolor{keywordtype}{int} n) \{}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00063}00063   sets\_won = n;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00064}00064 \}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00066}\mbox{\hyperlink{class_statistics_a0e43fe14491540195dd01ee81f81cb49}{00066}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_statistics_a0e43fe14491540195dd01ee81f81cb49}{Statistics::set\_sets\_lost}}(\textcolor{keywordtype}{int} n) \{}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00067}00067   sets\_lost = n;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00068}00068 \}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00070}\mbox{\hyperlink{class_statistics_a4faa80fa024777d57b6fa4b3559eec0a}{00070}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_statistics_a4faa80fa024777d57b6fa4b3559eec0a}{Statistics::clear}}() \{}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00071}00071   tournaments = points = matches\_won = matches\_lost = sets\_won = }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00072}00072     sets\_lost = games\_won = games\_lost = 0;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00073}00073 \}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00075}\mbox{\hyperlink{class_statistics_ae1196c0d787e9dfe3a71161d9f25b57b}{00075}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_statistics_ae1196c0d787e9dfe3a71161d9f25b57b}{Statistics::get\_points}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00076}00076   \textcolor{keywordflow}{return} points;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00077}00077 \}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00079}\mbox{\hyperlink{class_statistics_a982df5a5d2e58a63a3af3e1d99b8fa55}{00079}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_statistics_a982df5a5d2e58a63a3af3e1d99b8fa55}{Statistics::get\_tournaments}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00080}00080   \textcolor{keywordflow}{return} tournaments;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00081}00081 \}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00083}\mbox{\hyperlink{class_statistics_afa9252dfee154d7e24bb87c61a7a0d75}{00083}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_statistics_afa9252dfee154d7e24bb87c61a7a0d75}{Statistics::get\_matches\_won}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00084}00084   \textcolor{keywordflow}{return} matches\_won;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00085}00085 \}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00087}\mbox{\hyperlink{class_statistics_af0dba6690ee022c9ac5925a40f4355a9}{00087}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_statistics_af0dba6690ee022c9ac5925a40f4355a9}{Statistics::get\_matches\_lost}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00088}00088   \textcolor{keywordflow}{return} matches\_lost;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00089}00089 \}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00091}\mbox{\hyperlink{class_statistics_a8600132572eb7fc675192414d55f1c17}{00091}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_statistics_a8600132572eb7fc675192414d55f1c17}{Statistics::get\_sets\_won}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00092}00092   \textcolor{keywordflow}{return} sets\_won;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00093}00093 \}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00095}\mbox{\hyperlink{class_statistics_a0a262384af152cb440bcaf58544497f4}{00095}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_statistics_a0a262384af152cb440bcaf58544497f4}{Statistics::get\_sets\_lost}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00096}00096   \textcolor{keywordflow}{return} sets\_lost;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00097}00097 \}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00098}00098 }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00099}\mbox{\hyperlink{class_statistics_a364605762dea27e3b46ce081ef821df9}{00099}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_statistics_a364605762dea27e3b46ce081ef821df9}{Statistics::get\_games\_won}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00100}00100   \textcolor{keywordflow}{return} games\_won;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00101}00101 \}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00103}\mbox{\hyperlink{class_statistics_a9d8bfb495739375e83bad8a243329985}{00103}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_statistics_a9d8bfb495739375e83bad8a243329985}{Statistics::get\_games\_lost}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00104}00104   \textcolor{keywordflow}{return} games\_lost;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00105}00105 \}}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00107}\mbox{\hyperlink{class_statistics_a8985ecfe6cf78aa530287095ce57d625}{00107}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_statistics_a8985ecfe6cf78aa530287095ce57d625}{Statistics::print\_statistics}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00108}00108   cout << \textcolor{stringliteral}{"{}Ps:"{}} << points;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00109}00109   cout << \textcolor{stringliteral}{"{} Ts:"{}} << tournaments;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00110}00110   cout << \textcolor{stringliteral}{"{} WM:"{}} << matches\_won;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00111}00111   cout << \textcolor{stringliteral}{"{} LM:"{}} << matches\_lost;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00112}00112   cout << \textcolor{stringliteral}{"{} WS:"{}} << sets\_won;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00113}00113   cout << \textcolor{stringliteral}{"{} LS:"{}} << sets\_lost;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00114}00114   cout << \textcolor{stringliteral}{"{} WG:"{}} << games\_won;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00115}00115   cout << \textcolor{stringliteral}{"{} LG:"{}} << games\_lost;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00116}00116   cout << endl;}
+\DoxyCodeLine{\Hypertarget{_statistics_8cc_source_l00117}00117 \}}
+
+\end{DoxyCode}

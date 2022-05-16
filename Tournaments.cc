@@ -33,7 +33,7 @@ bool Tournaments::remove_tournament(const string& t, Ranking& r) { // Ranking& r
 			++res;
 		}
 		*/
-		r.remove_tournament_results(old);
+		r.add_tournament_results(old, map<string,Statistics>());
 		tournaments.erase(it);
 		return true;
 	}

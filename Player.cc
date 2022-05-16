@@ -1,66 +1,41 @@
 #include "Player.hh"
 
+// Creadoras
 
-/*Player::Player() {
-	name = "";
-	points = 0;
-}*/
-
-Player::Player(int n) {
-	name = "";
-	points = tmp = n;
-	ranking = 0;
+Player::Player(int rk) {
+	ranking = rk;
 }
 
-Player::Player(const string& _name) {
-	name = _name;
-	points = tmp = ranking = 0;
-}
-
-Player::Player(const string& _name, int _points) {
-	name = _name;
-	points = tmp = _points;
-	ranking = 0;
-}
-
+/*
 Player::Player(const Player& p) {
-	name = p.get_name();
-	points = p.get_points();
-	tmp = p.get_tmp_points();
+	st = Statistics();
+	st.add_stats(p.get_stats);
 	ranking = p.get_ranking();
 }
+*/
 
-void Player::set_name(const string& _name) {
-	name = _name;
-}
 
+// Modificadoras
+
+/*
 void Player::set_points(int n) {
 	points = n;
 }
-
-void Player::set_tmp_points(int n) {
-	tmp = n;
-}
+*/
 
 void Player::set_ranking(int n) {
 	ranking = n;
 }
 
-void Player::update_player() {
-	points = tmp;
-}
-
-string Player::get_name() const {
-	return name;
+/*
+void Player::add_stats(const Statistics& stats) {
+	st.add_stats(stats);
 }
 
 int Player::get_points() const {
 	return points;
 }
-
-int Player::get_tmp_points() const {
-	return tmp;
-}
+*/
 
 int Player::get_ranking() const {
 	return ranking;

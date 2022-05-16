@@ -1,0 +1,424 @@
+\hypertarget{class_player}{}\doxysection{Referencia de la Clase Player}
+\label{class_player}\index{Player@{Player}}
+
+
+Contiene el nombre y puntuación de un jugador.  
+
+
+
+
+{\ttfamily \#include $<$Player.\+hh$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_a5a2790fccf10c30106370d910c96d317}{Player}} (const string \&name)
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player_ad46377ed50796f0f2d9b85fad503cb41}{Player}} (int n)
+\begin{DoxyCompactList}\small\item\em Creadora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player_a76620b0c66411bac9974b35bedfc182c}{Player}} (const string \&name, int points)
+\begin{DoxyCompactList}\small\item\em Creadora. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player_adf2e45581d8fd61e26328fa48d13b9b7}{Player}} (const \mbox{\hyperlink{class_player}{Player}} \&p)
+\begin{DoxyCompactList}\small\item\em Creadora. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a3febbd31e6b1fd1f49bc3e5a0b938cd9}{set\+\_\+name}} (const string \&name)
+\begin{DoxyCompactList}\small\item\em Canviar nombre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_acf61e116ff6ebf016d6a4a5423431df3}{set\+\_\+points}} (int n)
+\begin{DoxyCompactList}\small\item\em Canviar puntuación. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a20d87708237a69339804f3bca9ff5425}{set\+\_\+tmp\+\_\+points}} (int n)
+\begin{DoxyCompactList}\small\item\em Canviar puntuación temporal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a3544f62609a4504bc4b8d217ab4ed5e3}{set\+\_\+ranking}} (int n)
+\begin{DoxyCompactList}\small\item\em Canviar el ranking. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_acac978288e2453eaaf571bfd089123a2}{update\+\_\+player}} ()
+\begin{DoxyCompactList}\small\item\em Mueve el valor de {\ttfamily tmp} a {\ttfamily points} \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_player_a7b7eb859de7cd84fca008408f9d969f9}{get\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Obtener nombre. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_player_af62cff981efa727fcb650e463e13e019}{get\+\_\+points}} () const
+\begin{DoxyCompactList}\small\item\em Obtener puntos. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_player_a509cb94bfc343e2dbc8a2d54a52606ba}{get\+\_\+tmp\+\_\+points}} () const
+\begin{DoxyCompactList}\small\item\em Obtener puntos temporales. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_player_ae2d04c85bd624be8b2d19e11206b1a16}{get\+\_\+ranking}} () const
+\begin{DoxyCompactList}\small\item\em Obtener el ranking del jugador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Contiene el nombre y puntuación de un jugador. 
+
+Definición en la línea \mbox{\hyperlink{_player_8hh_source_l00017}{17}} del archivo \mbox{\hyperlink{_player_8hh_source}{Player.\+hh}}.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_player_a5a2790fccf10c30106370d910c96d317}\label{class_player_a5a2790fccf10c30106370d910c96d317}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{const string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Crea un jugador con nombre vacío y puntuación 0
+\end{DoxyPostcond}
+Creadora \begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Crea un jugador con nombre {\ttfamily name} y puntuación 0 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_player_8cc_source_l00015}{15}} del archivo \mbox{\hyperlink{_player_8cc_source}{Player.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015                                   \{}
+\DoxyCodeLine{00016   name = \_name;}
+\DoxyCodeLine{00017   points = tmp = ranking = 0;}
+\DoxyCodeLine{00018 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_player_ad46377ed50796f0f2d9b85fad503cb41}\label{class_player_ad46377ed50796f0f2d9b85fad503cb41}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Creadora. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Crea un jugador con nombre vacío y puntuación {\ttfamily n} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_player_8cc_source_l00009}{9}} del archivo \mbox{\hyperlink{_player_8cc_source}{Player.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009                     \{}
+\DoxyCodeLine{00010   name = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00011   points = tmp = n;}
+\DoxyCodeLine{00012   ranking = 0;}
+\DoxyCodeLine{00013 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_player_a76620b0c66411bac9974b35bedfc182c}\label{class_player_a76620b0c66411bac9974b35bedfc182c}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{const string \&}]{name,  }\item[{int}]{points }\end{DoxyParamCaption})}
+
+
+
+Creadora. 
+
+\begin{DoxyPrecond}{Precondición}
+points \texorpdfstring{$>$}{>}= 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Crea un jugador con nombre {\ttfamily name} y puntuación {\ttfamily points} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_player_8cc_source_l00020}{20}} del archivo \mbox{\hyperlink{_player_8cc_source}{Player.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020                                                \{}
+\DoxyCodeLine{00021   name = \_name;}
+\DoxyCodeLine{00022   points = tmp = \_points;}
+\DoxyCodeLine{00023   ranking = 0;}
+\DoxyCodeLine{00024 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_player_adf2e45581d8fd61e26328fa48d13b9b7}\label{class_player_adf2e45581d8fd61e26328fa48d13b9b7}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_player}{Player}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Creadora. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Crea un jugador con los mismos parámetros que {\ttfamily p} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_player_8cc_source_l00026}{26}} del archivo \mbox{\hyperlink{_player_8cc_source}{Player.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026                               \{}
+\DoxyCodeLine{00027   name = p.\mbox{\hyperlink{class_player_a7b7eb859de7cd84fca008408f9d969f9}{get\_name}}();}
+\DoxyCodeLine{00028   points = p.\mbox{\hyperlink{class_player_af62cff981efa727fcb650e463e13e019}{get\_points}}();}
+\DoxyCodeLine{00029   tmp = p.\mbox{\hyperlink{class_player_a509cb94bfc343e2dbc8a2d54a52606ba}{get\_tmp\_points}}();}
+\DoxyCodeLine{00030   ranking = p.\mbox{\hyperlink{class_player_ae2d04c85bd624be8b2d19e11206b1a16}{get\_ranking}}();}
+\DoxyCodeLine{00031 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_player_a7b7eb859de7cd84fca008408f9d969f9}\label{class_player_a7b7eb859de7cd84fca008408f9d969f9}} 
+\index{Player@{Player}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily string Player\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtener nombre. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna el nombre del jugador en {\ttfamily this-\/\texorpdfstring{$>$}{>}name} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_player_8cc_source_l00053}{53}} del archivo \mbox{\hyperlink{_player_8cc_source}{Player.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053                               \{}
+\DoxyCodeLine{00054   \textcolor{keywordflow}{return} name;}
+\DoxyCodeLine{00055 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_player_af62cff981efa727fcb650e463e13e019}\label{class_player_af62cff981efa727fcb650e463e13e019}} 
+\index{Player@{Player}!get\_points@{get\_points}}
+\index{get\_points@{get\_points}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{get\_points()}{get\_points()}}
+{\footnotesize\ttfamily int Player\+::get\+\_\+points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtener puntos. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna los puntos del jugador en {\ttfamily this-\/\texorpdfstring{$>$}{>}points} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_player_8cc_source_l00057}{57}} del archivo \mbox{\hyperlink{_player_8cc_source}{Player.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057                              \{}
+\DoxyCodeLine{00058   \textcolor{keywordflow}{return} points;}
+\DoxyCodeLine{00059 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_player_ae2d04c85bd624be8b2d19e11206b1a16}\label{class_player_ae2d04c85bd624be8b2d19e11206b1a16}} 
+\index{Player@{Player}!get\_ranking@{get\_ranking}}
+\index{get\_ranking@{get\_ranking}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{get\_ranking()}{get\_ranking()}}
+{\footnotesize\ttfamily int Player\+::get\+\_\+ranking (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtener el ranking del jugador. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna el ranking (puede que sea temporal) del jugador 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_player_8cc_source_l00065}{65}} del archivo \mbox{\hyperlink{_player_8cc_source}{Player.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065                               \{}
+\DoxyCodeLine{00066   \textcolor{keywordflow}{return} ranking;}
+\DoxyCodeLine{00067 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_player_a509cb94bfc343e2dbc8a2d54a52606ba}\label{class_player_a509cb94bfc343e2dbc8a2d54a52606ba}} 
+\index{Player@{Player}!get\_tmp\_points@{get\_tmp\_points}}
+\index{get\_tmp\_points@{get\_tmp\_points}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{get\_tmp\_points()}{get\_tmp\_points()}}
+{\footnotesize\ttfamily int Player\+::get\+\_\+tmp\+\_\+points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtener puntos temporales. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna los puntos temporales del jugador 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_player_8cc_source_l00061}{61}} del archivo \mbox{\hyperlink{_player_8cc_source}{Player.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061                                  \{}
+\DoxyCodeLine{00062   \textcolor{keywordflow}{return} tmp;}
+\DoxyCodeLine{00063 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_player_a3febbd31e6b1fd1f49bc3e5a0b938cd9}\label{class_player_a3febbd31e6b1fd1f49bc3e5a0b938cd9}} 
+\index{Player@{Player}!set\_name@{set\_name}}
+\index{set\_name@{set\_name}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{set\_name()}{set\_name()}}
+{\footnotesize\ttfamily void Player\+::set\+\_\+name (\begin{DoxyParamCaption}\item[{const string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Canviar nombre. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Canvia {\ttfamily this-\/\texorpdfstring{$>$}{>}name} por {\ttfamily name} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_player_8cc_source_l00033}{33}} del archivo \mbox{\hyperlink{_player_8cc_source}{Player.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033                                          \{}
+\DoxyCodeLine{00034   name = \_name;}
+\DoxyCodeLine{00035 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_player_acf61e116ff6ebf016d6a4a5423431df3}\label{class_player_acf61e116ff6ebf016d6a4a5423431df3}} 
+\index{Player@{Player}!set\_points@{set\_points}}
+\index{set\_points@{set\_points}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{set\_points()}{set\_points()}}
+{\footnotesize\ttfamily void Player\+::set\+\_\+points (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Canviar puntuación. 
+
+\begin{DoxyPrecond}{Precondición}
+{\ttfamily n \texorpdfstring{$>$}{>}= 0} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Canvia el valor de {\ttfamily this-\/\texorpdfstring{$>$}{>}points} con el valor de {\ttfamily n} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_player_8cc_source_l00037}{37}} del archivo \mbox{\hyperlink{_player_8cc_source}{Player.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037                              \{}
+\DoxyCodeLine{00038   points = n;}
+\DoxyCodeLine{00039 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_player_a3544f62609a4504bc4b8d217ab4ed5e3}\label{class_player_a3544f62609a4504bc4b8d217ab4ed5e3}} 
+\index{Player@{Player}!set\_ranking@{set\_ranking}}
+\index{set\_ranking@{set\_ranking}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{set\_ranking()}{set\_ranking()}}
+{\footnotesize\ttfamily void Player\+::set\+\_\+ranking (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Canviar el ranking. 
+
+\begin{DoxyPrecond}{Precondición}
+{\ttfamily 1 \texorpdfstring{$<$}{<}= n} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Canvia el valor de {\ttfamily this-\/\texorpdfstring{$>$}{>}ranking} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_player_8cc_source_l00045}{45}} del archivo \mbox{\hyperlink{_player_8cc_source}{Player.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045                               \{}
+\DoxyCodeLine{00046   ranking = n;}
+\DoxyCodeLine{00047 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_player_a20d87708237a69339804f3bca9ff5425}\label{class_player_a20d87708237a69339804f3bca9ff5425}} 
+\index{Player@{Player}!set\_tmp\_points@{set\_tmp\_points}}
+\index{set\_tmp\_points@{set\_tmp\_points}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{set\_tmp\_points()}{set\_tmp\_points()}}
+{\footnotesize\ttfamily void Player\+::set\+\_\+tmp\+\_\+points (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Canviar puntuación temporal. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Canvia el valor en {\ttfamily this-\/\texorpdfstring{$>$}{>}tmp} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_player_8cc_source_l00041}{41}} del archivo \mbox{\hyperlink{_player_8cc_source}{Player.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041                                  \{}
+\DoxyCodeLine{00042   tmp = n;}
+\DoxyCodeLine{00043 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_player_acac978288e2453eaaf571bfd089123a2}\label{class_player_acac978288e2453eaaf571bfd089123a2}} 
+\index{Player@{Player}!update\_player@{update\_player}}
+\index{update\_player@{update\_player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{update\_player()}{update\_player()}}
+{\footnotesize\ttfamily void Player\+::update\+\_\+player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Mueve el valor de {\ttfamily tmp} a {\ttfamily points} 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+{\ttfamily points} contiene el previo valor de {\ttfamily tmp} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_player_8cc_source_l00049}{49}} del archivo \mbox{\hyperlink{_player_8cc_source}{Player.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049                            \{}
+\DoxyCodeLine{00050   points = tmp;}
+\DoxyCodeLine{00051 \}}
+
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_player_8hh}{Player.\+hh}}\item 
+\mbox{\hyperlink{_player_8cc}{Player.\+cc}}\end{DoxyCompactItemize}

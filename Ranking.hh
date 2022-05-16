@@ -5,8 +5,8 @@
 #ifndef _RANKING_HH
 #define _RANKING_HH
 
-#include "Statistics.hh"
 #include "Player.hh"
+#include "Statistics.hh"
 
 #ifndef NO_DIAGRAM
 #include <iostream>
@@ -22,15 +22,13 @@
  */
 class Ranking 
 {
-	private:
-		map<string, Statistics> stats; 			
-		vector<Player> ranking;
+	typedef map<string,Player>::iterator Player_it;
 
-		/** @brief Comparar puntuación de jugadores
-		 *	\pre _cierto_
-		 *	\post Retorna cierto si el jugador a tiene más puntuación que b.
-		 */
-		//bool cmp(const Player& a, const Player& b) const;
+	private:
+		map<string,Player> stats; 			
+		vector<Player_it> ranking;
+
+		// Auxiliares 
 
 		/** @brief Corrige el ranking dentro de los Players en un intervalo
 		 *	\pre `0 <= i < j <= ranking.size()`
@@ -45,6 +43,12 @@ class Ranking
 		 *	puntuación y en caso de empate, por anterioridad de rango.
 		 */
 		void sort_ranking();
+
+		/** @brief Comparar puntuación de jugadores
+          *  \pre _cierto_
+          *  \post Retorna cierto si el jugador a tiene más puntuación que b.
+          */
+		static bool cmp(const Player_it& a, const Player_it& b);
 
 	public:
 		
@@ -82,18 +86,6 @@ class Ranking
 		 */
 		bool remove_player(int n);
 
-		/** @brief Actualiza un jugador después de un torneo
-		 *	\pre El ranking contiene un jugador con nombre 'name'. 'result'
-		 *	contiene en el campo de 'tournaments' un solo elemento con el
-		 *	identificador del torneo que ha disputado.
-		 *	\post Se actualiza el ranking del jugador después de sumarle los
-		 *	los puntos en 'result.get_points()'. Se suman las estadísticas contenidas
-		 *	en 'result' a las estadísticas del jugador con nombre 'name'. Si el
-		 *	jugador no había disputado el torneo en 'result.first_tournament()', se le
-		 *	añade a las estadísticas.
-		 */
-		//void update_player(const string& name, const Statistics& result);
-
 		/** @brief Añade los resultados de un torneo
 		 *	\pre Todos los valores `key` de `old` y `results` se encuentran en 
 		 *	`this->ranking`. El mapa `old` contiene las puntuaciones que se van
@@ -103,15 +95,6 @@ class Ranking
 		 */
 		void add_tournament_results(const map<string, int>& old, const map<string, Statistics>& results);
 
-		/** @brief Resta puntos de un diccionario de jugadores
-		 *	Esta función es útil para la eliminación de torneos, restar los
-		 *	puntos que los jugadores habían ganado en la última edición.
-		 *	\pre Todos los valores `key` de `res` se encuentran en 
-		 *	`this->ranking`.
-		 *	\post Se actualiza el ranking y las estadísticas de los jugadores
-		 *	restando los resultados en `res`
-		 */
-		void remove_tournament_results(const map<string,int>& res);
 		
 		// Consultoras	
 

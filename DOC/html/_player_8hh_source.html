@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Práctica PRO2 Primavera 2022: Gestión de una liga de tenis profesional: Fichero Fuente Player.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Práctica PRO2 Primavera 2022: Gestión de una liga de tenis profesional<span id="projectnumber">&#160;Especificación 19-4-2022</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Player.hh</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_player_8hh.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef _PLAYER_HH</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define _PLAYER_HH</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef NO_DIAGRAM</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_player.html">   17</a></span><span class="keyword">class </span><a class="code hl_class" href="class_player.html">Player</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">string</span> name;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">int</span> points, tmp, ranking;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">// Creadoras</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">//Player();</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_function" href="class_player.html#a5a2790fccf10c30106370d910c96d317">Player</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; name);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_function" href="class_player.html#a5a2790fccf10c30106370d910c96d317">Player</a>(<span class="keywordtype">int</span> n);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_function" href="class_player.html#a5a2790fccf10c30106370d910c96d317">Player</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; name, <span class="keywordtype">int</span> points);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_function" href="class_player.html#a5a2790fccf10c30106370d910c96d317">Player</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_player.html">Player</a>&amp; p);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">// Modificadoras</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_player.html#a3febbd31e6b1fd1f49bc3e5a0b938cd9">set_name</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; name);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_player.html#acf61e116ff6ebf016d6a4a5423431df3">set_points</a>(<span class="keywordtype">int</span> n);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_player.html#a20d87708237a69339804f3bca9ff5425">set_tmp_points</a>(<span class="keywordtype">int</span> n);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_player.html#a3544f62609a4504bc4b8d217ab4ed5e3">set_ranking</a>(<span class="keywordtype">int</span> n);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_player.html#acac978288e2453eaaf571bfd089123a2">update_player</a>();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="comment">// Consultoras</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_player.html#a7b7eb859de7cd84fca008408f9d969f9">get_name</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_player.html#af62cff981efa727fcb650e463e13e019">get_points</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_player.html#a509cb94bfc343e2dbc8a2d54a52606ba">get_tmp_points</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_player.html#ae2d04c85bd624be8b2d19e11206b1a16">get_ranking</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>};</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdoc">Contiene el nombre y puntuación de un jugador.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8hh_source.html#l00017">Player.hh:17</a></div></div>
+<div class="ttc" id="aclass_player_html_a20d87708237a69339804f3bca9ff5425"><div class="ttname"><a href="class_player.html#a20d87708237a69339804f3bca9ff5425">Player::set_tmp_points</a></div><div class="ttdeci">void set_tmp_points(int n)</div><div class="ttdoc">Canviar puntuación temporal.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cc_source.html#l00041">Player.cc:41</a></div></div>
+<div class="ttc" id="aclass_player_html_a3544f62609a4504bc4b8d217ab4ed5e3"><div class="ttname"><a href="class_player.html#a3544f62609a4504bc4b8d217ab4ed5e3">Player::set_ranking</a></div><div class="ttdeci">void set_ranking(int n)</div><div class="ttdoc">Canviar el ranking.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cc_source.html#l00045">Player.cc:45</a></div></div>
+<div class="ttc" id="aclass_player_html_a3febbd31e6b1fd1f49bc3e5a0b938cd9"><div class="ttname"><a href="class_player.html#a3febbd31e6b1fd1f49bc3e5a0b938cd9">Player::set_name</a></div><div class="ttdeci">void set_name(const string &amp;name)</div><div class="ttdoc">Canviar nombre.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cc_source.html#l00033">Player.cc:33</a></div></div>
+<div class="ttc" id="aclass_player_html_a509cb94bfc343e2dbc8a2d54a52606ba"><div class="ttname"><a href="class_player.html#a509cb94bfc343e2dbc8a2d54a52606ba">Player::get_tmp_points</a></div><div class="ttdeci">int get_tmp_points() const</div><div class="ttdoc">Obtener puntos temporales.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cc_source.html#l00061">Player.cc:61</a></div></div>
+<div class="ttc" id="aclass_player_html_a5a2790fccf10c30106370d910c96d317"><div class="ttname"><a href="class_player.html#a5a2790fccf10c30106370d910c96d317">Player::Player</a></div><div class="ttdeci">Player(const string &amp;name)</div><div class="ttdoc">Creadora por defecto.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cc_source.html#l00015">Player.cc:15</a></div></div>
+<div class="ttc" id="aclass_player_html_a7b7eb859de7cd84fca008408f9d969f9"><div class="ttname"><a href="class_player.html#a7b7eb859de7cd84fca008408f9d969f9">Player::get_name</a></div><div class="ttdeci">string get_name() const</div><div class="ttdoc">Obtener nombre.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cc_source.html#l00053">Player.cc:53</a></div></div>
+<div class="ttc" id="aclass_player_html_acac978288e2453eaaf571bfd089123a2"><div class="ttname"><a href="class_player.html#acac978288e2453eaaf571bfd089123a2">Player::update_player</a></div><div class="ttdeci">void update_player()</div><div class="ttdoc">Mueve el valor de tmp a points</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cc_source.html#l00049">Player.cc:49</a></div></div>
+<div class="ttc" id="aclass_player_html_acf61e116ff6ebf016d6a4a5423431df3"><div class="ttname"><a href="class_player.html#acf61e116ff6ebf016d6a4a5423431df3">Player::set_points</a></div><div class="ttdeci">void set_points(int n)</div><div class="ttdoc">Canviar puntuación.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cc_source.html#l00037">Player.cc:37</a></div></div>
+<div class="ttc" id="aclass_player_html_ae2d04c85bd624be8b2d19e11206b1a16"><div class="ttname"><a href="class_player.html#ae2d04c85bd624be8b2d19e11206b1a16">Player::get_ranking</a></div><div class="ttdeci">int get_ranking() const</div><div class="ttdoc">Obtener el ranking del jugador.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cc_source.html#l00065">Player.cc:65</a></div></div>
+<div class="ttc" id="aclass_player_html_af62cff981efa727fcb650e463e13e019"><div class="ttname"><a href="class_player.html#af62cff981efa727fcb650e463e13e019">Player::get_points</a></div><div class="ttdeci">int get_points() const</div><div class="ttdoc">Obtener puntos.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cc_source.html#l00057">Player.cc:57</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>
