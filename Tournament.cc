@@ -33,7 +33,7 @@ void Tournament::end_tournament(map<string, int>& old, map<string, Statistics>& 
 	res.clear();
 	int n = stats.size();
 	for (int i = 0; i < n; ++i) {
-		cout << i+1 << '.' << names[i] << ' ' << stats[i].get_points() << endl;
+		if (stats[i].get_points() != 0) cout << i+1 << '.' << names[i] << ' ' << stats[i].get_points() << endl;
 		res[names[i]] = stats[i];
 	}
 }

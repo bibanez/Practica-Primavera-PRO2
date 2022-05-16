@@ -1,7 +1,7 @@
 OPTIONS = -D_JUDGE_ -D_GLIBCXX_DEBUG -O2 -Wall -Wextra -Werror -Wno-sign-compare -std=c++11
 
-program.x: program.o Player.o Statistics.o Categories.o Tournament.o Ranking.o Tournaments.o
-	g++ -o program.x program.o Player.o Statistics.o Categories.o Tournament.o Ranking.o Tournaments.o $(OPTIONS)
+program.exe: program.o Player.o Statistics.o Categories.o Tournament.o Ranking.o Tournaments.o
+	g++ -o program.exe program.o Player.o Statistics.o Categories.o Tournament.o Ranking.o Tournaments.o $(OPTIONS)
 
 program.o: program.cc
 	g++ -c program.cc $(OPTIONS)
@@ -28,4 +28,6 @@ tar: program.cc Player.cc Player.hh Statistics.cc Statistics.hh Categories.cc Ca
 	tar -cvf practica.tar program.cc Player.cc Player.hh Statistics.cc Statistics.hh Categories.cc Categories.hh Tournament.cc Tournament.hh Ranking.cc Ranking.hh Tournaments.cc Tournaments.hh Makefile
 
 clean:
+	rm *.x
+	rm *.exe
 	rm *.o
