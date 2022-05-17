@@ -1,0 +1,4 @@
+<map id="Tournament" name="Tournament">
+<area shape="rect" id="node1" title="Contiene la información de un torneo y permite hacer operaciones con él." alt="" coords="35,109,133,136"/>
+<area shape="rect" id="node2" href="$class_bin_tree.html" title=" " alt="" coords="5,5,163,47"/>
+</map>

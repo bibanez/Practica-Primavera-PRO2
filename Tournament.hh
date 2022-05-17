@@ -23,17 +23,43 @@ using namespace std;
  */
 class Tournament
 {
+	/** @brief Contiene la información sobre un match, es decir, los jugadores
+	 *  que se han enfrentado y el resultado final.
+	 */
+	struct match {
+		int a, b;
+		vector< pair<int,int> > result;
+	};
+
 	private:
-		struct match {
-			int a, b;
-			vector< pair<int,int> > result;
-		};
+
+		/** @brief Sirve para guardar el árbol de emparejamientos y resultados
+		 *  del torneo.
+		 */
 		BinTree<match> results;
 
+		/** @brief Guarda la información de los resultados de la edición 
+		 *  anterior del torneo, para poderlos restar cuando se finalize la
+		 *  nueva.
+		 */
 		map<string, int> old_results;
+
+		/** @brief Contiene las estadísticas de los jugadores, ordenados por
+		 *  ranking de entrada.
+		 */
 		vector<Statistics> stats;
+
+		/** @brief Contiene los nombres de los jugadores, de acuerdo con los
+		 *  índices del vector `stats`.
+		 */
 		vector<string> names;
+
+		/** @brief Categoría del torneo */
 		int c;
+
+		/** @brief Vale `true` si el torneo ha empezado y `false` si ha 
+		 *  terminado 
+		 */
 		bool started;
 
 		/** @brief Calcula el ganador de un match
@@ -46,8 +72,10 @@ class Tournament
 		/** @brief Funcion auxiliar de los emparejamientos
 		 *	\pre `a <= max` es el valor del ganador, `s` es $2^{nivel}$ y max
 		 *	es el índice máximo.
-		 *	\post En 't' hay un cuadro de emparejamientos pero solo con los
+		 *	\post En `t` hay un cuadro de emparejamientos pero solo con los
 		 *	identificadores de los jugadores dentro del ranking del torneo
+		 *	Nota: Para iniciar el árbol, se debe pasar como argumentos un `t`
+		 *	vacío, `a=1`, `s=2` y `max` dependiendo del número de jugadores.
 		 */
 		void pairings(BinTree<match>& t, int a, int s, int max);
 
@@ -67,9 +95,11 @@ class Tournament
 		 */
 		void read_match(match& m);
 
-		/** @brief Lee los matches en el canal de entrada para todo el torneo
+		/** @brief Lee los matches en el canal de entrada
 		 *	\pre En el canal de entrada hay los matches en preorden. `t` tiene
-		 *	la misma estructura que los datos de entrada
+		 *	la misma estructura que los datos de entrada. Cada entrada cumple 
+		 *	el `pre` de `read_match(match& m)`. Cuando no hay más entradas para
+		 *	una rama, se termina leyendo un `0`
 		 *	\post `t` contiene la información de los juegos disputados
 		 */
 		void read_matches(BinTree<match>& t);
@@ -94,7 +124,7 @@ class Tournament
 
 		/** @brief Creadora
 		 *	\pre _cierto_
-		 *	\post Crea un torneo nuevo con categoría 'c'
+		 *	\post Crea un torneo nuevo con categoría `c`
 		 */
 		Tournament(int c);
 
@@ -107,15 +137,15 @@ class Tournament
 		// Modificadoras
 
 		/** @brief Empieza el torneo
-		 *	\pre El torneo no se ha empezado ya (sin antes terminar o que sea 
-		 *	la primera vez que se inicia). 
+		 *	\pre El torneo no se ha empezado aún (es la primera vez que se 
+		 *	inicia o bien se ha terminado anterior a empezarlo). 
 		 *	`players` contiene los identificadores (nombres) de los jugadores 
 		 *	ordenados por ranking previo al torneo.
 		 *	`8 <= players.size() <= 2^(K-1)`, donde `K = rank_scores.size()`
 		 *	es el número de rangos.
-		 *	\post Se inicia el torneo con los jugadores 'players' y se guardan
+		 *	\post Se inicia el torneo con los jugadores `players` y se guardan
 		 *	los resultados antiguos en `this->old_results` para luego restarse
-		 *	del ranking cuando se llame `this->end_tournament(...)`
+		 *	del ranking cuando se llame end_tournament()
 		 */
 		void start_tournament(const vector<string>& players);
 
@@ -126,17 +156,20 @@ class Tournament
 		 *	categoría `c` y tiene `K` elementos en orden creciente de rango 
 		 *	que indican las puntuaciones por rango.
 		 *	\post `old` contiene las puntuaciones que deben restarse a los
-		 *	jugadores que jugaron la edición pasada del torneo. `results` a
-		 *	las estadísticas de cada jugador en el torneo, que serviran para 
-		 *	actualizar el ranking. En el canal de salida hay la tabla de 
+		 *	jugadores que jugaron la edición pasada del torneo. El mapa `results`
+		 *	contiene las estadísticas de cada jugador en el torneo, que serviran 
+		 *	para actualizar el ranking. En el canal de salida hay la tabla de 
 		 *	resultados y las puntuaciones que ha obtenido cada jugador,
-		 *	ordenado por el ranking original.
+		 *	ordenado por el ranking original. 
+		 *
+		 *	Nota: Si un jugador no ha recibido puntos, no aparecerá en el canal
+		 *	de salida.
 		 */
 		void end_tournament(map<string, int>& old, map<string, Statistics>& res, const vector<int>& rank_scores);
 
 		/** @brief Elimina un jugador de los resultados antiguos 
 		 *	\pre _cierto_
-		 *	\post Se elimina del mapa de 'old_results' al jugador con id 'name'
+		 *	\post Se elimina del mapa de `old_results` al jugador con id `name`
 		 *	Retorna cierto si el jugador existía en el torneo.
 		 */
 		bool remove_player_from_results(const string& name);
@@ -169,8 +202,9 @@ class Tournament
 		/** @brief Imprime el cuadro de resultados
 		 *	\pre Se ha finalizado el torneo al menos una vez
 		 *	\post En el canal de salida hay el cuadro de resultados escrito con
-		 *	el mismo formato que el juego de pruebas público */
-		//void print_results_table();
+		 *	el mismo formato que el juego de pruebas público 
+		 */
+		void print_results_table();
 
 		/** @brief Imprime la tabla de emparejamientos
 		 *	\pre Se ha empezado el torneo al menos una vez

@@ -1,11 +1,13 @@
 <map id="Statistics.hh" name="Statistics.hh">
-<area shape="rect" id="node1" title="Especificación de la clase Statistics." alt="" coords="158,5,253,32"/>
-<area shape="rect" id="node2" href="$_ranking_8hh.html" title="Especificación de la clase Ranking." alt="" coords="45,80,136,107"/>
-<area shape="rect" id="node7" href="$_statistics_8cc.html" title=" " alt="" coords="160,80,251,107"/>
-<area shape="rect" id="node8" href="$_tournament_8hh.html" title="Especificación de la clase Tournament." alt="" coords="275,80,394,107"/>
-<area shape="rect" id="node3" href="$_ranking_8cc.html" title=" " alt="" coords="47,155,134,181"/>
-<area shape="rect" id="node4" href="$_tournaments_8hh.html" title="Especificación de la clase Tournaments." alt="" coords="158,155,282,181"/>
-<area shape="rect" id="node6" href="$program_8cc.html" title=" " alt="" coords="5,229,96,256"/>
-<area shape="rect" id="node5" href="$_tournaments_8cc.html" title=" " alt="" coords="160,229,280,256"/>
-<area shape="rect" id="node9" href="$_tournament_8cc.html" title=" " alt="" coords="307,155,421,181"/>
+<area shape="rect" id="node1" title="Especificación de la clase Statistics." alt="" coords="139,5,234,32"/>
+<area shape="rect" id="node2" href="$_player_8hh.html" title="Especificación de la clase Player." alt="" coords="29,80,107,107"/>
+<area shape="rect" id="node4" href="$_ranking_8hh.html" title="Especificación de la clase Ranking." alt="" coords="104,155,195,181"/>
+<area shape="rect" id="node9" href="$_statistics_8cc.html" title=" " alt="" coords="183,80,273,107"/>
+<area shape="rect" id="node10" href="$_tournament_8hh.html" title="Especificación de la clase Tournament." alt="" coords="298,80,417,107"/>
+<area shape="rect" id="node3" href="$_player_8cc.html" title=" " alt="" coords="5,155,80,181"/>
+<area shape="rect" id="node5" href="$_ranking_8cc.html" title=" " alt="" coords="26,229,113,256"/>
+<area shape="rect" id="node6" href="$_tournaments_8hh.html" title="Especificación de la clase Tournaments." alt="" coords="197,229,321,256"/>
+<area shape="rect" id="node8" href="$program_8cc.html" title=" " alt="" coords="105,304,196,331"/>
+<area shape="rect" id="node7" href="$_tournaments_8cc.html" title=" " alt="" coords="220,304,340,331"/>
+<area shape="rect" id="node11" href="$_tournament_8cc.html" title=" " alt="" coords="300,155,415,181"/>
 </map>

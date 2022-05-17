@@ -1,75 +1,6 @@
 #include "Tournament.hh"
 
-Tournament::Tournament() {
-	c = 0;
-}
-
-Tournament::Tournament(int c) {
-	this->c = c;
-}
-
-void Tournament::start_tournament(const vector<string>& players) {
-	started = true;
-	old_results.clear();
-	int n = stats.size();
-	for (int i = 0; i < n; ++i) {
-		//cout << "AL JUGADOR " << names[i] << " ES RESTARAN " << stats[i].get_points() << " PUNTS" << endl;
-		old_results.insert(pair<string,int>(names[i],stats[i].get_points()));
-	}
-	names = players;
-	Statistics st;
-	st.set_tournaments(1);
-	stats = vector<Statistics>(players.size(), st);
-}
-
-void Tournament::end_tournament(map<string, int>& old, map<string, Statistics>& res, const vector<int>& rank_scores) {
-	started = false;
-	old = old_results;
-	read_matches(results);
-	print_table(results);
-	cout << endl;
-	vector<int> p(names.size());
-	calculate_rankings(results, rank_scores, p, 1);
-	res.clear();
-	int n = stats.size();
-	for (int i = 0; i < n; ++i) {
-		if (stats[i].get_points() != 0) cout << i+1 << '.' << names[i] << ' ' << stats[i].get_points() << endl;
-		res[names[i]] = stats[i];
-	}
-}
-
-bool Tournament::remove_player_from_results(const string& name) {
-	map<string,int>::iterator it = old_results.find(name);
-	if (it != old_results.end()) {
-		old_results.erase(it);
-		return true;
-	}
-	else {
-		int n = stats.size();
-		for (int i = 0; i < n; ++i) {
-			if (names[i] == name) {
-				stats[i].clear();
-				return true;
-			}
-		}
-		return false;
-	}
-}
-
-map<string,int> Tournament::get_old_results() const {
-	map<string,int> res;
-	int n = stats.size();
-	for (int i = 0; i < n; ++i) res[names[i]] = stats[i].get_points();
-	return res;
-}
-
-int Tournament::get_category() const {
-	return c;
-}
-
-bool Tournament::has_started() const {
-	return started;
-}
+// Auxiliares
 
 bool Tournament::first_wins(const match& m) const {
 	int a = 0;
@@ -212,12 +143,6 @@ void Tournament::print_pairings(const BinTree<match>& t) {
 	}
 }
 
-void Tournament::print_starting_pairs() {
-	pairings(results, 1, 2, names.size());
-	print_pairings(results);
-	cout << endl;
-}
-
 void Tournament::print_table(const BinTree<match>& t) {
 	cout << '(' << t.value().a << '.' << names[t.value().a-1] << " vs " 
 		<< t.value().b << '.' << names[t.value().b-1] << ' ';
@@ -229,4 +154,95 @@ void Tournament::print_table(const BinTree<match>& t) {
 	if (not t.left().empty()) print_table(t.left());
 	if (not t.right().empty()) print_table(t.right());
 	cout << ')';
+}
+
+
+// Creadoras
+
+Tournament::Tournament() {
+	c = 0;
+}
+
+Tournament::Tournament(int c) {
+	this->c = c;
+}
+
+
+// Modificadoras
+
+void Tournament::start_tournament(const vector<string>& players) {
+	started = true;
+	old_results.clear();
+	int n = stats.size();
+	for (int i = 0; i < n; ++i) 
+		old_results.insert(pair<string,int>(names[i],stats[i].get_points()));
+	names = players;
+	Statistics st;
+	st.set_tournaments(1);
+	stats = vector<Statistics>(players.size(), st);
+}
+
+void Tournament::end_tournament(map<string, int>& old, map<string, Statistics>& res, const vector<int>& rank_scores) {
+	started = false;
+	old = old_results;
+	read_matches(results);
+	print_results_table();
+	vector<int> p(names.size());
+	calculate_rankings(results, rank_scores, p, 1);
+	res.clear();
+	int n = stats.size();
+	for (int i = 0; i < n; ++i) {
+		if (stats[i].get_points() != 0) cout << i+1 << '.' << names[i] << ' ' << stats[i].get_points() << endl;
+		res[names[i]] = stats[i];
+	}
+}
+
+bool Tournament::remove_player_from_results(const string& name) {
+	map<string,int>::iterator it = old_results.find(name);
+	if (it != old_results.end()) {
+		old_results.erase(it);
+		return true;
+	}
+	else {
+		int n = stats.size();
+		for (int i = 0; i < n; ++i) {
+			if (names[i] == name) {
+				stats[i].clear();
+				return true;
+			}
+		}
+		return false;
+	}
+}
+
+
+// Consultoras
+
+int Tournament::get_category() const {
+	return c;
+}
+
+bool Tournament::has_started() const {
+	return started;
+}
+
+map<string,int> Tournament::get_old_results() const {
+	map<string,int> res;
+	int n = stats.size();
+	for (int i = 0; i < n; ++i) res[names[i]] = stats[i].get_points();
+	return res;
+}
+
+
+// Escritoras
+
+void Tournament::print_starting_pairs() {
+	pairings(results, 1, 2, names.size());
+	print_pairings(results);
+	cout << endl;
+}
+
+void Tournament::print_results_table() {
+	print_table(results);
+	cout << endl;
 }

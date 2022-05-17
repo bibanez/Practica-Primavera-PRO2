@@ -12,7 +12,7 @@ Contiene la información relativa a las categorías.
 \doxysubsection*{Métodos públicos}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_categories_a2c0e6373cb8a311ced54225437c11bda}{read\+\_\+categories}} (int C, int K)
+void \mbox{\hyperlink{class_categories_a2c0e6373cb8a311ced54225437c11bda}{read\+\_\+categories}} (int \mbox{\hyperlink{class_categories_a666db38464a39984605f0e28e1bc6324}{C}}, int \mbox{\hyperlink{class_categories_a9fd6bc659410d5645b72ecaecbd138c9}{K}})
 \begin{DoxyCompactList}\small\item\em Lee la información de las categorías. \end{DoxyCompactList}\item 
 vector$<$ int $>$ \mbox{\hyperlink{class_categories_a708f9b0e824e3ddd69897336eba93c90}{get\+\_\+ctg\+\_\+scores}} (int c) const
 \begin{DoxyCompactList}\small\item\em Obtiene las putunaciones por nivel de una categoría. \end{DoxyCompactList}\item 
@@ -24,6 +24,17 @@ string \mbox{\hyperlink{class_categories_aac421f34e0afd755e181b08c401a7a6a}{get\
 \begin{DoxyCompactList}\small\item\em Obtener el nombre de una categoría. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_categories_a1bc219c1c6d3c237dc7e5d1d3b88dee5}{list\+\_\+categories}} ()
 \begin{DoxyCompactList}\small\item\em Imprime las categorías. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_categories_a3b964923b31cde90c72848e6647c2ee8}{names}}
+\begin{DoxyCompactList}\small\item\em Identificadores de las categorías. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ \mbox{\hyperlink{class_categories_a133d4a3f71b7435f77e54b5dee7b6c00}{ctg\+\_\+scores}}
+\begin{DoxyCompactList}\small\item\em Matriz {\ttfamily CxK} que contiene las puntuaciones por categoría para cada categoría, con el mismo índice identificador que {\ttfamily names}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_categories_a666db38464a39984605f0e28e1bc6324}{C}}
+\begin{DoxyCompactList}\small\item\em Número de categorías. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_categories_a9fd6bc659410d5645b72ecaecbd138c9}{K}}
+\begin{DoxyCompactList}\small\item\em Número máximo de niveles por categoría. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descripción detallada}
@@ -34,31 +45,40 @@ Definición en la línea \mbox{\hyperlink{_categories_8hh_source_l00018}{18}} de
 
 
 \doxysubsection{Documentación de las funciones miembro}
-\mbox{\Hypertarget{class_categories_af6f09ba2c0d7a9936861ca881ead1943}\label{class_categories_af6f09ba2c0d7a9936861ca881ead1943}} 
-\index{Categories@{Categories}!count\_categories@{count\_categories}}
-\index{count\_categories@{count\_categories}!Categories@{Categories}}
-\doxysubsubsection{\texorpdfstring{count\_categories()}{count\_categories()}}
-{\footnotesize\ttfamily int Categories\+::count\+\_\+categories (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+\mbox{\Hypertarget{class_categories_a2c0e6373cb8a311ced54225437c11bda}\label{class_categories_a2c0e6373cb8a311ced54225437c11bda}} 
+\index{Categories@{Categories}!read\_categories@{read\_categories}}
+\index{read\_categories@{read\_categories}!Categories@{Categories}}
+\doxysubsubsection{\texorpdfstring{read\_categories()}{read\_categories()}}
+{\footnotesize\ttfamily void Categories\+::read\+\_\+categories (\begin{DoxyParamCaption}\item[{int}]{C,  }\item[{int}]{K }\end{DoxyParamCaption})}
 
 
 
-Obtiene el número de categorías en la clase. 
+Lee la información de las categorías. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape cierto} 
+{\ttfamily C \texorpdfstring{$>$}{>}= 1}, {\ttfamily K \texorpdfstring{$>$}{>}= 4} En el canal de entrada hay primero C strings con los nombres asociados a las categorías identificadas por los valores de 1 a {\ttfamily C} en orden creciente. Luego, en el canal de entrada hay {\ttfamily CxK} enteros {\ttfamily \texorpdfstring{$>$}{>}= 0} que serán los puntos por categoría y nivel ordenados crecientemente por categorías y dentro de cada categoría, ordenados crecientemente por nivel. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-Retorna el número de categorías que hay actualmente en la clase 
+Se borra el contenido de {\ttfamily this-\/\texorpdfstring{$>$}{>}ctg\+\_\+scores} y reempleza con los puntos por categoría y nivel en el canal de entrada. Se borra el contenido de {\ttfamily this-\/\texorpdfstring{$>$}{>}names} y se reemplaza con los nombres en el canal de entrada. 
 \end{DoxyPostcond}
 
 
-Definición en la línea \mbox{\hyperlink{_categories_8cc_source_l00024}{24}} del archivo \mbox{\hyperlink{_categories_8cc_source}{Categories.\+cc}}.
+Definición en la línea \mbox{\hyperlink{_categories_8cc_source_l00005}{5}} del archivo \mbox{\hyperlink{_categories_8cc_source}{Categories.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00024                                        \{}
-\DoxyCodeLine{00025   \textcolor{keywordflow}{return} C;}
-\DoxyCodeLine{00026 \}}
+\DoxyCodeLine{00005                                              \{}
+\DoxyCodeLine{00006   \mbox{\hyperlink{class_categories_a3b964923b31cde90c72848e6647c2ee8}{names}} = vector<string>(\mbox{\hyperlink{class_categories_a666db38464a39984605f0e28e1bc6324}{C}});}
+\DoxyCodeLine{00007   \mbox{\hyperlink{class_categories_a133d4a3f71b7435f77e54b5dee7b6c00}{ctg\_scores}} = vector< vector<int> >(\mbox{\hyperlink{class_categories_a666db38464a39984605f0e28e1bc6324}{C}}, vector<int>(\mbox{\hyperlink{class_categories_a9fd6bc659410d5645b72ecaecbd138c9}{K}}));}
+\DoxyCodeLine{00008   this-\/>C = \mbox{\hyperlink{class_categories_a666db38464a39984605f0e28e1bc6324}{C}};}
+\DoxyCodeLine{00009   this-\/>\mbox{\hyperlink{class_categories_a9fd6bc659410d5645b72ecaecbd138c9}{K}} = \mbox{\hyperlink{class_categories_a9fd6bc659410d5645b72ecaecbd138c9}{K}};}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < C; ++i) cin >> \mbox{\hyperlink{class_categories_a3b964923b31cde90c72848e6647c2ee8}{names}}[i];}
+\DoxyCodeLine{00012   }
+\DoxyCodeLine{00013   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_categories_a666db38464a39984605f0e28e1bc6324}{C}}; ++i) \{}
+\DoxyCodeLine{00014     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < K; ++j) cin >> \mbox{\hyperlink{class_categories_a133d4a3f71b7435f77e54b5dee7b6c00}{ctg\_scores}}[i][j];}
+\DoxyCodeLine{00015   \}}
+\DoxyCodeLine{00016 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_categories_a708f9b0e824e3ddd69897336eba93c90}\label{class_categories_a708f9b0e824e3ddd69897336eba93c90}} 
@@ -79,40 +99,40 @@ Retorna el valor de {\ttfamily ctg\+\_\+scores} para la categoría {\ttfamily c}
 \end{DoxyPostcond}
 
 
-Definición en la línea \mbox{\hyperlink{_categories_8cc_source_l00020}{20}} del archivo \mbox{\hyperlink{_categories_8cc_source}{Categories.\+cc}}.
+Definición en la línea \mbox{\hyperlink{_categories_8cc_source_l00021}{21}} del archivo \mbox{\hyperlink{_categories_8cc_source}{Categories.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00020                                                   \{}
-\DoxyCodeLine{00021   \textcolor{keywordflow}{return} ctg\_scores[c-\/1];}
-\DoxyCodeLine{00022 \}}
+\DoxyCodeLine{00021                                                   \{}
+\DoxyCodeLine{00022   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_categories_a133d4a3f71b7435f77e54b5dee7b6c00}{ctg\_scores}}[c-\/1];}
+\DoxyCodeLine{00023 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_categories_aac421f34e0afd755e181b08c401a7a6a}\label{class_categories_aac421f34e0afd755e181b08c401a7a6a}} 
-\index{Categories@{Categories}!get\_name@{get\_name}}
-\index{get\_name@{get\_name}!Categories@{Categories}}
-\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
-{\footnotesize\ttfamily string Categories\+::get\+\_\+name (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption}) const}
+\mbox{\Hypertarget{class_categories_af6f09ba2c0d7a9936861ca881ead1943}\label{class_categories_af6f09ba2c0d7a9936861ca881ead1943}} 
+\index{Categories@{Categories}!count\_categories@{count\_categories}}
+\index{count\_categories@{count\_categories}!Categories@{Categories}}
+\doxysubsubsection{\texorpdfstring{count\_categories()}{count\_categories()}}
+{\footnotesize\ttfamily int Categories\+::count\+\_\+categories (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
-Obtener el nombre de una categoría. 
+Obtiene el número de categorías en la clase. 
 
 \begin{DoxyPrecond}{Precondición}
-1 \texorpdfstring{$<$}{<}= c \texorpdfstring{$<$}{<}= C 
+{\itshape cierto} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-Retorna el nombre de la categoría con identificador c 
+Retorna el número de categorías que hay actualmente en la clase 
 \end{DoxyPostcond}
 
 
-Definición en la línea \mbox{\hyperlink{_categories_8cc_source_l00032}{32}} del archivo \mbox{\hyperlink{_categories_8cc_source}{Categories.\+cc}}.
+Definición en la línea \mbox{\hyperlink{_categories_8cc_source_l00025}{25}} del archivo \mbox{\hyperlink{_categories_8cc_source}{Categories.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00032                                        \{}
-\DoxyCodeLine{00033   \textcolor{keywordflow}{return} names[c-\/1];}
-\DoxyCodeLine{00034 \}}
+\DoxyCodeLine{00025                                        \{}
+\DoxyCodeLine{00026   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_categories_a666db38464a39984605f0e28e1bc6324}{C}};}
+\DoxyCodeLine{00027 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_categories_a7b377582ccad7e69d2a0af98e2109e14}\label{class_categories_a7b377582ccad7e69d2a0af98e2109e14}} 
@@ -133,13 +153,40 @@ Retorna el número de rangos para los cuales la clase tiene valores de puntuaci�
 \end{DoxyPostcond}
 
 
-Definición en la línea \mbox{\hyperlink{_categories_8cc_source_l00028}{28}} del archivo \mbox{\hyperlink{_categories_8cc_source}{Categories.\+cc}}.
+Definición en la línea \mbox{\hyperlink{_categories_8cc_source_l00029}{29}} del archivo \mbox{\hyperlink{_categories_8cc_source}{Categories.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00028                                      \{}
-\DoxyCodeLine{00029   \textcolor{keywordflow}{return} K;}
-\DoxyCodeLine{00030 \}}
+\DoxyCodeLine{00029                                      \{}
+\DoxyCodeLine{00030   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_categories_a9fd6bc659410d5645b72ecaecbd138c9}{K}};}
+\DoxyCodeLine{00031 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_categories_aac421f34e0afd755e181b08c401a7a6a}\label{class_categories_aac421f34e0afd755e181b08c401a7a6a}} 
+\index{Categories@{Categories}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!Categories@{Categories}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily string Categories\+::get\+\_\+name (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption}) const}
+
+
+
+Obtener el nombre de una categoría. 
+
+\begin{DoxyPrecond}{Precondición}
+1 \texorpdfstring{$<$}{<}= c \texorpdfstring{$<$}{<}= C 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna el nombre de la categoría con identificador c 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_categories_8cc_source_l00033}{33}} del archivo \mbox{\hyperlink{_categories_8cc_source}{Categories.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033                                        \{}
+\DoxyCodeLine{00034   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_categories_a3b964923b31cde90c72848e6647c2ee8}{names}}[c-\/1];}
+\DoxyCodeLine{00035 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_categories_a1bc219c1c6d3c237dc7e5d1d3b88dee5}\label{class_categories_a1bc219c1c6d3c237dc7e5d1d3b88dee5}} 
@@ -160,62 +207,79 @@ Para cada categoría, imprime su nombre y en orden creciente las puntuaciones po
 \end{DoxyPostcond}
 
 
-Definición en la línea \mbox{\hyperlink{_categories_8cc_source_l00036}{36}} del archivo \mbox{\hyperlink{_categories_8cc_source}{Categories.\+cc}}.
+Definición en la línea \mbox{\hyperlink{_categories_8cc_source_l00040}{40}} del archivo \mbox{\hyperlink{_categories_8cc_source}{Categories.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00036                                  \{}
-\DoxyCodeLine{00037   cout << C << \textcolor{charliteral}{' '} << K << endl;}
-\DoxyCodeLine{00038   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < C; ++i) \{}
-\DoxyCodeLine{00039     cout << names[i];}
-\DoxyCodeLine{00040     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < K; ++j) cout << \textcolor{charliteral}{' '} << ctg\_scores[i][j];}
-\DoxyCodeLine{00041     cout << endl;}
-\DoxyCodeLine{00042   \}}
-\DoxyCodeLine{00043 \}}
+\DoxyCodeLine{00040                                  \{}
+\DoxyCodeLine{00041   cout << \mbox{\hyperlink{class_categories_a666db38464a39984605f0e28e1bc6324}{C}} << \textcolor{charliteral}{' '} << \mbox{\hyperlink{class_categories_a9fd6bc659410d5645b72ecaecbd138c9}{K}} << endl;}
+\DoxyCodeLine{00042   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_categories_a666db38464a39984605f0e28e1bc6324}{C}}; ++i) \{}
+\DoxyCodeLine{00043     cout << \mbox{\hyperlink{class_categories_a3b964923b31cde90c72848e6647c2ee8}{names}}[i];}
+\DoxyCodeLine{00044     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{class_categories_a9fd6bc659410d5645b72ecaecbd138c9}{K}}; ++j) cout << \textcolor{charliteral}{' '} << \mbox{\hyperlink{class_categories_a133d4a3f71b7435f77e54b5dee7b6c00}{ctg\_scores}}[i][j];}
+\DoxyCodeLine{00045     cout << endl;}
+\DoxyCodeLine{00046   \}}
+\DoxyCodeLine{00047 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_categories_a2c0e6373cb8a311ced54225437c11bda}\label{class_categories_a2c0e6373cb8a311ced54225437c11bda}} 
-\index{Categories@{Categories}!read\_categories@{read\_categories}}
-\index{read\_categories@{read\_categories}!Categories@{Categories}}
-\doxysubsubsection{\texorpdfstring{read\_categories()}{read\_categories()}}
-{\footnotesize\ttfamily void Categories\+::read\+\_\+categories (\begin{DoxyParamCaption}\item[{int}]{C,  }\item[{int}]{K }\end{DoxyParamCaption})}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_categories_a3b964923b31cde90c72848e6647c2ee8}\label{class_categories_a3b964923b31cde90c72848e6647c2ee8}} 
+\index{Categories@{Categories}!names@{names}}
+\index{names@{names}!Categories@{Categories}}
+\doxysubsubsection{\texorpdfstring{names}{names}}
+{\footnotesize\ttfamily vector$<$string$>$ Categories\+::names\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Lee la información de las categorías. 
-
-\begin{DoxyPrecond}{Precondición}
-{\itshape cierto} 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Crea la clase de categorías con categorías iniciales 
-\end{DoxyPostcond}
-\begin{DoxyPrecond}{Precondición}
-{\ttfamily C \texorpdfstring{$>$}{>}= 1}, {\ttfamily K \texorpdfstring{$>$}{>}= 4} En el canal de entrada hay primero C strings con los nombres asociados a las categorías identificadas por los valores de 1 a C en orden creciente. Luego, en el canal de entrada hay CxK enteros \texorpdfstring{$>$}{>}= 0 que serán los puntos por categoría y nivel ordenados crecientemente por categorías y dentro de cada categoría, ordenados crecientemente por nivel. 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Se borra el contenido de \textquotesingle{}this-\/\texorpdfstring{$>$}{>}ctg\+\_\+scores\textquotesingle{} y reempleza con los puntos por categoría y nivel en el canal de entrada. Se borra el contenido de \textquotesingle{}this-\/\texorpdfstring{$>$}{>}names\textquotesingle{} y se reemplaza con los nombres en el canal de entrada. 
-\end{DoxyPostcond}
+Identificadores de las categorías. 
 
 
-Definición en la línea \mbox{\hyperlink{_categories_8cc_source_l00007}{7}} del archivo \mbox{\hyperlink{_categories_8cc_source}{Categories.\+cc}}.
+
+Definición en la línea \mbox{\hyperlink{_categories_8hh_source_l00022}{22}} del archivo \mbox{\hyperlink{_categories_8hh_source}{Categories.\+hh}}.
+
+\mbox{\Hypertarget{class_categories_a133d4a3f71b7435f77e54b5dee7b6c00}\label{class_categories_a133d4a3f71b7435f77e54b5dee7b6c00}} 
+\index{Categories@{Categories}!ctg\_scores@{ctg\_scores}}
+\index{ctg\_scores@{ctg\_scores}!Categories@{Categories}}
+\doxysubsubsection{\texorpdfstring{ctg\_scores}{ctg\_scores}}
+{\footnotesize\ttfamily vector$<$ vector$<$int$>$ $>$ Categories\+::ctg\+\_\+scores\hspace{0.3cm}{\ttfamily [private]}}
 
 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00007                                              \{}
-\DoxyCodeLine{00008   names = vector<string>(C);}
-\DoxyCodeLine{00009   ctg\_scores = vector< vector<int> >(C, vector<int>(K));}
-\DoxyCodeLine{00010   this-\/>C = C;}
-\DoxyCodeLine{00011   this-\/>K = K;}
-\DoxyCodeLine{00012 }
-\DoxyCodeLine{00013   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < C; ++i) cin >> names[i];}
-\DoxyCodeLine{00014   }
-\DoxyCodeLine{00015   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < C; ++i) \{}
-\DoxyCodeLine{00016     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < K; ++j) cin >> ctg\_scores[i][j];}
-\DoxyCodeLine{00017   \}}
-\DoxyCodeLine{00018 \}}
 
-\end{DoxyCode}
+Matriz {\ttfamily CxK} que contiene las puntuaciones por categoría para cada categoría, con el mismo índice identificador que {\ttfamily names}. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_categories_8hh_source_l00027}{27}} del archivo \mbox{\hyperlink{_categories_8hh_source}{Categories.\+hh}}.
+
+\mbox{\Hypertarget{class_categories_a666db38464a39984605f0e28e1bc6324}\label{class_categories_a666db38464a39984605f0e28e1bc6324}} 
+\index{Categories@{Categories}!C@{C}}
+\index{C@{C}!Categories@{Categories}}
+\doxysubsubsection{\texorpdfstring{C}{C}}
+{\footnotesize\ttfamily int Categories\+::C\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Número de categorías. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_categories_8hh_source_l00030}{30}} del archivo \mbox{\hyperlink{_categories_8hh_source}{Categories.\+hh}}.
+
+\mbox{\Hypertarget{class_categories_a9fd6bc659410d5645b72ecaecbd138c9}\label{class_categories_a9fd6bc659410d5645b72ecaecbd138c9}} 
+\index{Categories@{Categories}!K@{K}}
+\index{K@{K}!Categories@{Categories}}
+\doxysubsubsection{\texorpdfstring{K}{K}}
+{\footnotesize\ttfamily int Categories\+::K\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Número máximo de niveles por categoría. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_categories_8hh_source_l00033}{33}} del archivo \mbox{\hyperlink{_categories_8hh_source}{Categories.\+hh}}.
+
 
 
 La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}

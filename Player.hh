@@ -14,10 +14,12 @@
 using namespace std;
 
 /** @class Player
- *  @brief Contiene el nombre y puntuación de un jugador 
+ *  @brief Esta clase extiende la funcionalidad de Statistics para comprender 
+ *  los rankings en el circuito.
  */
 class Player : public Statistics {
 	private:
+		/** @brief Ranking del jugador */
 		int ranking;
 
 	public:
@@ -30,41 +32,14 @@ class Player : public Statistics {
 		 */
 		Player(int rk);
 
-		/** @brief Creadora
-		 *	\pre _cierto_
-		 *	\post Crea un jugador con los mismos parámetros que `p`
-		 */
-		//Player(const Player& p);
-
-
-		// Modificadoras
-
-		/** @brief Canviar puntuación
-		 *	\pre `n >= 0`
-		 *	\post Canvia el valor de `this->points` con el valor de `n`
-		 */
-		//void set_points(int n);
-
 		/** @brief Canviar el ranking
 		 *	\pre `1 <= n`
 		 *	\post Canvia el valor de `this->ranking`
 		 */
 		void set_ranking(int n);
 
-		/** @brief Añade estadísticas al parámetro implícito
-		 *	\pre `stats` tiene estadísticas válidas
-		 *	\post Se añaden las `stats` al parámetro implícito `st`
-		 */
-		//void add_stats(const Statistics& stats);
-
 
 		// Consultoras
-
-		/** @brief Obtener puntos
-		 *	\pre _cierto_
-		 *	\post Retorna los puntos del jugador en `this->points`
-		 */
-		//int get_points() const;
 
 		/** @brief Obtener el ranking del jugador
 		 *	\pre _cierto_

@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Práctica PRO2 Primavera 2022: Gestión de una liga de tenis profesional<span id="projectnumber">&#160;Especificación 19-4-2022</span>
+   <div id="projectname">Práctica PRO2 Primavera 2022: Gestión de una liga de tenis profesional<span id="projectnumber">&#160;Especificación 17-5-2022</span>
    </div>
   </td>
  </tr>
@@ -64,6 +64,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pri-attribs">Atributos privados</a> &#124;
 <a href="class_categories-members.html">Lista de todos los miembros</a>  </div>
   <div class="headertitle"><div class="title">Referencia de la Clase Categories</div></div>
 </div><!--header-->
@@ -76,7 +77,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Métodos públicos</h2></td></tr>
-<tr class="memitem:a2c0e6373cb8a311ced54225437c11bda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_categories.html#a2c0e6373cb8a311ced54225437c11bda">read_categories</a> (int C, int K)</td></tr>
+<tr class="memitem:a2c0e6373cb8a311ced54225437c11bda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_categories.html#a2c0e6373cb8a311ced54225437c11bda">read_categories</a> (int <a class="el" href="class_categories.html#a666db38464a39984605f0e28e1bc6324">C</a>, int <a class="el" href="class_categories.html#a9fd6bc659410d5645b72ecaecbd138c9">K</a>)</td></tr>
 <tr class="memdesc:a2c0e6373cb8a311ced54225437c11bda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lee la información de las categorías.  <a href="class_categories.html#a2c0e6373cb8a311ced54225437c11bda">Más...</a><br /></td></tr>
 <tr class="separator:a2c0e6373cb8a311ced54225437c11bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a708f9b0e824e3ddd69897336eba93c90"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_categories.html#a708f9b0e824e3ddd69897336eba93c90">get_ctg_scores</a> (int c) const</td></tr>
@@ -94,149 +95,27 @@ Métodos públicos</h2></td></tr>
 <tr class="memitem:a1bc219c1c6d3c237dc7e5d1d3b88dee5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_categories.html#a1bc219c1c6d3c237dc7e5d1d3b88dee5">list_categories</a> ()</td></tr>
 <tr class="memdesc:a1bc219c1c6d3c237dc7e5d1d3b88dee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime las categorías.  <a href="class_categories.html#a1bc219c1c6d3c237dc7e5d1d3b88dee5">Más...</a><br /></td></tr>
 <tr class="separator:a1bc219c1c6d3c237dc7e5d1d3b88dee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:a3b964923b31cde90c72848e6647c2ee8"><td class="memItemLeft" align="right" valign="top">vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_categories.html#a3b964923b31cde90c72848e6647c2ee8">names</a></td></tr>
+<tr class="memdesc:a3b964923b31cde90c72848e6647c2ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identificadores de las categorías.  <a href="class_categories.html#a3b964923b31cde90c72848e6647c2ee8">Más...</a><br /></td></tr>
+<tr class="separator:a3b964923b31cde90c72848e6647c2ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a133d4a3f71b7435f77e54b5dee7b6c00"><td class="memItemLeft" align="right" valign="top">vector&lt; vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_categories.html#a133d4a3f71b7435f77e54b5dee7b6c00">ctg_scores</a></td></tr>
+<tr class="memdesc:a133d4a3f71b7435f77e54b5dee7b6c00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matriz <code>CxK</code> que contiene las puntuaciones por categoría para cada categoría, con el mismo índice identificador que <code>names</code>.  <a href="class_categories.html#a133d4a3f71b7435f77e54b5dee7b6c00">Más...</a><br /></td></tr>
+<tr class="separator:a133d4a3f71b7435f77e54b5dee7b6c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a666db38464a39984605f0e28e1bc6324"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_categories.html#a666db38464a39984605f0e28e1bc6324">C</a></td></tr>
+<tr class="memdesc:a666db38464a39984605f0e28e1bc6324"><td class="mdescLeft">&#160;</td><td class="mdescRight">Número de categorías.  <a href="class_categories.html#a666db38464a39984605f0e28e1bc6324">Más...</a><br /></td></tr>
+<tr class="separator:a666db38464a39984605f0e28e1bc6324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fd6bc659410d5645b72ecaecbd138c9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_categories.html#a9fd6bc659410d5645b72ecaecbd138c9">K</a></td></tr>
+<tr class="memdesc:a9fd6bc659410d5645b72ecaecbd138c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Número máximo de niveles por categoría.  <a href="class_categories.html#a9fd6bc659410d5645b72ecaecbd138c9">Más...</a><br /></td></tr>
+<tr class="separator:a9fd6bc659410d5645b72ecaecbd138c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock"><p >Contiene la información relativa a las categorías. </p>
 
 <p class="definition">Definición en la línea <a class="el" href="_categories_8hh_source.html#l00018">18</a> del archivo <a class="el" href="_categories_8hh_source.html">Categories.hh</a>.</p>
 </div><h2 class="groupheader">Documentación de las funciones miembro</h2>
-<a id="af6f09ba2c0d7a9936861ca881ead1943" name="af6f09ba2c0d7a9936861ca881ead1943"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6f09ba2c0d7a9936861ca881ead1943">&#9670;&nbsp;</a></span>count_categories()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Categories::count_categories </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Obtiene el número de categorías en la clase. </p>
-<dl class="section pre"><dt>Precondición</dt><dd><em>cierto</em> </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Retorna el número de categorías que hay actualmente en la clase </dd></dl>
-
-<p class="definition">Definición en la línea <a class="el" href="_categories_8cc_source.html#l00024">24</a> del archivo <a class="el" href="_categories_8cc_source.html">Categories.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   24</span>                                       {</div>
-<div class="line"><span class="lineno">   25</span>  <span class="keywordflow">return</span> C;</div>
-<div class="line"><span class="lineno">   26</span>}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a708f9b0e824e3ddd69897336eba93c90" name="a708f9b0e824e3ddd69897336eba93c90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a708f9b0e824e3ddd69897336eba93c90">&#9670;&nbsp;</a></span>get_ctg_scores()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">vector&lt; int &gt; Categories::get_ctg_scores </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>c</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Obtiene las putunaciones por nivel de una categoría. </p>
-<dl class="section pre"><dt>Precondición</dt><dd><code>1 &lt;= c &lt; C = names.size()</code> </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Retorna el valor de <code>ctg_scores</code> para la categoría <code>c</code> </dd></dl>
-
-<p class="definition">Definición en la línea <a class="el" href="_categories_8cc_source.html#l00020">20</a> del archivo <a class="el" href="_categories_8cc_source.html">Categories.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>                                                  {</div>
-<div class="line"><span class="lineno">   21</span>  <span class="keywordflow">return</span> ctg_scores[c-1];</div>
-<div class="line"><span class="lineno">   22</span>}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="aac421f34e0afd755e181b08c401a7a6a" name="aac421f34e0afd755e181b08c401a7a6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac421f34e0afd755e181b08c401a7a6a">&#9670;&nbsp;</a></span>get_name()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">string Categories::get_name </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>c</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Obtener el nombre de una categoría. </p>
-<dl class="section pre"><dt>Precondición</dt><dd>1 &lt;= c &lt;= C </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Retorna el nombre de la categoría con identificador c </dd></dl>
-
-<p class="definition">Definición en la línea <a class="el" href="_categories_8cc_source.html#l00032">32</a> del archivo <a class="el" href="_categories_8cc_source.html">Categories.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   32</span>                                       {</div>
-<div class="line"><span class="lineno">   33</span>  <span class="keywordflow">return</span> names[c-1];</div>
-<div class="line"><span class="lineno">   34</span>}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a7b377582ccad7e69d2a0af98e2109e14" name="a7b377582ccad7e69d2a0af98e2109e14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b377582ccad7e69d2a0af98e2109e14">&#9670;&nbsp;</a></span>get_rank_depth()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Categories::get_rank_depth </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Obtiene el número de rangos. </p>
-<dl class="section pre"><dt>Precondición</dt><dd><em>cierto</em> </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Retorna el número de rangos para los cuales la clase tiene valores de puntuación </dd></dl>
-
-<p class="definition">Definición en la línea <a class="el" href="_categories_8cc_source.html#l00028">28</a> del archivo <a class="el" href="_categories_8cc_source.html">Categories.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                     {</div>
-<div class="line"><span class="lineno">   29</span>  <span class="keywordflow">return</span> K;</div>
-<div class="line"><span class="lineno">   30</span>}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a1bc219c1c6d3c237dc7e5d1d3b88dee5" name="a1bc219c1c6d3c237dc7e5d1d3b88dee5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1bc219c1c6d3c237dc7e5d1d3b88dee5">&#9670;&nbsp;</a></span>list_categories()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Categories::list_categories </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Imprime las categorías. </p>
-<dl class="section pre"><dt>Precondición</dt><dd><em>cierto</em> </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Para cada categoría, imprime su nombre y en orden creciente las puntuaciones por nivel </dd></dl>
-
-<p class="definition">Definición en la línea <a class="el" href="_categories_8cc_source.html#l00036">36</a> del archivo <a class="el" href="_categories_8cc_source.html">Categories.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>                                 {</div>
-<div class="line"><span class="lineno">   37</span>  cout &lt;&lt; C &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; K &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">   38</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; C; ++i) {</div>
-<div class="line"><span class="lineno">   39</span>    cout &lt;&lt; names[i];</div>
-<div class="line"><span class="lineno">   40</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; K; ++j) cout &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; ctg_scores[i][j];</div>
-<div class="line"><span class="lineno">   41</span>    cout &lt;&lt; endl;</div>
-<div class="line"><span class="lineno">   42</span>  }</div>
-<div class="line"><span class="lineno">   43</span>}</div>
-</div><!-- fragment -->
-</div>
-</div>
 <a id="a2c0e6373cb8a311ced54225437c11bda" name="a2c0e6373cb8a311ced54225437c11bda"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2c0e6373cb8a311ced54225437c11bda">&#9670;&nbsp;</a></span>read_categories()</h2>
 
@@ -264,25 +143,269 @@ Métodos públicos</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Lee la información de las categorías. </p>
-<dl class="section pre"><dt>Precondición</dt><dd><em>cierto</em> </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Crea la clase de categorías con categorías iniciales </dd></dl>
-<dl class="section pre"><dt>Precondición</dt><dd><code>C &gt;= 1</code>, <code>K &gt;= 4</code> En el canal de entrada hay primero C strings con los nombres asociados a las categorías identificadas por los valores de 1 a C en orden creciente. Luego, en el canal de entrada hay CxK enteros &gt;= 0 que serán los puntos por categoría y nivel ordenados crecientemente por categorías y dentro de cada categoría, ordenados crecientemente por nivel. </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Se borra el contenido de 'this-&gt;ctg_scores' y reempleza con los puntos por categoría y nivel en el canal de entrada. Se borra el contenido de 'this-&gt;names' y se reemplaza con los nombres en el canal de entrada. </dd></dl>
+<dl class="section pre"><dt>Precondición</dt><dd><code>C &gt;= 1</code>, <code>K &gt;= 4</code> En el canal de entrada hay primero C strings con los nombres asociados a las categorías identificadas por los valores de 1 a <code>C</code> en orden creciente. Luego, en el canal de entrada hay <code>CxK</code> enteros <code>&gt;= 0</code> que serán los puntos por categoría y nivel ordenados crecientemente por categorías y dentro de cada categoría, ordenados crecientemente por nivel. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Se borra el contenido de <code>this-&gt;ctg_scores</code> y reempleza con los puntos por categoría y nivel en el canal de entrada. Se borra el contenido de <code>this-&gt;names</code> y se reemplaza con los nombres en el canal de entrada. </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_categories_8cc_source.html#l00007">7</a> del archivo <a class="el" href="_categories_8cc_source.html">Categories.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    7</span>                                             {</div>
-<div class="line"><span class="lineno">    8</span>  names = vector&lt;string&gt;(C);</div>
-<div class="line"><span class="lineno">    9</span>  ctg_scores = vector&lt; vector&lt;int&gt; &gt;(C, vector&lt;int&gt;(K));</div>
-<div class="line"><span class="lineno">   10</span>  this-&gt;C = C;</div>
-<div class="line"><span class="lineno">   11</span>  this-&gt;K = K;</div>
-<div class="line"><span class="lineno">   12</span> </div>
-<div class="line"><span class="lineno">   13</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; C; ++i) cin &gt;&gt; names[i];</div>
-<div class="line"><span class="lineno">   14</span>  </div>
-<div class="line"><span class="lineno">   15</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; C; ++i) {</div>
-<div class="line"><span class="lineno">   16</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; K; ++j) cin &gt;&gt; ctg_scores[i][j];</div>
-<div class="line"><span class="lineno">   17</span>  }</div>
-<div class="line"><span class="lineno">   18</span>}</div>
+<p class="definition">Definición en la línea <a class="el" href="_categories_8cc_source.html#l00005">5</a> del archivo <a class="el" href="_categories_8cc_source.html">Categories.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    5</span>                                             {</div>
+<div class="line"><span class="lineno">    6</span>  <a class="code hl_variable" href="class_categories.html#a3b964923b31cde90c72848e6647c2ee8">names</a> = vector&lt;string&gt;(<a class="code hl_variable" href="class_categories.html#a666db38464a39984605f0e28e1bc6324">C</a>);</div>
+<div class="line"><span class="lineno">    7</span>  <a class="code hl_variable" href="class_categories.html#a133d4a3f71b7435f77e54b5dee7b6c00">ctg_scores</a> = vector&lt; vector&lt;int&gt; &gt;(<a class="code hl_variable" href="class_categories.html#a666db38464a39984605f0e28e1bc6324">C</a>, vector&lt;int&gt;(<a class="code hl_variable" href="class_categories.html#a9fd6bc659410d5645b72ecaecbd138c9">K</a>));</div>
+<div class="line"><span class="lineno">    8</span>  this-&gt;C = <a class="code hl_variable" href="class_categories.html#a666db38464a39984605f0e28e1bc6324">C</a>;</div>
+<div class="line"><span class="lineno">    9</span>  this-&gt;<a class="code hl_variable" href="class_categories.html#a9fd6bc659410d5645b72ecaecbd138c9">K</a> = <a class="code hl_variable" href="class_categories.html#a9fd6bc659410d5645b72ecaecbd138c9">K</a>;</div>
+<div class="line"><span class="lineno">   10</span> </div>
+<div class="line"><span class="lineno">   11</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; C; ++i) cin &gt;&gt; <a class="code hl_variable" href="class_categories.html#a3b964923b31cde90c72848e6647c2ee8">names</a>[i];</div>
+<div class="line"><span class="lineno">   12</span>  </div>
+<div class="line"><span class="lineno">   13</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_categories.html#a666db38464a39984605f0e28e1bc6324">C</a>; ++i) {</div>
+<div class="line"><span class="lineno">   14</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; K; ++j) cin &gt;&gt; <a class="code hl_variable" href="class_categories.html#a133d4a3f71b7435f77e54b5dee7b6c00">ctg_scores</a>[i][j];</div>
+<div class="line"><span class="lineno">   15</span>  }</div>
+<div class="line"><span class="lineno">   16</span>}</div>
+<div class="ttc" id="aclass_categories_html_a133d4a3f71b7435f77e54b5dee7b6c00"><div class="ttname"><a href="class_categories.html#a133d4a3f71b7435f77e54b5dee7b6c00">Categories::ctg_scores</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; ctg_scores</div><div class="ttdoc">Matriz CxK que contiene las puntuaciones por categoría para cada categoría, con el mismo índice ident...</div><div class="ttdef"><b>Definition:</b> <a href="_categories_8hh_source.html#l00027">Categories.hh:27</a></div></div>
+<div class="ttc" id="aclass_categories_html_a3b964923b31cde90c72848e6647c2ee8"><div class="ttname"><a href="class_categories.html#a3b964923b31cde90c72848e6647c2ee8">Categories::names</a></div><div class="ttdeci">vector&lt; string &gt; names</div><div class="ttdoc">Identificadores de las categorías.</div><div class="ttdef"><b>Definition:</b> <a href="_categories_8hh_source.html#l00022">Categories.hh:22</a></div></div>
+<div class="ttc" id="aclass_categories_html_a666db38464a39984605f0e28e1bc6324"><div class="ttname"><a href="class_categories.html#a666db38464a39984605f0e28e1bc6324">Categories::C</a></div><div class="ttdeci">int C</div><div class="ttdoc">Número de categorías.</div><div class="ttdef"><b>Definition:</b> <a href="_categories_8hh_source.html#l00030">Categories.hh:30</a></div></div>
+<div class="ttc" id="aclass_categories_html_a9fd6bc659410d5645b72ecaecbd138c9"><div class="ttname"><a href="class_categories.html#a9fd6bc659410d5645b72ecaecbd138c9">Categories::K</a></div><div class="ttdeci">int K</div><div class="ttdoc">Número máximo de niveles por categoría.</div><div class="ttdef"><b>Definition:</b> <a href="_categories_8hh_source.html#l00033">Categories.hh:33</a></div></div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="a708f9b0e824e3ddd69897336eba93c90" name="a708f9b0e824e3ddd69897336eba93c90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a708f9b0e824e3ddd69897336eba93c90">&#9670;&nbsp;</a></span>get_ctg_scores()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; int &gt; Categories::get_ctg_scores </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene las putunaciones por nivel de una categoría. </p>
+<dl class="section pre"><dt>Precondición</dt><dd><code>1 &lt;= c &lt; C = names.size()</code> </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Retorna el valor de <code>ctg_scores</code> para la categoría <code>c</code> </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_categories_8cc_source.html#l00021">21</a> del archivo <a class="el" href="_categories_8cc_source.html">Categories.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>                                                  {</div>
+<div class="line"><span class="lineno">   22</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="class_categories.html#a133d4a3f71b7435f77e54b5dee7b6c00">ctg_scores</a>[c-1];</div>
+<div class="line"><span class="lineno">   23</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af6f09ba2c0d7a9936861ca881ead1943" name="af6f09ba2c0d7a9936861ca881ead1943"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6f09ba2c0d7a9936861ca881ead1943">&#9670;&nbsp;</a></span>count_categories()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Categories::count_categories </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene el número de categorías en la clase. </p>
+<dl class="section pre"><dt>Precondición</dt><dd><em>cierto</em> </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Retorna el número de categorías que hay actualmente en la clase </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_categories_8cc_source.html#l00025">25</a> del archivo <a class="el" href="_categories_8cc_source.html">Categories.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>                                       {</div>
+<div class="line"><span class="lineno">   26</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="class_categories.html#a666db38464a39984605f0e28e1bc6324">C</a>;</div>
+<div class="line"><span class="lineno">   27</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7b377582ccad7e69d2a0af98e2109e14" name="a7b377582ccad7e69d2a0af98e2109e14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b377582ccad7e69d2a0af98e2109e14">&#9670;&nbsp;</a></span>get_rank_depth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Categories::get_rank_depth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene el número de rangos. </p>
+<dl class="section pre"><dt>Precondición</dt><dd><em>cierto</em> </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Retorna el número de rangos para los cuales la clase tiene valores de puntuación </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_categories_8cc_source.html#l00029">29</a> del archivo <a class="el" href="_categories_8cc_source.html">Categories.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>                                     {</div>
+<div class="line"><span class="lineno">   30</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="class_categories.html#a9fd6bc659410d5645b72ecaecbd138c9">K</a>;</div>
+<div class="line"><span class="lineno">   31</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aac421f34e0afd755e181b08c401a7a6a" name="aac421f34e0afd755e181b08c401a7a6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac421f34e0afd755e181b08c401a7a6a">&#9670;&nbsp;</a></span>get_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Categories::get_name </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtener el nombre de una categoría. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>1 &lt;= c &lt;= C </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Retorna el nombre de la categoría con identificador c </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_categories_8cc_source.html#l00033">33</a> del archivo <a class="el" href="_categories_8cc_source.html">Categories.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>                                       {</div>
+<div class="line"><span class="lineno">   34</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="class_categories.html#a3b964923b31cde90c72848e6647c2ee8">names</a>[c-1];</div>
+<div class="line"><span class="lineno">   35</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1bc219c1c6d3c237dc7e5d1d3b88dee5" name="a1bc219c1c6d3c237dc7e5d1d3b88dee5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bc219c1c6d3c237dc7e5d1d3b88dee5">&#9670;&nbsp;</a></span>list_categories()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Categories::list_categories </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprime las categorías. </p>
+<dl class="section pre"><dt>Precondición</dt><dd><em>cierto</em> </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Para cada categoría, imprime su nombre y en orden creciente las puntuaciones por nivel </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_categories_8cc_source.html#l00040">40</a> del archivo <a class="el" href="_categories_8cc_source.html">Categories.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>                                 {</div>
+<div class="line"><span class="lineno">   41</span>  cout &lt;&lt; <a class="code hl_variable" href="class_categories.html#a666db38464a39984605f0e28e1bc6324">C</a> &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; <a class="code hl_variable" href="class_categories.html#a9fd6bc659410d5645b72ecaecbd138c9">K</a> &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   42</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_categories.html#a666db38464a39984605f0e28e1bc6324">C</a>; ++i) {</div>
+<div class="line"><span class="lineno">   43</span>    cout &lt;&lt; <a class="code hl_variable" href="class_categories.html#a3b964923b31cde90c72848e6647c2ee8">names</a>[i];</div>
+<div class="line"><span class="lineno">   44</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_variable" href="class_categories.html#a9fd6bc659410d5645b72ecaecbd138c9">K</a>; ++j) cout &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; <a class="code hl_variable" href="class_categories.html#a133d4a3f71b7435f77e54b5dee7b6c00">ctg_scores</a>[i][j];</div>
+<div class="line"><span class="lineno">   45</span>    cout &lt;&lt; endl;</div>
+<div class="line"><span class="lineno">   46</span>  }</div>
+<div class="line"><span class="lineno">   47</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Documentación de los datos miembro</h2>
+<a id="a3b964923b31cde90c72848e6647c2ee8" name="a3b964923b31cde90c72848e6647c2ee8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b964923b31cde90c72848e6647c2ee8">&#9670;&nbsp;</a></span>names</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;string&gt; Categories::names</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Identificadores de las categorías. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_categories_8hh_source.html#l00022">22</a> del archivo <a class="el" href="_categories_8hh_source.html">Categories.hh</a>.</p>
+
+</div>
+</div>
+<a id="a133d4a3f71b7435f77e54b5dee7b6c00" name="a133d4a3f71b7435f77e54b5dee7b6c00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a133d4a3f71b7435f77e54b5dee7b6c00">&#9670;&nbsp;</a></span>ctg_scores</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; vector&lt;int&gt; &gt; Categories::ctg_scores</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Matriz <code>CxK</code> que contiene las puntuaciones por categoría para cada categoría, con el mismo índice identificador que <code>names</code>. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_categories_8hh_source.html#l00027">27</a> del archivo <a class="el" href="_categories_8hh_source.html">Categories.hh</a>.</p>
+
+</div>
+</div>
+<a id="a666db38464a39984605f0e28e1bc6324" name="a666db38464a39984605f0e28e1bc6324"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a666db38464a39984605f0e28e1bc6324">&#9670;&nbsp;</a></span>C</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Categories::C</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Número de categorías. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_categories_8hh_source.html#l00030">30</a> del archivo <a class="el" href="_categories_8hh_source.html">Categories.hh</a>.</p>
+
+</div>
+</div>
+<a id="a9fd6bc659410d5645b72ecaecbd138c9" name="a9fd6bc659410d5645b72ecaecbd138c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fd6bc659410d5645b72ecaecbd138c9">&#9670;&nbsp;</a></span>K</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Categories::K</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Número máximo de niveles por categoría. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_categories_8hh_source.html#l00033">33</a> del archivo <a class="el" href="_categories_8hh_source.html">Categories.hh</a>.</p>
+
 </div>
 </div>
 <hr/>La documentación para esta clase fue generada a partir de los siguientes ficheros:<ul>

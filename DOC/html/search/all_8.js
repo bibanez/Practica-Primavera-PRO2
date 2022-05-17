@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['player_0',['Player',['../class_player.html',1,'Player'],['../class_player.html#a5a2790fccf10c30106370d910c96d317',1,'Player::Player(const string &amp;name)'],['../class_player.html#ad46377ed50796f0f2d9b85fad503cb41',1,'Player::Player(int n)'],['../class_player.html#a76620b0c66411bac9974b35bedfc182c',1,'Player::Player(const string &amp;name, int points)'],['../class_player.html#adf2e45581d8fd61e26328fa48d13b9b7',1,'Player::Player(const Player &amp;p)']]],
-  ['player_2ecc_1',['Player.cc',['../_player_8cc.html',1,'']]],
-  ['player_2ehh_2',['Player.hh',['../_player_8hh.html',1,'']]],
-  ['print_5fstarting_5fpairs_3',['print_starting_pairs',['../class_tournament.html#ae54cbe8d2c187903d04e1475d60a2970',1,'Tournament']]],
-  ['print_5fstatistics_4',['print_statistics',['../class_statistics.html#a8985ecfe6cf78aa530287095ce57d625',1,'Statistics']]],
-  ['program_2ecc_5',['program.cc',['../program_8cc.html',1,'']]],
-  ['práctica_20de_20pro2_20primavera_202022_3a_20gestión_20de_20una_20liga_20de_20tenis_20profesional_2e_6',['Práctica de PRO2 primavera 2022: Gestión de una liga de tenis profesional.',['../index.html',1,'']]]
+  ['left_0',['left',['../struct_bin_tree_1_1_node.html#a265a6367635a38838e6a6366564be78d',1,'BinTree::Node::left()'],['../class_bin_tree.html#a82108db4c1b08d1f111027788c196d4e',1,'BinTree::left()']]],
+  ['list_5fcategories_1',['list_categories',['../class_categories.html#a1bc219c1c6d3c237dc7e5d1d3b88dee5',1,'Categories']]],
+  ['list_5fplayers_2',['list_players',['../class_ranking.html#a43da3834b2db0c9c6cfcf14a4f3d9ab5',1,'Ranking']]],
+  ['list_5franking_3',['list_ranking',['../class_ranking.html#a034b202d0e04c1f06a85e647f4f35930',1,'Ranking']]],
+  ['list_5ftournaments_4',['list_tournaments',['../class_tournaments.html#a9695a745c94203564120bab2b4ccf804',1,'Tournaments']]]
 ];

@@ -1,6 +1,4 @@
 #include "Ranking.hh"
-using namespace std;
-
 
 // Auxiliares
 

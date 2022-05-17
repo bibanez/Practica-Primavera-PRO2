@@ -1,0 +1,4 @@
+<map id="Representación gráfica de la clase" name="Representación gráfica de la clase">
+<area shape="rect" id="node1" href="$class_statistics.html" title="Contiene las estadísticas de un jugador." alt="" coords="5,5,80,32"/>
+<area shape="rect" id="node2" href="$class_player.html" title="Esta clase extiende la funcionalidad de Statistics para comprender los rankings en el circuito." alt="" coords="128,5,189,32"/>
+</map>

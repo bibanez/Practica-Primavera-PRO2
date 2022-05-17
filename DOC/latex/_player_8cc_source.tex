@@ -3,70 +3,21 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_player_8cc_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_player_8hh}{Player.hh}}"{}}}
 \DoxyCodeLine{\Hypertarget{_player_8cc_source_l00002}00002 }
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00003}00003 }
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00004}00004 \textcolor{comment}{/*Player::Player() \{}}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00005}00005 \textcolor{comment}{  name = "{}"{};}}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00006}00006 \textcolor{comment}{  points = 0;}}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00007}00007 \textcolor{comment}{\}*/}}
+\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00003}00003 \textcolor{comment}{// Creadoras}}
+\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00005}\mbox{\hyperlink{class_player_acc890586bab5d711200648babc4b0ff5}{00005}} \mbox{\hyperlink{class_player_acc890586bab5d711200648babc4b0ff5}{Player::Player}}(\textcolor{keywordtype}{int} rk) \{}
+\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00006}00006   \mbox{\hyperlink{class_player_ac793ef1d1e7c66b3b4a81a8b4ed005a5}{ranking}} = rk;}
+\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00007}00007 \}}
 \DoxyCodeLine{\Hypertarget{_player_8cc_source_l00008}00008 }
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00009}\mbox{\hyperlink{class_player_ad46377ed50796f0f2d9b85fad503cb41}{00009}} \mbox{\hyperlink{class_player_a5a2790fccf10c30106370d910c96d317}{Player::Player}}(\textcolor{keywordtype}{int} n) \{}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00010}00010   name = \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00011}00011   points = tmp = n;}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00012}00012   ranking = 0;}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00013}00013 \}}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00014}00014 }
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00015}\mbox{\hyperlink{class_player_a5a2790fccf10c30106370d910c96d317}{00015}} \mbox{\hyperlink{class_player_a5a2790fccf10c30106370d910c96d317}{Player::Player}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& \_name) \{}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00016}00016   name = \_name;}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00017}00017   points = tmp = ranking = 0;}
+\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00010}00010 \textcolor{comment}{// Modificadoras}}
+\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00012}\mbox{\hyperlink{class_player_a3544f62609a4504bc4b8d217ab4ed5e3}{00012}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_a3544f62609a4504bc4b8d217ab4ed5e3}{Player::set\_ranking}}(\textcolor{keywordtype}{int} n) \{}
+\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00013}00013   \mbox{\hyperlink{class_player_ac793ef1d1e7c66b3b4a81a8b4ed005a5}{ranking}} = n;}
+\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00014}00014 \}}
+\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00016}\mbox{\hyperlink{class_player_ae2d04c85bd624be8b2d19e11206b1a16}{00016}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_player_ae2d04c85bd624be8b2d19e11206b1a16}{Player::get\_ranking}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00017}00017   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_player_ac793ef1d1e7c66b3b4a81a8b4ed005a5}{ranking}};}
 \DoxyCodeLine{\Hypertarget{_player_8cc_source_l00018}00018 \}}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00019}00019 }
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00020}\mbox{\hyperlink{class_player_a76620b0c66411bac9974b35bedfc182c}{00020}} \mbox{\hyperlink{class_player_a5a2790fccf10c30106370d910c96d317}{Player::Player}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& \_name, \textcolor{keywordtype}{int} \_points) \{}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00021}00021   name = \_name;}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00022}00022   points = tmp = \_points;}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00023}00023   ranking = 0;}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00024}00024 \}}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00025}00025 }
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00026}\mbox{\hyperlink{class_player_adf2e45581d8fd61e26328fa48d13b9b7}{00026}} \mbox{\hyperlink{class_player_a5a2790fccf10c30106370d910c96d317}{Player::Player}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_player}{Player}}\& p) \{}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00027}00027   name = p.\mbox{\hyperlink{class_player_a7b7eb859de7cd84fca008408f9d969f9}{get\_name}}();}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00028}00028   points = p.\mbox{\hyperlink{class_player_af62cff981efa727fcb650e463e13e019}{get\_points}}();}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00029}00029   tmp = p.\mbox{\hyperlink{class_player_a509cb94bfc343e2dbc8a2d54a52606ba}{get\_tmp\_points}}();}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00030}00030   ranking = p.\mbox{\hyperlink{class_player_ae2d04c85bd624be8b2d19e11206b1a16}{get\_ranking}}();}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00031}00031 \}}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00032}00032 }
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00033}\mbox{\hyperlink{class_player_a3febbd31e6b1fd1f49bc3e5a0b938cd9}{00033}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_a3febbd31e6b1fd1f49bc3e5a0b938cd9}{Player::set\_name}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& \_name) \{}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00034}00034   name = \_name;}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00035}00035 \}}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00036}00036 }
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00037}\mbox{\hyperlink{class_player_acf61e116ff6ebf016d6a4a5423431df3}{00037}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_acf61e116ff6ebf016d6a4a5423431df3}{Player::set\_points}}(\textcolor{keywordtype}{int} n) \{}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00038}00038   points = n;}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00039}00039 \}}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00040}00040 }
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00041}\mbox{\hyperlink{class_player_a20d87708237a69339804f3bca9ff5425}{00041}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_a20d87708237a69339804f3bca9ff5425}{Player::set\_tmp\_points}}(\textcolor{keywordtype}{int} n) \{}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00042}00042   tmp = n;}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00043}00043 \}}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00044}00044 }
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00045}\mbox{\hyperlink{class_player_a3544f62609a4504bc4b8d217ab4ed5e3}{00045}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_a3544f62609a4504bc4b8d217ab4ed5e3}{Player::set\_ranking}}(\textcolor{keywordtype}{int} n) \{}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00046}00046   ranking = n;}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00047}00047 \}}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00048}00048 }
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00049}\mbox{\hyperlink{class_player_acac978288e2453eaaf571bfd089123a2}{00049}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_acac978288e2453eaaf571bfd089123a2}{Player::update\_player}}() \{}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00050}00050   points = tmp;}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00051}00051 \}}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00052}00052 }
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00053}\mbox{\hyperlink{class_player_a7b7eb859de7cd84fca008408f9d969f9}{00053}} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_player_a7b7eb859de7cd84fca008408f9d969f9}{Player::get\_name}}()\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00054}00054   \textcolor{keywordflow}{return} name;}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00055}00055 \}}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00056}00056 }
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00057}\mbox{\hyperlink{class_player_af62cff981efa727fcb650e463e13e019}{00057}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_player_af62cff981efa727fcb650e463e13e019}{Player::get\_points}}()\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00058}00058   \textcolor{keywordflow}{return} points;}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00059}00059 \}}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00060}00060 }
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00061}\mbox{\hyperlink{class_player_a509cb94bfc343e2dbc8a2d54a52606ba}{00061}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_player_a509cb94bfc343e2dbc8a2d54a52606ba}{Player::get\_tmp\_points}}()\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00062}00062   \textcolor{keywordflow}{return} tmp;}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00063}00063 \}}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00064}00064 }
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00065}\mbox{\hyperlink{class_player_ae2d04c85bd624be8b2d19e11206b1a16}{00065}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_player_ae2d04c85bd624be8b2d19e11206b1a16}{Player::get\_ranking}}()\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00066}00066   \textcolor{keywordflow}{return} ranking;}
-\DoxyCodeLine{\Hypertarget{_player_8cc_source_l00067}00067 \}}
 
 \end{DoxyCode}

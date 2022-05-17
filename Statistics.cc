@@ -1,6 +1,6 @@
 #include "Statistics.hh"
-using namespace std;
 
+// Creadoras
 
 Statistics::Statistics() {
 	tournaments = points = matches_won = matches_lost = sets_won = 
@@ -13,16 +13,8 @@ Statistics::Statistics(int t) {
 	tournaments = t;
 }
 
-/*Statistics::Statistics(const Statistics& original) {
-	tournaments = original.tournaments;
-	points = original.points;
-	matches_won = original.matches_won;
-	matches_lost = original.matches_lost;
-	sets_won = original.sets_won;
-	sets_lost = original.sets_lost;
-	games_won = original.games_won;
-	games_lost = original.games_lost;
-}*/
+
+// Modificadoras
 
 void Statistics::add_stats(const Statistics& stats) {
 	tournaments += stats.tournaments;
@@ -72,6 +64,9 @@ void Statistics::clear() {
 		sets_lost = games_won = games_lost = 0;
 }
 
+
+// Consultoras
+
 int Statistics::get_points() const {
 	return points;
 }
@@ -103,6 +98,9 @@ int Statistics::get_games_won() const {
 int Statistics::get_games_lost() const {
 	return games_lost;
 }
+
+
+// Escritoras
 
 void Statistics::print_statistics() const {
 	cout << "Ps:" << points;

@@ -2,216 +2,157 @@
 \mbox{\hyperlink{_ranking_8cc}{Ir a la documentación de este archivo.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_ranking_8hh}{Ranking.hh}}"{}}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00002}00002 \textcolor{keyword}{using namespace }std;}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00003}00003 \textcolor{comment}{// Auxiliares}}
 \DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00004}00004 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00005}\mbox{\hyperlink{class_ranking_a7b1142b455d06f3d455d796ed329118f}{00005}} \mbox{\hyperlink{class_ranking_a7b1142b455d06f3d455d796ed329118f}{Ranking::Ranking}}() \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00006}00006   stats = map<string, Statistics>();}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00007}00007   ranking = vector<Player>();}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00008}00008 \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00009}00009 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00010}00010 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00011}\mbox{\hyperlink{class_ranking_a11edd6bdb619ca3cfb63b891522b882d}{00011}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_ranking_a11edd6bdb619ca3cfb63b891522b882d}{Ranking::add\_player}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& name) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00012}00012   map<string,Statistics>::iterator it = stats.find(name);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00013}00013   \textcolor{keywordflow}{if} (it == stats.end()) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00014}00014     \mbox{\hyperlink{class_player}{Player}} p(name);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00015}00015     p.\mbox{\hyperlink{class_player_a3544f62609a4504bc4b8d217ab4ed5e3}{set\_ranking}}(ranking.size()+1);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00016}00016     ranking.push\_back(p);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00017}00017     stats[name];}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00018}00018     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00019}00019   \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00020}00020   \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00021}00021 \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00022}00022 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00023}\mbox{\hyperlink{class_ranking_aaa4eb88f2f5f6478940923ee49a9f596}{00023}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_ranking_aaa4eb88f2f5f6478940923ee49a9f596}{Ranking::remove\_player}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& name) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00024}00024   map<string, Statistics>::iterator it = stats.find(name);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00025}00025   \textcolor{keywordflow}{if} (it != stats.end()) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00026}00026     \textcolor{keywordtype}{int} i = \mbox{\hyperlink{class_ranking_ac34919621a76529cc800125179f94ad8}{get\_ranking}}(name)-\/1;}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00027}00027     ranking.erase(ranking.begin()+i);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00028}00028     stats.erase(it);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00029}00029     update\_ranking(i, ranking.size());}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00030}00030     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00031}00031   \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00032}00032   \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00033}00033 \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00005}\mbox{\hyperlink{class_ranking_a9255a4308513c4ad3faee3af2d407a52}{00005}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ranking_a9255a4308513c4ad3faee3af2d407a52}{Ranking::update\_ranking}}(\textcolor{keywordtype}{int} i, \textcolor{keywordtype}{int} j) \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00006}00006   \textcolor{keywordflow}{while} (i < j) \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00007}00007     \mbox{\hyperlink{class_ranking_a83bb955fd258ec28f9012b975ce2e22d}{ranking}}[i]-\/>second.set\_ranking(i+1);}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00008}00008     ++i;}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00009}00009   \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00010}00010 \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00012}\mbox{\hyperlink{class_ranking_a48a68ae2dac22a5d7e33fb0db6213445}{00012}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ranking_a48a68ae2dac22a5d7e33fb0db6213445}{Ranking::sort\_ranking}}() \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00013}00013   sort(\mbox{\hyperlink{class_ranking_a83bb955fd258ec28f9012b975ce2e22d}{ranking}}.begin(), \mbox{\hyperlink{class_ranking_a83bb955fd258ec28f9012b975ce2e22d}{ranking}}.end(), \mbox{\hyperlink{class_ranking_a4027e2e339b01b8721e4f8d0cab4716e}{cmp}});}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00014}00014   \textcolor{keywordtype}{int} n = \mbox{\hyperlink{class_ranking_a83bb955fd258ec28f9012b975ce2e22d}{ranking}}.size();}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00015}00015   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \mbox{\hyperlink{class_ranking_a83bb955fd258ec28f9012b975ce2e22d}{ranking}}[i]-\/>second.set\_ranking(i+1);}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00016}00016 \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00018}\mbox{\hyperlink{class_ranking_a4027e2e339b01b8721e4f8d0cab4716e}{00018}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_ranking_a4027e2e339b01b8721e4f8d0cab4716e}{Ranking::cmp}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_ranking_a7873924f1054c9096d5ab28aaf0c69af}{Player\_it}}\& a, \textcolor{keyword}{const} \mbox{\hyperlink{class_ranking_a7873924f1054c9096d5ab28aaf0c69af}{Player\_it}}\& b) \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00019}00019   \textcolor{keywordflow}{if} (a-\/>second.get\_points() == b-\/>second.get\_points()) }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00020}00020     \textcolor{keywordflow}{return} a-\/>second.get\_ranking() < b-\/>second.get\_ranking();}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00021}00021   \textcolor{keywordflow}{return} a-\/>second.get\_points() > b-\/>second.get\_points();}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00022}00022 \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00025}00025 \textcolor{comment}{// Creadoras}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00027}\mbox{\hyperlink{class_ranking_a7b1142b455d06f3d455d796ed329118f}{00027}} \mbox{\hyperlink{class_ranking_a7b1142b455d06f3d455d796ed329118f}{Ranking::Ranking}}() \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00028}00028   \mbox{\hyperlink{class_ranking_a5cfe9d31120562c9aed58f6aa0881d25}{stats}} = map<string,Player>();}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00029}00029   \mbox{\hyperlink{class_ranking_a83bb955fd258ec28f9012b975ce2e22d}{ranking}} = vector<Player\_it>();}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00030}00030 \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00033}00033 \textcolor{comment}{// Modificadoras}}
 \DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00034}00034 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00035}00035 \textcolor{keywordtype}{void} Ranking::update\_ranking(\textcolor{keywordtype}{int} i, \textcolor{keywordtype}{int} j) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00036}00036   \textcolor{keywordflow}{while} (i < j) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00037}00037     ranking[i].set\_ranking(i+1);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00038}00038     ++i;}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00039}00039   \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00040}00040 \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00041}00041 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00042}\mbox{\hyperlink{class_ranking_a76f06c55d7fb35eaba2dabf3b64d8b03}{00042}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_ranking_aaa4eb88f2f5f6478940923ee49a9f596}{Ranking::remove\_player}}(\textcolor{keywordtype}{int} n) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00043}00043   \textcolor{keywordflow}{if} (1 <= n and n <= ranking.size()) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00044}00044     -\/-\/n;}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00045}00045     stats.erase(ranking[n].\mbox{\hyperlink{class_ranking_a1db0c257fd2ceda3d4771ef1bdbe27d5}{get\_name}}());}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00046}00046     ranking.erase(ranking.begin()+n);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00047}00047     update\_ranking(n, ranking.size());}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00048}00048     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00049}00049   \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00050}00050   \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00051}00051 \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00052}00052 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00053}00053 \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00054}00054 \textcolor{comment}{bool cmp(const Player\& a, const Player\& b) \{}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00055}00055 \textcolor{comment}{  if (a.get\_points() == b.get\_points()) return a.get\_ranking() < b.get\_ranking();}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00056}00056 \textcolor{comment}{  else return a.get\_points() > b.get\_points();}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00057}00057 \textcolor{comment}{\}}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00058}00058 \textcolor{comment}{*/}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00059}00059 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00060}\mbox{\hyperlink{_ranking_8cc_a204a1f534d605d13af877bceed13a49e}{00060}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{_ranking_8cc_a204a1f534d605d13af877bceed13a49e}{cmp}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_player}{Player}}\& a, \textcolor{keyword}{const} \mbox{\hyperlink{class_player}{Player}}\& b) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00061}00061   \textcolor{keywordflow}{if} (a.\mbox{\hyperlink{class_player_af62cff981efa727fcb650e463e13e019}{get\_points}}() == b.\mbox{\hyperlink{class_player_af62cff981efa727fcb650e463e13e019}{get\_points}}()) \textcolor{keywordflow}{return} a.\mbox{\hyperlink{class_player_ae2d04c85bd624be8b2d19e11206b1a16}{get\_ranking}}() < b.\mbox{\hyperlink{class_player_ae2d04c85bd624be8b2d19e11206b1a16}{get\_ranking}}();}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00062}00062   \textcolor{keywordflow}{return} a.\mbox{\hyperlink{class_player_af62cff981efa727fcb650e463e13e019}{get\_points}}() > b.\mbox{\hyperlink{class_player_af62cff981efa727fcb650e463e13e019}{get\_points}}();}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00063}00063 \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00064}00064 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00065}\mbox{\hyperlink{class_ranking_aaa7f5ae061d8fb73a7342511a3cd2906}{00065}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_ranking_aaa7f5ae061d8fb73a7342511a3cd2906}{Ranking::count\_players}}()\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00066}00066   \textcolor{keywordflow}{return} ranking.size();}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00067}00067 \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00068}00068 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00069}\mbox{\hyperlink{class_ranking_ac34919621a76529cc800125179f94ad8}{00069}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_ranking_ac34919621a76529cc800125179f94ad8}{Ranking::get\_ranking}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& name)\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00070}00070   map<string, Statistics>::const\_iterator it1 = stats.find(name);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00071}00071   \textcolor{keywordflow}{if} (it1 != stats.end()) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00072}00072     \textcolor{keywordtype}{int} p = it1-\/>second.get\_points();}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00073}00073     vector<Player>::const\_iterator it2;}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00074}00074     it2 = lower\_bound(ranking.begin(), ranking.end(), \mbox{\hyperlink{class_player}{Player}}(p), \mbox{\hyperlink{_ranking_8cc_a204a1f534d605d13af877bceed13a49e}{cmp}});}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00075}00075     \textcolor{keywordflow}{while} (it2-\/>get\_name() != name and it2-\/>get\_points() == p) ++it2;}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00076}00076     \textcolor{keywordflow}{return} (it2 -\/ ranking.begin()) + 1;}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00035}\mbox{\hyperlink{class_ranking_a11edd6bdb619ca3cfb63b891522b882d}{00035}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_ranking_a11edd6bdb619ca3cfb63b891522b882d}{Ranking::add\_player}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& name) \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00036}00036   \mbox{\hyperlink{class_player}{Player}} p(\mbox{\hyperlink{class_ranking_a83bb955fd258ec28f9012b975ce2e22d}{ranking}}.size()+1);}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00037}00037   pair<Player\_it,bool> marker = \mbox{\hyperlink{class_ranking_a5cfe9d31120562c9aed58f6aa0881d25}{stats}}.insert(pair<string,Player>(name, p));}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00038}00038   \textcolor{keywordflow}{if} (marker.second) \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00039}00039     \mbox{\hyperlink{class_ranking_a83bb955fd258ec28f9012b975ce2e22d}{ranking}}.push\_back(marker.first);}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00040}00040     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00041}00041   \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00042}00042   \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00043}00043 \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00045}\mbox{\hyperlink{class_ranking_aaa4eb88f2f5f6478940923ee49a9f596}{00045}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_ranking_aaa4eb88f2f5f6478940923ee49a9f596}{Ranking::remove\_player}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& name) \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00046}00046   \mbox{\hyperlink{class_ranking_a7873924f1054c9096d5ab28aaf0c69af}{Player\_it}} it = \mbox{\hyperlink{class_ranking_a5cfe9d31120562c9aed58f6aa0881d25}{stats}}.find(name);}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00047}00047   \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_ranking_a5cfe9d31120562c9aed58f6aa0881d25}{stats}}.end()) \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00048}00048     \textcolor{keywordtype}{int} i = it-\/>second.get\_ranking() -\/ 1;}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00049}00049     \mbox{\hyperlink{class_ranking_a83bb955fd258ec28f9012b975ce2e22d}{ranking}}.erase(\mbox{\hyperlink{class_ranking_a83bb955fd258ec28f9012b975ce2e22d}{ranking}}.begin()+i);}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00050}00050     \mbox{\hyperlink{class_ranking_a5cfe9d31120562c9aed58f6aa0881d25}{stats}}.erase(it);}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00051}00051     \mbox{\hyperlink{class_ranking_a9255a4308513c4ad3faee3af2d407a52}{update\_ranking}}(i, \mbox{\hyperlink{class_ranking_a83bb955fd258ec28f9012b975ce2e22d}{ranking}}.size());}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00052}00052     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00053}00053   \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00054}00054   \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00055}00055 \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00057}\mbox{\hyperlink{class_ranking_a76f06c55d7fb35eaba2dabf3b64d8b03}{00057}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_ranking_aaa4eb88f2f5f6478940923ee49a9f596}{Ranking::remove\_player}}(\textcolor{keywordtype}{int} n) \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00058}00058   \textcolor{keywordflow}{if} (1 <= n and n <= \mbox{\hyperlink{class_ranking_a83bb955fd258ec28f9012b975ce2e22d}{ranking}}.size()) \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00059}00059     -\/-\/n; \textcolor{comment}{// El ranking 1 pasa a ser el indice 0}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00060}00060     \mbox{\hyperlink{class_ranking_a5cfe9d31120562c9aed58f6aa0881d25}{stats}}.erase(\mbox{\hyperlink{class_ranking_a83bb955fd258ec28f9012b975ce2e22d}{ranking}}[n]);}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00061}00061     \mbox{\hyperlink{class_ranking_a83bb955fd258ec28f9012b975ce2e22d}{ranking}}.erase(\mbox{\hyperlink{class_ranking_a83bb955fd258ec28f9012b975ce2e22d}{ranking}}.begin()+n);}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00062}00062     \mbox{\hyperlink{class_ranking_a9255a4308513c4ad3faee3af2d407a52}{update\_ranking}}(n, \mbox{\hyperlink{class_ranking_a83bb955fd258ec28f9012b975ce2e22d}{ranking}}.size());}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00063}00063     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00064}00064   \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00065}00065   \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00066}00066 \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00068}\mbox{\hyperlink{class_ranking_a63dff39266b00b2078fb0b7e900d53e7}{00068}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ranking_a63dff39266b00b2078fb0b7e900d53e7}{Ranking::add\_tournament\_results}}(\textcolor{keyword}{const} map<string, int>\& old, \textcolor{keyword}{const} map<string, Statistics>\& results) \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00069}00069   \textcolor{keywordflow}{if} (old.size() > 0) \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00070}00070     map<string,int>::const\_iterator it1 = old.begin();}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00071}00071     \textcolor{keywordflow}{while} (it1 != old.end()) \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00072}00072       \mbox{\hyperlink{class_ranking_a7873924f1054c9096d5ab28aaf0c69af}{Player\_it}} it = \mbox{\hyperlink{class_ranking_a5cfe9d31120562c9aed58f6aa0881d25}{stats}}.find(it1-\/>first);}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00073}00073       \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_ranking_a5cfe9d31120562c9aed58f6aa0881d25}{stats}}.end()) }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00074}00074         it-\/>second.set\_points(it-\/>second.get\_points() -\/ it1-\/>second);}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00075}00075       ++it1;}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00076}00076     \}}
 \DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00077}00077   \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00078}00078   \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00079}00079 \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00080}00080 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00081}\mbox{\hyperlink{class_ranking_a63dff39266b00b2078fb0b7e900d53e7}{00081}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ranking_a63dff39266b00b2078fb0b7e900d53e7}{Ranking::add\_tournament\_results}}(\textcolor{keyword}{const} map<string, int>\& old, \textcolor{keyword}{const} map<string, Statistics>\& results) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00082}00082   set<int> visited;}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00083}00083   \textcolor{keywordflow}{if} (old.size() > 0) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00084}00084     map<string,int>::const\_iterator it1 = old.begin();}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00085}00085     \textcolor{keywordflow}{while} (it1 != old.end()) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00086}00086       \textcolor{comment}{//cout << "{}S'HAN DE RESTAR "{} << it1-\/>second << "{} PUNTS AL JUGADOR "{} << it1-\/>first << endl;}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00087}00087       \textcolor{keywordtype}{int} i = \mbox{\hyperlink{class_ranking_ac34919621a76529cc800125179f94ad8}{get\_ranking}}(it1-\/>first) -\/ 1;}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00088}00088       \textcolor{keywordflow}{if} (i != -\/2) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00089}00089         ranking[i].set\_tmp\_points(ranking[i].get\_tmp\_points() -\/ it1-\/>second);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00090}00090         visited.insert(visited.end(), i);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00091}00091       \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00092}00092       ++it1;}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00093}00093     \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00094}00094   \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00095}00095 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00096}00096   \textcolor{keywordflow}{if} (results.size() > 0) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00097}00097     map<string,Statistics>::const\_iterator it2 = results.begin();}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00098}00098     \textcolor{keywordflow}{while} (it2 != results.end()) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00099}00099       \textcolor{keywordtype}{int} i = \mbox{\hyperlink{class_ranking_ac34919621a76529cc800125179f94ad8}{get\_ranking}}(it2-\/>first) -\/ 1;}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00100}00100       \textcolor{keywordflow}{if} (i != -\/2) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00101}00101         ranking[i].set\_tmp\_points(ranking[i].get\_tmp\_points() + it2-\/>second.get\_points());}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00102}00102         visited.insert(i);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00103}00103       \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00104}00104       ++it2;}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00105}00105     \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00106}00106   \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00107}00107 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00108}00108   set<int>::iterator it = visited.begin();}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00109}00109   \textcolor{keywordflow}{while} (it != visited.end()) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00110}00110     ranking[*it].update\_player();}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00111}00111     ++it;}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00112}00112   \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00113}00113   }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00114}00114   sort\_ranking();}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00079}00079   \textcolor{keywordflow}{if} (results.size() > 0) \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00080}00080     map<string,Statistics>::const\_iterator it2 = results.begin();}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00081}00081     \textcolor{keywordflow}{while} (it2 != results.end()) \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00082}00082       \mbox{\hyperlink{class_ranking_a7873924f1054c9096d5ab28aaf0c69af}{Player\_it}} it = \mbox{\hyperlink{class_ranking_a5cfe9d31120562c9aed58f6aa0881d25}{stats}}.find(it2-\/>first);}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00083}00083       \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_ranking_a5cfe9d31120562c9aed58f6aa0881d25}{stats}}.end()) it-\/>second.add\_stats(it2-\/>second);}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00084}00084       ++it2;}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00085}00085     \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00086}00086   \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00088}00088   \mbox{\hyperlink{class_ranking_a48a68ae2dac22a5d7e33fb0db6213445}{sort\_ranking}}();}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00089}00089 \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00092}00092 \textcolor{comment}{// Consultoras}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00094}\mbox{\hyperlink{class_ranking_a1db0c257fd2ceda3d4771ef1bdbe27d5}{00094}} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_ranking_a1db0c257fd2ceda3d4771ef1bdbe27d5}{Ranking::get\_name}}(\textcolor{keywordtype}{int} n)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00095}00095   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_ranking_a83bb955fd258ec28f9012b975ce2e22d}{ranking}}[n-\/1]-\/>first;}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00096}00096 \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00098}\mbox{\hyperlink{class_ranking_ac34919621a76529cc800125179f94ad8}{00098}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_ranking_ac34919621a76529cc800125179f94ad8}{Ranking::get\_ranking}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& name)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00099}00099   map<string,Player>::const\_iterator it = \mbox{\hyperlink{class_ranking_a5cfe9d31120562c9aed58f6aa0881d25}{stats}}.find(name);}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00100}00100   \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_ranking_a5cfe9d31120562c9aed58f6aa0881d25}{stats}}.end()) \textcolor{keywordflow}{return} it-\/>second.get\_ranking();}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00101}00101   \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00102}00102 \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00104}\mbox{\hyperlink{class_ranking_a0217927ec1a3c9c038a39668c51921da}{00104}} vector<string> \mbox{\hyperlink{class_ranking_a0217927ec1a3c9c038a39668c51921da}{Ranking::get\_names\_from\_rankings}}(\textcolor{keyword}{const} vector<int>\& rks)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00105}00105   \textcolor{keywordtype}{int} n = rks.size();}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00106}00106   vector<string> names(n);}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00107}00107   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) names[i] = \mbox{\hyperlink{class_ranking_a83bb955fd258ec28f9012b975ce2e22d}{ranking}}[rks[i]-\/1]-\/>first;}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00108}00108   \textcolor{keywordflow}{return} names;}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00109}00109 \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00111}\mbox{\hyperlink{class_ranking_aaa7f5ae061d8fb73a7342511a3cd2906}{00111}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_ranking_aaa7f5ae061d8fb73a7342511a3cd2906}{Ranking::count\_players}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00112}00112   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_ranking_a83bb955fd258ec28f9012b975ce2e22d}{ranking}}.size();}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00113}00113 \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00114}00114 }
 \DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00115}00115 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00116}00116   \textcolor{keywordflow}{if} (old.size() > 0) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00117}00117     map<string,int>::const\_iterator it1 = old.begin();}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00118}00118     \textcolor{keywordflow}{while} (it1 != old.end()) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00119}00119       map<string,Statistics>::iterator it = stats.find(it1-\/>first);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00120}00120       \textcolor{keywordflow}{if} (it != stats.end()) it-\/>second.set\_points(it-\/>second.get\_points() -\/ it1-\/>second);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00121}00121       ++it1;}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00122}00122     \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00116}00116 \textcolor{comment}{// Lectoras}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00117}00117 }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00118}\mbox{\hyperlink{class_ranking_ab5aee24457c107c1890499d0ac592183}{00118}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ranking_ab5aee24457c107c1890499d0ac592183}{Ranking::read\_players}}(\textcolor{keywordtype}{int} P) \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00119}00119   \textcolor{keywordflow}{while} (P-\/-\/) \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00120}00120     \textcolor{keywordtype}{string} s;}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00121}00121     cin >> s;}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00122}00122     \mbox{\hyperlink{class_ranking_a11edd6bdb619ca3cfb63b891522b882d}{add\_player}}(s);}
 \DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00123}00123   \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00124}00124 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00125}00125   \textcolor{keywordflow}{if} (results.size() > 0) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00126}00126     map<string,Statistics>::const\_iterator it2 = results.begin();}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00127}00127     it2 = results.begin();}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00128}00128     \textcolor{keywordflow}{while} (it2 != results.end()) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00129}00129       map<string,Statistics>::iterator it = stats.find(it2-\/>first);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00130}00130       \textcolor{keywordflow}{if} (it != stats.end()) it-\/>second.add\_stats(it2-\/>second);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00131}00131       ++it2;}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00132}00132     \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00124}00124 \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00125}00125 }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00126}00126 }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00127}00127 \textcolor{comment}{// Escritoras}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00128}00128 }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00129}\mbox{\hyperlink{class_ranking_a034b202d0e04c1f06a85e647f4f35930}{00129}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ranking_a034b202d0e04c1f06a85e647f4f35930}{Ranking::list\_ranking}}() \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00130}00130   \textcolor{keywordtype}{int} n = \mbox{\hyperlink{class_ranking_a83bb955fd258ec28f9012b975ce2e22d}{ranking}}.size();}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00131}00131   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00132}00132     cout << i+1 << \textcolor{charliteral}{' '} << \mbox{\hyperlink{class_ranking_a83bb955fd258ec28f9012b975ce2e22d}{ranking}}[i]-\/>first << \textcolor{charliteral}{' '} << \mbox{\hyperlink{class_ranking_a83bb955fd258ec28f9012b975ce2e22d}{ranking}}[i]-\/>second.get\_points() << endl;}
 \DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00133}00133   \}}
 \DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00134}00134 \}}
 \DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00135}00135 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00136}\mbox{\hyperlink{class_ranking_a9a08cb7ad56d41c6504c21d6fce9b348}{00136}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ranking_a9a08cb7ad56d41c6504c21d6fce9b348}{Ranking::remove\_tournament\_results}}(\textcolor{keyword}{const} map<string,int>\& res) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00137}00137   \textcolor{keywordflow}{if} (res.size() > 0) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00138}00138     vector<int> visited;}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00139}00139 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00140}00140     map<string,int>::const\_iterator it = res.begin();}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00141}00141     \textcolor{keywordflow}{while} (it != res.end()) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00142}00142       \textcolor{keywordtype}{int} i = \mbox{\hyperlink{class_ranking_ac34919621a76529cc800125179f94ad8}{get\_ranking}}(it-\/>first) -\/ 1;}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00143}00143       \textcolor{keywordflow}{if} (i != -\/2) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00144}00144         \textcolor{keywordtype}{int} points = ranking[i].get\_points() -\/ it-\/>second;}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00145}00145         \textcolor{comment}{//cout << it-\/>first << "{} LOSES "{} << it-\/>second << "{} POINTS"{} << endl;}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00146}00146         ranking[i].set\_tmp\_points(points);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00147}00147         map<string,Statistics>::iterator it1 = stats.find(it-\/>first);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00148}00148         it1-\/>second.set\_points(points);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00149}00149         visited.push\_back(i);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00150}00150       \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00151}00151       ++it;}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00152}00152     \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00153}00153 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00154}00154     \textcolor{keywordtype}{int} n = visited.size();}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00155}00155     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) ranking[visited[i]].update\_player();}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00156}00156 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00157}00157     sort\_ranking();}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00158}00158   \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00159}00159 \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00160}00160 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00161}00161 \textcolor{keywordtype}{void} Ranking::sort\_ranking() \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00162}00162   sort(ranking.begin(), ranking.end(), \mbox{\hyperlink{_ranking_8cc_a204a1f534d605d13af877bceed13a49e}{cmp}});}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00163}00163   \textcolor{keywordtype}{int} n = ranking.size();}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00164}00164   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) ranking[i].set\_ranking(i+1);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00165}00165 \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00166}00166 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00167}\mbox{\hyperlink{class_ranking_a1db0c257fd2ceda3d4771ef1bdbe27d5}{00167}} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_ranking_a1db0c257fd2ceda3d4771ef1bdbe27d5}{Ranking::get\_name}}(\textcolor{keywordtype}{int} n)\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00168}00168   \textcolor{keywordflow}{return} ranking[n-\/1].get\_name();}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00169}00169 \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00170}00170 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00171}\mbox{\hyperlink{class_ranking_a0217927ec1a3c9c038a39668c51921da}{00171}} vector<string> \mbox{\hyperlink{class_ranking_a0217927ec1a3c9c038a39668c51921da}{Ranking::get\_names\_from\_rankings}}(\textcolor{keyword}{const} vector<int>\& rankings)\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00172}00172   \textcolor{keywordtype}{int} n = rankings.size();}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00173}00173   vector<string> names(n);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00174}00174   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00175}00175     names[i] = \mbox{\hyperlink{class_ranking_a1db0c257fd2ceda3d4771ef1bdbe27d5}{get\_name}}(rankings[i]);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00176}00176   \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00177}00177   \textcolor{keywordflow}{return} names;}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00178}00178 \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00179}00179 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00180}\mbox{\hyperlink{class_ranking_ab5aee24457c107c1890499d0ac592183}{00180}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ranking_ab5aee24457c107c1890499d0ac592183}{Ranking::read\_players}}(\textcolor{keywordtype}{int} P) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00181}00181   \textcolor{keywordflow}{while} (P-\/-\/) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00182}00182     \textcolor{keywordtype}{string} s;}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00183}00183     cin >> s;}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00184}00184     \mbox{\hyperlink{class_ranking_a11edd6bdb619ca3cfb63b891522b882d}{add\_player}}(s);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00185}00185   \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00186}00186 \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00187}00187 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00188}\mbox{\hyperlink{class_ranking_a034b202d0e04c1f06a85e647f4f35930}{00188}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ranking_a034b202d0e04c1f06a85e647f4f35930}{Ranking::list\_ranking}}() \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00189}00189   \textcolor{keywordtype}{int} n = ranking.size();}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00190}00190   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00191}00191     cout << i+1 << \textcolor{charliteral}{' '} << ranking[i].get\_name() << \textcolor{charliteral}{' '} << ranking[i].get\_points() << endl;}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00192}00192   \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00193}00193 \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00194}00194 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00195}\mbox{\hyperlink{class_ranking_a43da3834b2db0c9c6cfcf14a4f3d9ab5}{00195}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ranking_a43da3834b2db0c9c6cfcf14a4f3d9ab5}{Ranking::list\_players}}() \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00196}00196   cout << stats.size() << endl;}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00197}00197   map<string, Statistics>::const\_iterator it = stats.begin();}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00198}00198   \textcolor{keywordflow}{while} (it != stats.end()) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00199}00199     \mbox{\hyperlink{class_ranking_ac9a2fd8a4bd6b45e9ecbd47ea16d5352}{consult\_player}}(it-\/>first);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00200}00200     ++it;}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00201}00201   \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00202}00202 \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00203}00203 }
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00204}\mbox{\hyperlink{class_ranking_ac9a2fd8a4bd6b45e9ecbd47ea16d5352}{00204}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_ranking_ac9a2fd8a4bd6b45e9ecbd47ea16d5352}{Ranking::consult\_player}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& name) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00205}00205   map<string,Statistics>::iterator it = stats.find(name);}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00206}00206   \textcolor{keywordflow}{if} (it != stats.end()) \{}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00207}00207     cout << name << \textcolor{stringliteral}{"{} Rk:"{}} << \mbox{\hyperlink{class_ranking_ac34919621a76529cc800125179f94ad8}{get\_ranking}}(name) << \textcolor{charliteral}{' '};}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00208}00208     it-\/>second.print\_statistics();}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00209}00209     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00210}00210   \}}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00211}00211   \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00212}00212 \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00136}\mbox{\hyperlink{class_ranking_a43da3834b2db0c9c6cfcf14a4f3d9ab5}{00136}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ranking_a43da3834b2db0c9c6cfcf14a4f3d9ab5}{Ranking::list\_players}}() \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00137}00137   map<string, Player>::const\_iterator it = \mbox{\hyperlink{class_ranking_a5cfe9d31120562c9aed58f6aa0881d25}{stats}}.begin();}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00138}00138   \textcolor{keywordflow}{while} (it != \mbox{\hyperlink{class_ranking_a5cfe9d31120562c9aed58f6aa0881d25}{stats}}.end()) \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00139}00139     cout << it-\/>first << \textcolor{stringliteral}{"{} Rk:"{}} << it-\/>second.get\_ranking() << \textcolor{charliteral}{' '};}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00140}00140     it-\/>second.print\_statistics();}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00141}00141     ++it;}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00142}00142   \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00143}00143 \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00144}00144 }
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00145}\mbox{\hyperlink{class_ranking_ac9a2fd8a4bd6b45e9ecbd47ea16d5352}{00145}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_ranking_ac9a2fd8a4bd6b45e9ecbd47ea16d5352}{Ranking::consult\_player}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& name) \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00146}00146   map<string,Player>::iterator it = \mbox{\hyperlink{class_ranking_a5cfe9d31120562c9aed58f6aa0881d25}{stats}}.find(name);}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00147}00147   \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_ranking_a5cfe9d31120562c9aed58f6aa0881d25}{stats}}.end()) \{}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00148}00148     cout << name << \textcolor{stringliteral}{"{} Rk:"{}} << it-\/>second.get\_ranking() << \textcolor{charliteral}{' '};}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00149}00149     it-\/>second.print\_statistics();}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00150}00150     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00151}00151   \}}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00152}00152   \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_ranking_8cc_source_l00153}00153 \}}
 
 \end{DoxyCode}

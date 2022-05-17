@@ -18,35 +18,36 @@ using namespace std;
 class Categories
 {
 	private:
+		/** @brief Identificadores de las categorías */
 		vector<string> names;
+
+		/** @brief Matriz `CxK` que contiene las puntuaciones por categoría
+		 *  para cada categoría, con el mismo índice identificador que `names`.
+		 */
 		vector< vector<int> > ctg_scores;
-		int C, K;
+
+		/** @brief Número de categorías */
+		int C;
+
+		/** @brief Número máximo de niveles por categoría */
+		int K;
 	
 	public:
-
-		// Creadoras
-
-		/** @brief 
-		 *	\pre  _cierto_
-		 *	\post Crea la clase de categorías con categorías iniciales
-		 */
-		//Categories();
-
 
 		// Modificadoras
 
 		/** @brief Lee la información de las categorías
 		 *	\pre `C >= 1`, `K >= 4`
 		 *	En el canal de entrada hay primero C strings con los nombres
-		 *	asociados a las categorías identificadas por los valores de 1 a C
+		 *	asociados a las categorías identificadas por los valores de 1 a `C`
 		 *	en orden creciente.
-		 *	Luego, en el canal de entrada hay CxK enteros >= 0 que serán los 
+		 *	Luego, en el canal de entrada hay `CxK` enteros `>= 0` que serán los 
 		 *	puntos por categoría y nivel ordenados crecientemente por 
 		 *	categorías y dentro de cada categoría, ordenados crecientemente por
 		 *	nivel. 
-		 *	\post Se borra el contenido de 'this->ctg_scores' y reempleza con 
+		 *	\post Se borra el contenido de `this->ctg_scores` y reempleza con 
 		 *	los puntos por categoría y nivel en el canal de entrada. Se borra
-		 *	el contenido de 'this->names' y se reemplaza con los nombres en el
+		 *	el contenido de `this->names` y se reemplaza con los nombres en el
 		 *	canal de entrada.
 		 */
 		void read_categories(int C, int K);

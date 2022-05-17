@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Práctica PRO2 Primavera 2022: Gestión de una liga de tenis profesional<span id="projectnumber">&#160;Especificación 19-4-2022</span>
+   <div id="projectname">Práctica PRO2 Primavera 2022: Gestión de una liga de tenis profesional<span id="projectnumber">&#160;Especificación 17-5-2022</span>
    </div>
   </td>
  </tr>
@@ -70,6 +70,8 @@ $(function() {
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="class_statistics.html#a3e2e905f930be0f993d0187ed8388206">add_stats</a>(const Statistics &amp;stats)</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="class_statistics.html#a4faa80fa024777d57b6fa4b3559eec0a">clear</a>()</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_statistics.html#a16407fea5b227ccc221b1fb38cb8a74c">games_lost</a></td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_statistics.html#a764b77298e5b22d27621673424591845">games_won</a></td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_statistics.html#a9d8bfb495739375e83bad8a243329985">get_games_lost</a>() const</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="class_statistics.html#a364605762dea27e3b46ce081ef821df9">get_games_won</a>() const</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_statistics.html#af0dba6690ee022c9ac5925a40f4355a9">get_matches_lost</a>() const</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
@@ -78,17 +80,23 @@ $(function() {
   <tr class="odd"><td class="entry"><a class="el" href="class_statistics.html#a0a262384af152cb440bcaf58544497f4">get_sets_lost</a>() const</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_statistics.html#a8600132572eb7fc675192414d55f1c17">get_sets_won</a>() const</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="class_statistics.html#a982df5a5d2e58a63a3af3e1d99b8fa55">get_tournaments</a>() const</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_statistics.html#a8985ecfe6cf78aa530287095ce57d625">print_statistics</a>() const</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_statistics.html#a08824e077af9a690352935cae5c0e8ac">set_games_lost</a>(int n)</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_statistics.html#a365f32c4787f2efac6e3b0b9872c2910">set_games_won</a>(int n)</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_statistics.html#a3e10891474345b61c7904bbd04af19e5">set_matches_lost</a>(int n)</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_statistics.html#a09c9fe8d7059df6aab872513228eb0c8">set_matches_won</a>(int n)</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_statistics.html#a5dd7afe22bc74689387a27315a6039b7">set_points</a>(int n)</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_statistics.html#a0e43fe14491540195dd01ee81f81cb49">set_sets_lost</a>(int n)</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_statistics.html#a812bb705484b4bbf1cd71808dc2e15b0">set_sets_won</a>(int n)</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_statistics.html#a41f54794e71c50102dc5cfb5d40297d9">set_tournaments</a>(int n)</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_statistics.html#a60ddd90a571ed4c3ce8c0f6317a36d63">Statistics</a>()</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_statistics.html#a00267ff63545946e7068e1b70137050d">Statistics</a>(int tournaments)</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_statistics.html#a9b3e470743914d2d3225b3b72a7582cb">matches_lost</a></td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_statistics.html#a55ceb6b864ad1ae0b332bd4b9bb60e6f">matches_won</a></td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_statistics.html#a38bd96be45562d8f2d1377043343561e">points</a></td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_statistics.html#a8985ecfe6cf78aa530287095ce57d625">print_statistics</a>() const</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_statistics.html#a08824e077af9a690352935cae5c0e8ac">set_games_lost</a>(int n)</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_statistics.html#a365f32c4787f2efac6e3b0b9872c2910">set_games_won</a>(int n)</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_statistics.html#a3e10891474345b61c7904bbd04af19e5">set_matches_lost</a>(int n)</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_statistics.html#a09c9fe8d7059df6aab872513228eb0c8">set_matches_won</a>(int n)</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_statistics.html#a5dd7afe22bc74689387a27315a6039b7">set_points</a>(int n)</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_statistics.html#a0e43fe14491540195dd01ee81f81cb49">set_sets_lost</a>(int n)</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_statistics.html#a812bb705484b4bbf1cd71808dc2e15b0">set_sets_won</a>(int n)</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_statistics.html#a41f54794e71c50102dc5cfb5d40297d9">set_tournaments</a>(int n)</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_statistics.html#a59fd9776be1aaba070bcf07a7fe75223">sets_lost</a></td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_statistics.html#aac371279328f1370825e92fb408897b5">sets_won</a></td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_statistics.html#a60ddd90a571ed4c3ce8c0f6317a36d63">Statistics</a>()</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_statistics.html#a00267ff63545946e7068e1b70137050d">Statistics</a>(int tournaments)</td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_statistics.html#ae2a6f6821bca9d68341591ebd2c527d7">tournaments</a></td><td class="entry"><a class="el" href="class_statistics.html">Statistics</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

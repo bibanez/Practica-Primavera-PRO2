@@ -12,9 +12,10 @@ digraph "program.cc"
   Node4 [label="Statistics.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_statistics_8hh.html",tooltip="Especificación de la clase Statistics."];
   Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
   Node5 [label="Ranking.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_ranking_8hh.html",tooltip="Especificación de la clase Ranking."];
-  Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
   Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
   Node6 [label="Player.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_player_8hh.html",tooltip="Especificación de la clase Player."];
+  Node6 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
   Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
   Node7 [label="Categories.hh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_categories_8hh.html",tooltip="Especificación de la clase Categories."];
   Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];

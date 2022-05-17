@@ -14,7 +14,7 @@ Contiene las estadísticas de un jugador.
 \item 
 \mbox{\hyperlink{class_statistics_a60ddd90a571ed4c3ce8c0f6317a36d63}{Statistics}} ()
 \begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_statistics_a00267ff63545946e7068e1b70137050d}{Statistics}} (int tournaments)
+\mbox{\hyperlink{class_statistics_a00267ff63545946e7068e1b70137050d}{Statistics}} (int \mbox{\hyperlink{class_statistics_ae2a6f6821bca9d68341591ebd2c527d7}{tournaments}})
 \begin{DoxyCompactList}\small\item\em Creadora por copia. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_statistics_a3e2e905f930be0f993d0187ed8388206}{add\+\_\+stats}} (const \mbox{\hyperlink{class_statistics}{Statistics}} \&stats)
 \begin{DoxyCompactList}\small\item\em Actualiza las estadísticas sumando de nuevas. \end{DoxyCompactList}\item 
@@ -54,14 +54,33 @@ int \mbox{\hyperlink{class_statistics_a9d8bfb495739375e83bad8a243329985}{get\+\_
 \begin{DoxyCompactList}\small\item\em Obtener juegos perdidos. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_statistics_a8985ecfe6cf78aa530287095ce57d625}{print\+\_\+statistics}} () const
 \begin{DoxyCompactList}\small\item\em Imprime las estadísticas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_statistics_ae2a6f6821bca9d68341591ebd2c527d7}{tournaments}}
+\begin{DoxyCompactList}\small\item\em Número de torneos jugados. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_statistics_a38bd96be45562d8f2d1377043343561e}{points}}
+\begin{DoxyCompactList}\small\item\em Puntos ganados. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_statistics_a55ceb6b864ad1ae0b332bd4b9bb60e6f}{matches\+\_\+won}}
+\begin{DoxyCompactList}\small\item\em Partidos ganados. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_statistics_a9b3e470743914d2d3225b3b72a7582cb}{matches\+\_\+lost}}
+\begin{DoxyCompactList}\small\item\em Partidos perdidos. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_statistics_aac371279328f1370825e92fb408897b5}{sets\+\_\+won}}
+\begin{DoxyCompactList}\small\item\em Sets ganados. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_statistics_a59fd9776be1aaba070bcf07a7fe75223}{sets\+\_\+lost}}
+\begin{DoxyCompactList}\small\item\em Sets perdidos. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_statistics_a764b77298e5b22d27621673424591845}{games\+\_\+won}}
+\begin{DoxyCompactList}\small\item\em Juegos ganados. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_statistics_a16407fea5b227ccc221b1fb38cb8a74c}{games\+\_\+lost}}
+\begin{DoxyCompactList}\small\item\em Juegos perdidos. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descripción detallada}
 Contiene las estadísticas de un jugador. 
 
-Se puede utilizar para transmitir la información de los resultados de un jugador en un torneo. Es una clase puramente informativa. 
+Se puede utilizar para transmitir la información de los resultados de un jugador en un torneo. 
 
-Definición en la línea \mbox{\hyperlink{_statistics_8hh_source_l00020}{20}} del archivo \mbox{\hyperlink{_statistics_8hh_source}{Statistics.\+hh}}.
+Definición en la línea \mbox{\hyperlink{_statistics_8hh_source_l00022}{22}} del archivo \mbox{\hyperlink{_statistics_8hh_source}{Statistics.\+hh}}.
 
 
 
@@ -80,7 +99,7 @@ Creadora por defecto.
 {\itshape cierto} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-Crea unas estadísticas con todos los int inicializados en 0 y el set de \textquotesingle{}tournaments\textquotesingle{} vacío. 
+Crea unas estadísticas con todos los int inicializados en 0 y el set de {\ttfamily tournaments} vacío. 
 \end{DoxyPostcond}
 
 
@@ -89,8 +108,8 @@ Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00005}{5}} del
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00005                        \{}
-\DoxyCodeLine{00006   tournaments = points = matches\_won = matches\_lost = sets\_won = }
-\DoxyCodeLine{00007     sets\_lost = games\_won = games\_lost = 0;}
+\DoxyCodeLine{00006   \mbox{\hyperlink{class_statistics_ae2a6f6821bca9d68341591ebd2c527d7}{tournaments}} = \mbox{\hyperlink{class_statistics_a38bd96be45562d8f2d1377043343561e}{points}} = \mbox{\hyperlink{class_statistics_a55ceb6b864ad1ae0b332bd4b9bb60e6f}{matches\_won}} = \mbox{\hyperlink{class_statistics_a9b3e470743914d2d3225b3b72a7582cb}{matches\_lost}} = \mbox{\hyperlink{class_statistics_aac371279328f1370825e92fb408897b5}{sets\_won}} = }
+\DoxyCodeLine{00007     \mbox{\hyperlink{class_statistics_a59fd9776be1aaba070bcf07a7fe75223}{sets\_lost}} = \mbox{\hyperlink{class_statistics_a764b77298e5b22d27621673424591845}{games\_won}} = \mbox{\hyperlink{class_statistics_a16407fea5b227ccc221b1fb38cb8a74c}{games\_lost}} = 0;}
 \DoxyCodeLine{00008 \}}
 
 \end{DoxyCode}
@@ -117,9 +136,9 @@ Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00010}{10}} de
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00010                             \{}
-\DoxyCodeLine{00011   points = matches\_won = matches\_lost = sets\_won = }
-\DoxyCodeLine{00012     sets\_lost = games\_won = games\_lost = 0;}
-\DoxyCodeLine{00013   tournaments = t;}
+\DoxyCodeLine{00011   \mbox{\hyperlink{class_statistics_a38bd96be45562d8f2d1377043343561e}{points}} = \mbox{\hyperlink{class_statistics_a55ceb6b864ad1ae0b332bd4b9bb60e6f}{matches\_won}} = \mbox{\hyperlink{class_statistics_a9b3e470743914d2d3225b3b72a7582cb}{matches\_lost}} = \mbox{\hyperlink{class_statistics_aac371279328f1370825e92fb408897b5}{sets\_won}} = }
+\DoxyCodeLine{00012     \mbox{\hyperlink{class_statistics_a59fd9776be1aaba070bcf07a7fe75223}{sets\_lost}} = \mbox{\hyperlink{class_statistics_a764b77298e5b22d27621673424591845}{games\_won}} = \mbox{\hyperlink{class_statistics_a16407fea5b227ccc221b1fb38cb8a74c}{games\_lost}} = 0;}
+\DoxyCodeLine{00013   \mbox{\hyperlink{class_statistics_ae2a6f6821bca9d68341591ebd2c527d7}{tournaments}} = t;}
 \DoxyCodeLine{00014 \}}
 
 \end{DoxyCode}
@@ -140,23 +159,239 @@ Actualiza las estadísticas sumando de nuevas.
 {\itshape cierto} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-Se actualizan los valors privados con los de stats, añadiendo el torneo en \textquotesingle{}stats.\+first\+\_\+tournament()\textquotesingle{} si 
+Se actualizan los valors privados con los de stats en suma 
 \end{DoxyPostcond}
 
 
-Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00027}{27}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
+Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00019}{19}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00027                                                   \{}
-\DoxyCodeLine{00028   tournaments += stats.tournaments;}
-\DoxyCodeLine{00029   points += stats.points;}
-\DoxyCodeLine{00030   matches\_won += stats.matches\_won;}
-\DoxyCodeLine{00031   matches\_lost += stats.matches\_lost;}
-\DoxyCodeLine{00032   sets\_won += stats.sets\_won;}
-\DoxyCodeLine{00033   sets\_lost += stats.sets\_lost;}
-\DoxyCodeLine{00034   games\_won += stats.games\_won;}
-\DoxyCodeLine{00035   games\_lost += stats.games\_lost;}
+\DoxyCodeLine{00019                                                   \{}
+\DoxyCodeLine{00020   \mbox{\hyperlink{class_statistics_ae2a6f6821bca9d68341591ebd2c527d7}{tournaments}} += stats.\mbox{\hyperlink{class_statistics_ae2a6f6821bca9d68341591ebd2c527d7}{tournaments}};}
+\DoxyCodeLine{00021   \mbox{\hyperlink{class_statistics_a38bd96be45562d8f2d1377043343561e}{points}} += stats.\mbox{\hyperlink{class_statistics_a38bd96be45562d8f2d1377043343561e}{points}};}
+\DoxyCodeLine{00022   \mbox{\hyperlink{class_statistics_a55ceb6b864ad1ae0b332bd4b9bb60e6f}{matches\_won}} += stats.\mbox{\hyperlink{class_statistics_a55ceb6b864ad1ae0b332bd4b9bb60e6f}{matches\_won}};}
+\DoxyCodeLine{00023   \mbox{\hyperlink{class_statistics_a9b3e470743914d2d3225b3b72a7582cb}{matches\_lost}} += stats.\mbox{\hyperlink{class_statistics_a9b3e470743914d2d3225b3b72a7582cb}{matches\_lost}};}
+\DoxyCodeLine{00024   \mbox{\hyperlink{class_statistics_aac371279328f1370825e92fb408897b5}{sets\_won}} += stats.\mbox{\hyperlink{class_statistics_aac371279328f1370825e92fb408897b5}{sets\_won}};}
+\DoxyCodeLine{00025   \mbox{\hyperlink{class_statistics_a59fd9776be1aaba070bcf07a7fe75223}{sets\_lost}} += stats.\mbox{\hyperlink{class_statistics_a59fd9776be1aaba070bcf07a7fe75223}{sets\_lost}};}
+\DoxyCodeLine{00026   \mbox{\hyperlink{class_statistics_a764b77298e5b22d27621673424591845}{games\_won}} += stats.\mbox{\hyperlink{class_statistics_a764b77298e5b22d27621673424591845}{games\_won}};}
+\DoxyCodeLine{00027   \mbox{\hyperlink{class_statistics_a16407fea5b227ccc221b1fb38cb8a74c}{games\_lost}} += stats.\mbox{\hyperlink{class_statistics_a16407fea5b227ccc221b1fb38cb8a74c}{games\_lost}};}
+\DoxyCodeLine{00028 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_statistics_a5dd7afe22bc74689387a27315a6039b7}\label{class_statistics_a5dd7afe22bc74689387a27315a6039b7}} 
+\index{Statistics@{Statistics}!set\_points@{set\_points}}
+\index{set\_points@{set\_points}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{set\_points()}{set\_points()}}
+{\footnotesize\ttfamily void Statistics\+::set\+\_\+points (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Obtener puntos. 
+
+\begin{DoxyPrecond}{Precondición}
+n \texorpdfstring{$>$}{>}= 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Actualiza los puntos contenidos en {\ttfamily this-\/\texorpdfstring{$>$}{>}points} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00030}{30}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030                                  \{}
+\DoxyCodeLine{00031   \mbox{\hyperlink{class_statistics_a38bd96be45562d8f2d1377043343561e}{points}} = n;}
+\DoxyCodeLine{00032 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_statistics_a09c9fe8d7059df6aab872513228eb0c8}\label{class_statistics_a09c9fe8d7059df6aab872513228eb0c8}} 
+\index{Statistics@{Statistics}!set\_matches\_won@{set\_matches\_won}}
+\index{set\_matches\_won@{set\_matches\_won}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{set\_matches\_won()}{set\_matches\_won()}}
+{\footnotesize\ttfamily void Statistics\+::set\+\_\+matches\+\_\+won (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Actualizar partidos ganados. 
+
+\begin{DoxyPrecond}{Precondición}
+n \texorpdfstring{$>$}{>}= 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Actualiza el contenido de {\ttfamily this-\/\texorpdfstring{$>$}{>}matches\+\_\+won} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00038}{38}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038                                       \{}
+\DoxyCodeLine{00039   \mbox{\hyperlink{class_statistics_a55ceb6b864ad1ae0b332bd4b9bb60e6f}{matches\_won}} = n;}
+\DoxyCodeLine{00040 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_statistics_a3e10891474345b61c7904bbd04af19e5}\label{class_statistics_a3e10891474345b61c7904bbd04af19e5}} 
+\index{Statistics@{Statistics}!set\_matches\_lost@{set\_matches\_lost}}
+\index{set\_matches\_lost@{set\_matches\_lost}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{set\_matches\_lost()}{set\_matches\_lost()}}
+{\footnotesize\ttfamily void Statistics\+::set\+\_\+matches\+\_\+lost (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Actualizar partidos perdidos. 
+
+\begin{DoxyPrecond}{Precondición}
+n \texorpdfstring{$>$}{>}= 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Actualiza el contenido de {\ttfamily this-\/\texorpdfstring{$>$}{>}matches\+\_\+lost} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00042}{42}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042                                        \{}
+\DoxyCodeLine{00043   \mbox{\hyperlink{class_statistics_a9b3e470743914d2d3225b3b72a7582cb}{matches\_lost}} = n;}
+\DoxyCodeLine{00044 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_statistics_a812bb705484b4bbf1cd71808dc2e15b0}\label{class_statistics_a812bb705484b4bbf1cd71808dc2e15b0}} 
+\index{Statistics@{Statistics}!set\_sets\_won@{set\_sets\_won}}
+\index{set\_sets\_won@{set\_sets\_won}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{set\_sets\_won()}{set\_sets\_won()}}
+{\footnotesize\ttfamily void Statistics\+::set\+\_\+sets\+\_\+won (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Actualizar sets ganados. 
+
+\begin{DoxyPrecond}{Precondición}
+n \texorpdfstring{$>$}{>}= 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Actualiza el contenido de {\ttfamily this-\/\texorpdfstring{$>$}{>}sets\+\_\+won} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00054}{54}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054                                    \{}
+\DoxyCodeLine{00055   \mbox{\hyperlink{class_statistics_aac371279328f1370825e92fb408897b5}{sets\_won}} = n;}
+\DoxyCodeLine{00056 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_statistics_a0e43fe14491540195dd01ee81f81cb49}\label{class_statistics_a0e43fe14491540195dd01ee81f81cb49}} 
+\index{Statistics@{Statistics}!set\_sets\_lost@{set\_sets\_lost}}
+\index{set\_sets\_lost@{set\_sets\_lost}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{set\_sets\_lost()}{set\_sets\_lost()}}
+{\footnotesize\ttfamily void Statistics\+::set\+\_\+sets\+\_\+lost (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Actualizar sets perdidos. 
+
+\begin{DoxyPrecond}{Precondición}
+n \texorpdfstring{$>$}{>}= 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Actualiza el contenido de {\ttfamily this-\/\texorpdfstring{$>$}{>}sets\+\_\+lost} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00058}{58}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058                                     \{}
+\DoxyCodeLine{00059   \mbox{\hyperlink{class_statistics_a59fd9776be1aaba070bcf07a7fe75223}{sets\_lost}} = n;}
+\DoxyCodeLine{00060 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_statistics_a365f32c4787f2efac6e3b0b9872c2910}\label{class_statistics_a365f32c4787f2efac6e3b0b9872c2910}} 
+\index{Statistics@{Statistics}!set\_games\_won@{set\_games\_won}}
+\index{set\_games\_won@{set\_games\_won}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{set\_games\_won()}{set\_games\_won()}}
+{\footnotesize\ttfamily void Statistics\+::set\+\_\+games\+\_\+won (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Actualizar juegos ganados. 
+
+\begin{DoxyPrecond}{Precondición}
+n \texorpdfstring{$>$}{>}= 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Actualiza el contenido de {\ttfamily this-\/\texorpdfstring{$>$}{>}games\+\_\+won} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00046}{46}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046                                     \{}
+\DoxyCodeLine{00047   \mbox{\hyperlink{class_statistics_a764b77298e5b22d27621673424591845}{games\_won}} = n;}
+\DoxyCodeLine{00048 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_statistics_a08824e077af9a690352935cae5c0e8ac}\label{class_statistics_a08824e077af9a690352935cae5c0e8ac}} 
+\index{Statistics@{Statistics}!set\_games\_lost@{set\_games\_lost}}
+\index{set\_games\_lost@{set\_games\_lost}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{set\_games\_lost()}{set\_games\_lost()}}
+{\footnotesize\ttfamily void Statistics\+::set\+\_\+games\+\_\+lost (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Actualizar juegos perdidos. 
+
+\begin{DoxyPrecond}{Precondición}
+n \texorpdfstring{$>$}{>}= 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Actualiza el contenido de {\ttfamily this-\/\texorpdfstring{$>$}{>}games\+\_\+lost} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00050}{50}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050                                      \{}
+\DoxyCodeLine{00051   \mbox{\hyperlink{class_statistics_a16407fea5b227ccc221b1fb38cb8a74c}{games\_lost}} = n;}
+\DoxyCodeLine{00052 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_statistics_a41f54794e71c50102dc5cfb5d40297d9}\label{class_statistics_a41f54794e71c50102dc5cfb5d40297d9}} 
+\index{Statistics@{Statistics}!set\_tournaments@{set\_tournaments}}
+\index{set\_tournaments@{set\_tournaments}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{set\_tournaments()}{set\_tournaments()}}
+{\footnotesize\ttfamily void Statistics\+::set\+\_\+tournaments (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Actualizar torneos jugados. 
+
+\begin{DoxyPrecond}{Precondición}
+n \texorpdfstring{$>$}{>}= 0 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Actualiza el contenido de {\ttfamily this-\/\texorpdfstring{$>$}{>}tournaments} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00034}{34}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034                                       \{}
+\DoxyCodeLine{00035   \mbox{\hyperlink{class_statistics_ae2a6f6821bca9d68341591ebd2c527d7}{tournaments}} = n;}
 \DoxyCodeLine{00036 \}}
 
 \end{DoxyCode}
@@ -178,122 +413,14 @@ Todos los campos contienen 0
 \end{DoxyPostcond}
 
 
-Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00070}{70}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
+Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00062}{62}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00070                        \{}
-\DoxyCodeLine{00071   tournaments = points = matches\_won = matches\_lost = sets\_won = }
-\DoxyCodeLine{00072     sets\_lost = games\_won = games\_lost = 0;}
-\DoxyCodeLine{00073 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_statistics_a9d8bfb495739375e83bad8a243329985}\label{class_statistics_a9d8bfb495739375e83bad8a243329985}} 
-\index{Statistics@{Statistics}!get\_games\_lost@{get\_games\_lost}}
-\index{get\_games\_lost@{get\_games\_lost}!Statistics@{Statistics}}
-\doxysubsubsection{\texorpdfstring{get\_games\_lost()}{get\_games\_lost()}}
-{\footnotesize\ttfamily int Statistics\+::get\+\_\+games\+\_\+lost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Obtener juegos perdidos. 
-
-\begin{DoxyPrecond}{Precondición}
-{\itshape cierto} 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Retorna el contenido de \textquotesingle{}this-\/\texorpdfstring{$>$}{>}games\+\_\+lost\textquotesingle{} 
-\end{DoxyPostcond}
-
-
-Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00103}{103}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00103                                      \{}
-\DoxyCodeLine{00104   \textcolor{keywordflow}{return} games\_lost;}
-\DoxyCodeLine{00105 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_statistics_a364605762dea27e3b46ce081ef821df9}\label{class_statistics_a364605762dea27e3b46ce081ef821df9}} 
-\index{Statistics@{Statistics}!get\_games\_won@{get\_games\_won}}
-\index{get\_games\_won@{get\_games\_won}!Statistics@{Statistics}}
-\doxysubsubsection{\texorpdfstring{get\_games\_won()}{get\_games\_won()}}
-{\footnotesize\ttfamily int Statistics\+::get\+\_\+games\+\_\+won (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Obtener juegos ganados. 
-
-\begin{DoxyPrecond}{Precondición}
-{\itshape cierto} 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Retorna el contenido de \textquotesingle{}this-\/\texorpdfstring{$>$}{>}games\+\_\+won\textquotesingle{} 
-\end{DoxyPostcond}
-
-
-Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00099}{99}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00099                                     \{}
-\DoxyCodeLine{00100   \textcolor{keywordflow}{return} games\_won;}
-\DoxyCodeLine{00101 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_statistics_af0dba6690ee022c9ac5925a40f4355a9}\label{class_statistics_af0dba6690ee022c9ac5925a40f4355a9}} 
-\index{Statistics@{Statistics}!get\_matches\_lost@{get\_matches\_lost}}
-\index{get\_matches\_lost@{get\_matches\_lost}!Statistics@{Statistics}}
-\doxysubsubsection{\texorpdfstring{get\_matches\_lost()}{get\_matches\_lost()}}
-{\footnotesize\ttfamily int Statistics\+::get\+\_\+matches\+\_\+lost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Obtener partidos perdidos. 
-
-\begin{DoxyPrecond}{Precondición}
-{\itshape cierto} 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Retorna el contenido de \textquotesingle{}this-\/\texorpdfstring{$>$}{>}matches\+\_\+lost\textquotesingle{} 
-\end{DoxyPostcond}
-
-
-Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00087}{87}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00087                                        \{}
-\DoxyCodeLine{00088   \textcolor{keywordflow}{return} matches\_lost;}
-\DoxyCodeLine{00089 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_statistics_afa9252dfee154d7e24bb87c61a7a0d75}\label{class_statistics_afa9252dfee154d7e24bb87c61a7a0d75}} 
-\index{Statistics@{Statistics}!get\_matches\_won@{get\_matches\_won}}
-\index{get\_matches\_won@{get\_matches\_won}!Statistics@{Statistics}}
-\doxysubsubsection{\texorpdfstring{get\_matches\_won()}{get\_matches\_won()}}
-{\footnotesize\ttfamily int Statistics\+::get\+\_\+matches\+\_\+won (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Obtener partidos ganados. 
-
-\begin{DoxyPrecond}{Precondición}
-{\itshape cierto} 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Retorna el contenido de \textquotesingle{}this-\/\texorpdfstring{$>$}{>}matches\+\_\+won\textquotesingle{} 
-\end{DoxyPostcond}
-
-
-Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00083}{83}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00083                                       \{}
-\DoxyCodeLine{00084   \textcolor{keywordflow}{return} matches\_won;}
-\DoxyCodeLine{00085 \}}
+\DoxyCodeLine{00062                        \{}
+\DoxyCodeLine{00063   \mbox{\hyperlink{class_statistics_ae2a6f6821bca9d68341591ebd2c527d7}{tournaments}} = \mbox{\hyperlink{class_statistics_a38bd96be45562d8f2d1377043343561e}{points}} = \mbox{\hyperlink{class_statistics_a55ceb6b864ad1ae0b332bd4b9bb60e6f}{matches\_won}} = \mbox{\hyperlink{class_statistics_a9b3e470743914d2d3225b3b72a7582cb}{matches\_lost}} = \mbox{\hyperlink{class_statistics_aac371279328f1370825e92fb408897b5}{sets\_won}} = }
+\DoxyCodeLine{00064     \mbox{\hyperlink{class_statistics_a59fd9776be1aaba070bcf07a7fe75223}{sets\_lost}} = \mbox{\hyperlink{class_statistics_a764b77298e5b22d27621673424591845}{games\_won}} = \mbox{\hyperlink{class_statistics_a16407fea5b227ccc221b1fb38cb8a74c}{games\_lost}} = 0;}
+\DoxyCodeLine{00065 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_statistics_ae1196c0d787e9dfe3a71161d9f25b57b}\label{class_statistics_ae1196c0d787e9dfe3a71161d9f25b57b}} 
@@ -310,71 +437,17 @@ Obtener puntos.
 {\itshape cierto} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-Retorna los puntos contenidos en \textquotesingle{}this-\/\texorpdfstring{$>$}{>}points\textquotesingle{} 
+Retorna los puntos contenidos en {\ttfamily this-\/\texorpdfstring{$>$}{>}points} 
 \end{DoxyPostcond}
 
 
-Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00075}{75}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
+Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00070}{70}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00075                                  \{}
-\DoxyCodeLine{00076   \textcolor{keywordflow}{return} points;}
-\DoxyCodeLine{00077 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_statistics_a0a262384af152cb440bcaf58544497f4}\label{class_statistics_a0a262384af152cb440bcaf58544497f4}} 
-\index{Statistics@{Statistics}!get\_sets\_lost@{get\_sets\_lost}}
-\index{get\_sets\_lost@{get\_sets\_lost}!Statistics@{Statistics}}
-\doxysubsubsection{\texorpdfstring{get\_sets\_lost()}{get\_sets\_lost()}}
-{\footnotesize\ttfamily int Statistics\+::get\+\_\+sets\+\_\+lost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Obtener sets perdidos. 
-
-\begin{DoxyPrecond}{Precondición}
-{\itshape cierto} 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Retorna el contenido de \textquotesingle{}this-\/\texorpdfstring{$>$}{>}sets\+\_\+lost\textquotesingle{} 
-\end{DoxyPostcond}
-
-
-Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00095}{95}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00095                                     \{}
-\DoxyCodeLine{00096   \textcolor{keywordflow}{return} sets\_lost;}
-\DoxyCodeLine{00097 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_statistics_a8600132572eb7fc675192414d55f1c17}\label{class_statistics_a8600132572eb7fc675192414d55f1c17}} 
-\index{Statistics@{Statistics}!get\_sets\_won@{get\_sets\_won}}
-\index{get\_sets\_won@{get\_sets\_won}!Statistics@{Statistics}}
-\doxysubsubsection{\texorpdfstring{get\_sets\_won()}{get\_sets\_won()}}
-{\footnotesize\ttfamily int Statistics\+::get\+\_\+sets\+\_\+won (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Obtener sets ganados. 
-
-\begin{DoxyPrecond}{Precondición}
-{\itshape cierto} 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Retorna el contenido de \textquotesingle{}this-\/\texorpdfstring{$>$}{>}sets\+\_\+won\textquotesingle{} 
-\end{DoxyPostcond}
-
-
-Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00091}{91}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00091                                    \{}
-\DoxyCodeLine{00092   \textcolor{keywordflow}{return} sets\_won;}
-\DoxyCodeLine{00093 \}}
+\DoxyCodeLine{00070                                  \{}
+\DoxyCodeLine{00071   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_statistics_a38bd96be45562d8f2d1377043343561e}{points}};}
+\DoxyCodeLine{00072 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_statistics_a982df5a5d2e58a63a3af3e1d99b8fa55}\label{class_statistics_a982df5a5d2e58a63a3af3e1d99b8fa55}} 
@@ -395,13 +468,175 @@ Retorna la cantidad de torneos jugados
 \end{DoxyPostcond}
 
 
-Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00079}{79}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
+Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00074}{74}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00079                                       \{}
-\DoxyCodeLine{00080   \textcolor{keywordflow}{return} tournaments;}
-\DoxyCodeLine{00081 \}}
+\DoxyCodeLine{00074                                       \{}
+\DoxyCodeLine{00075   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_statistics_ae2a6f6821bca9d68341591ebd2c527d7}{tournaments}};}
+\DoxyCodeLine{00076 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_statistics_afa9252dfee154d7e24bb87c61a7a0d75}\label{class_statistics_afa9252dfee154d7e24bb87c61a7a0d75}} 
+\index{Statistics@{Statistics}!get\_matches\_won@{get\_matches\_won}}
+\index{get\_matches\_won@{get\_matches\_won}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{get\_matches\_won()}{get\_matches\_won()}}
+{\footnotesize\ttfamily int Statistics\+::get\+\_\+matches\+\_\+won (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtener partidos ganados. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna el contenido de {\ttfamily this-\/\texorpdfstring{$>$}{>}matches\+\_\+won} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00078}{78}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00078                                       \{}
+\DoxyCodeLine{00079   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_statistics_a55ceb6b864ad1ae0b332bd4b9bb60e6f}{matches\_won}};}
+\DoxyCodeLine{00080 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_statistics_af0dba6690ee022c9ac5925a40f4355a9}\label{class_statistics_af0dba6690ee022c9ac5925a40f4355a9}} 
+\index{Statistics@{Statistics}!get\_matches\_lost@{get\_matches\_lost}}
+\index{get\_matches\_lost@{get\_matches\_lost}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{get\_matches\_lost()}{get\_matches\_lost()}}
+{\footnotesize\ttfamily int Statistics\+::get\+\_\+matches\+\_\+lost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtener partidos perdidos. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna el contenido de {\ttfamily this-\/\texorpdfstring{$>$}{>}matches\+\_\+lost} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00082}{82}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00082                                        \{}
+\DoxyCodeLine{00083   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_statistics_a9b3e470743914d2d3225b3b72a7582cb}{matches\_lost}};}
+\DoxyCodeLine{00084 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_statistics_a8600132572eb7fc675192414d55f1c17}\label{class_statistics_a8600132572eb7fc675192414d55f1c17}} 
+\index{Statistics@{Statistics}!get\_sets\_won@{get\_sets\_won}}
+\index{get\_sets\_won@{get\_sets\_won}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{get\_sets\_won()}{get\_sets\_won()}}
+{\footnotesize\ttfamily int Statistics\+::get\+\_\+sets\+\_\+won (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtener sets ganados. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna el contenido de {\ttfamily this-\/\texorpdfstring{$>$}{>}sets\+\_\+won} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00086}{86}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00086                                    \{}
+\DoxyCodeLine{00087   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_statistics_aac371279328f1370825e92fb408897b5}{sets\_won}};}
+\DoxyCodeLine{00088 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_statistics_a0a262384af152cb440bcaf58544497f4}\label{class_statistics_a0a262384af152cb440bcaf58544497f4}} 
+\index{Statistics@{Statistics}!get\_sets\_lost@{get\_sets\_lost}}
+\index{get\_sets\_lost@{get\_sets\_lost}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{get\_sets\_lost()}{get\_sets\_lost()}}
+{\footnotesize\ttfamily int Statistics\+::get\+\_\+sets\+\_\+lost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtener sets perdidos. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna el contenido de {\ttfamily this-\/\texorpdfstring{$>$}{>}sets\+\_\+lost} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00090}{90}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00090                                     \{}
+\DoxyCodeLine{00091   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_statistics_a59fd9776be1aaba070bcf07a7fe75223}{sets\_lost}};}
+\DoxyCodeLine{00092 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_statistics_a364605762dea27e3b46ce081ef821df9}\label{class_statistics_a364605762dea27e3b46ce081ef821df9}} 
+\index{Statistics@{Statistics}!get\_games\_won@{get\_games\_won}}
+\index{get\_games\_won@{get\_games\_won}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{get\_games\_won()}{get\_games\_won()}}
+{\footnotesize\ttfamily int Statistics\+::get\+\_\+games\+\_\+won (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtener juegos ganados. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna el contenido de {\ttfamily this-\/\texorpdfstring{$>$}{>}games\+\_\+won} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00094}{94}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094                                     \{}
+\DoxyCodeLine{00095   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_statistics_a764b77298e5b22d27621673424591845}{games\_won}};}
+\DoxyCodeLine{00096 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_statistics_a9d8bfb495739375e83bad8a243329985}\label{class_statistics_a9d8bfb495739375e83bad8a243329985}} 
+\index{Statistics@{Statistics}!get\_games\_lost@{get\_games\_lost}}
+\index{get\_games\_lost@{get\_games\_lost}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{get\_games\_lost()}{get\_games\_lost()}}
+{\footnotesize\ttfamily int Statistics\+::get\+\_\+games\+\_\+lost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtener juegos perdidos. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna el contenido de {\ttfamily this-\/\texorpdfstring{$>$}{>}games\+\_\+lost} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00098}{98}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00098                                      \{}
+\DoxyCodeLine{00099   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_statistics_a16407fea5b227ccc221b1fb38cb8a74c}{games\_lost}};}
+\DoxyCodeLine{00100 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_statistics_a8985ecfe6cf78aa530287095ce57d625}\label{class_statistics_a8985ecfe6cf78aa530287095ce57d625}} 
@@ -422,239 +657,138 @@ En el canal de salida hay todas las estadísticas en el format adecuado.
 \end{DoxyPostcond}
 
 
-Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00107}{107}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
+Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00105}{105}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00107                                         \{}
-\DoxyCodeLine{00108   cout << \textcolor{stringliteral}{"{}Ps:"{}} << points;}
-\DoxyCodeLine{00109   cout << \textcolor{stringliteral}{"{} Ts:"{}} << tournaments;}
-\DoxyCodeLine{00110   cout << \textcolor{stringliteral}{"{} WM:"{}} << matches\_won;}
-\DoxyCodeLine{00111   cout << \textcolor{stringliteral}{"{} LM:"{}} << matches\_lost;}
-\DoxyCodeLine{00112   cout << \textcolor{stringliteral}{"{} WS:"{}} << sets\_won;}
-\DoxyCodeLine{00113   cout << \textcolor{stringliteral}{"{} LS:"{}} << sets\_lost;}
-\DoxyCodeLine{00114   cout << \textcolor{stringliteral}{"{} WG:"{}} << games\_won;}
-\DoxyCodeLine{00115   cout << \textcolor{stringliteral}{"{} LG:"{}} << games\_lost;}
-\DoxyCodeLine{00116   cout << endl;}
-\DoxyCodeLine{00117 \}}
+\DoxyCodeLine{00105                                         \{}
+\DoxyCodeLine{00106   cout << \textcolor{stringliteral}{"{}Ps:"{}} << \mbox{\hyperlink{class_statistics_a38bd96be45562d8f2d1377043343561e}{points}};}
+\DoxyCodeLine{00107   cout << \textcolor{stringliteral}{"{} Ts:"{}} << \mbox{\hyperlink{class_statistics_ae2a6f6821bca9d68341591ebd2c527d7}{tournaments}};}
+\DoxyCodeLine{00108   cout << \textcolor{stringliteral}{"{} WM:"{}} << \mbox{\hyperlink{class_statistics_a55ceb6b864ad1ae0b332bd4b9bb60e6f}{matches\_won}};}
+\DoxyCodeLine{00109   cout << \textcolor{stringliteral}{"{} LM:"{}} << \mbox{\hyperlink{class_statistics_a9b3e470743914d2d3225b3b72a7582cb}{matches\_lost}};}
+\DoxyCodeLine{00110   cout << \textcolor{stringliteral}{"{} WS:"{}} << \mbox{\hyperlink{class_statistics_aac371279328f1370825e92fb408897b5}{sets\_won}};}
+\DoxyCodeLine{00111   cout << \textcolor{stringliteral}{"{} LS:"{}} << \mbox{\hyperlink{class_statistics_a59fd9776be1aaba070bcf07a7fe75223}{sets\_lost}};}
+\DoxyCodeLine{00112   cout << \textcolor{stringliteral}{"{} WG:"{}} << \mbox{\hyperlink{class_statistics_a764b77298e5b22d27621673424591845}{games\_won}};}
+\DoxyCodeLine{00113   cout << \textcolor{stringliteral}{"{} LG:"{}} << \mbox{\hyperlink{class_statistics_a16407fea5b227ccc221b1fb38cb8a74c}{games\_lost}};}
+\DoxyCodeLine{00114   cout << endl;}
+\DoxyCodeLine{00115 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_statistics_a08824e077af9a690352935cae5c0e8ac}\label{class_statistics_a08824e077af9a690352935cae5c0e8ac}} 
-\index{Statistics@{Statistics}!set\_games\_lost@{set\_games\_lost}}
-\index{set\_games\_lost@{set\_games\_lost}!Statistics@{Statistics}}
-\doxysubsubsection{\texorpdfstring{set\_games\_lost()}{set\_games\_lost()}}
-{\footnotesize\ttfamily void Statistics\+::set\+\_\+games\+\_\+lost (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
 
 
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_statistics_ae2a6f6821bca9d68341591ebd2c527d7}\label{class_statistics_ae2a6f6821bca9d68341591ebd2c527d7}} 
+\index{Statistics@{Statistics}!tournaments@{tournaments}}
+\index{tournaments@{tournaments}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{tournaments}{tournaments}}
+{\footnotesize\ttfamily int Statistics\+::tournaments\hspace{0.3cm}{\ttfamily [private]}}
 
-Actualizar juegos perdidos. 
 
-\begin{DoxyPrecond}{Precondición}
-n \texorpdfstring{$>$}{>}= 0 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Actualiza el contenido de \textquotesingle{}this-\/\texorpdfstring{$>$}{>}games\+\_\+lost\textquotesingle{} 
-\end{DoxyPostcond}
 
+Número de torneos jugados. 
 
-Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00058}{58}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
 
 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00058                                      \{}
-\DoxyCodeLine{00059   games\_lost = n;}
-\DoxyCodeLine{00060 \}}
+Definición en la línea \mbox{\hyperlink{_statistics_8hh_source_l00026}{26}} del archivo \mbox{\hyperlink{_statistics_8hh_source}{Statistics.\+hh}}.
 
-\end{DoxyCode}
-\mbox{\Hypertarget{class_statistics_a365f32c4787f2efac6e3b0b9872c2910}\label{class_statistics_a365f32c4787f2efac6e3b0b9872c2910}} 
-\index{Statistics@{Statistics}!set\_games\_won@{set\_games\_won}}
-\index{set\_games\_won@{set\_games\_won}!Statistics@{Statistics}}
-\doxysubsubsection{\texorpdfstring{set\_games\_won()}{set\_games\_won()}}
-{\footnotesize\ttfamily void Statistics\+::set\+\_\+games\+\_\+won (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_statistics_a38bd96be45562d8f2d1377043343561e}\label{class_statistics_a38bd96be45562d8f2d1377043343561e}} 
+\index{Statistics@{Statistics}!points@{points}}
+\index{points@{points}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{points}{points}}
+{\footnotesize\ttfamily int Statistics\+::points\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Actualizar juegos ganados. 
+Puntos ganados. 
 
-\begin{DoxyPrecond}{Precondición}
-n \texorpdfstring{$>$}{>}= 0 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Actualiza el contenido de \textquotesingle{}this-\/\texorpdfstring{$>$}{>}games\+\_\+won\textquotesingle{} 
-\end{DoxyPostcond}
 
 
-Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00054}{54}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
+Definición en la línea \mbox{\hyperlink{_statistics_8hh_source_l00029}{29}} del archivo \mbox{\hyperlink{_statistics_8hh_source}{Statistics.\+hh}}.
 
+\mbox{\Hypertarget{class_statistics_a55ceb6b864ad1ae0b332bd4b9bb60e6f}\label{class_statistics_a55ceb6b864ad1ae0b332bd4b9bb60e6f}} 
+\index{Statistics@{Statistics}!matches\_won@{matches\_won}}
+\index{matches\_won@{matches\_won}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{matches\_won}{matches\_won}}
+{\footnotesize\ttfamily int Statistics\+::matches\+\_\+won\hspace{0.3cm}{\ttfamily [private]}}
 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00054                                     \{}
-\DoxyCodeLine{00055   games\_won = n;}
-\DoxyCodeLine{00056 \}}
 
-\end{DoxyCode}
-\mbox{\Hypertarget{class_statistics_a3e10891474345b61c7904bbd04af19e5}\label{class_statistics_a3e10891474345b61c7904bbd04af19e5}} 
-\index{Statistics@{Statistics}!set\_matches\_lost@{set\_matches\_lost}}
-\index{set\_matches\_lost@{set\_matches\_lost}!Statistics@{Statistics}}
-\doxysubsubsection{\texorpdfstring{set\_matches\_lost()}{set\_matches\_lost()}}
-{\footnotesize\ttfamily void Statistics\+::set\+\_\+matches\+\_\+lost (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
 
+Partidos ganados. 
 
 
-Actualizar partidos perdidos. 
 
-\begin{DoxyPrecond}{Precondición}
-n \texorpdfstring{$>$}{>}= 0 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Actualiza el contenido de \textquotesingle{}this-\/\texorpdfstring{$>$}{>}matches\+\_\+lost\textquotesingle{} 
-\end{DoxyPostcond}
+Definición en la línea \mbox{\hyperlink{_statistics_8hh_source_l00032}{32}} del archivo \mbox{\hyperlink{_statistics_8hh_source}{Statistics.\+hh}}.
 
+\mbox{\Hypertarget{class_statistics_a9b3e470743914d2d3225b3b72a7582cb}\label{class_statistics_a9b3e470743914d2d3225b3b72a7582cb}} 
+\index{Statistics@{Statistics}!matches\_lost@{matches\_lost}}
+\index{matches\_lost@{matches\_lost}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{matches\_lost}{matches\_lost}}
+{\footnotesize\ttfamily int Statistics\+::matches\+\_\+lost\hspace{0.3cm}{\ttfamily [private]}}
 
-Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00050}{50}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
 
 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00050                                        \{}
-\DoxyCodeLine{00051   matches\_lost = n;}
-\DoxyCodeLine{00052 \}}
+Partidos perdidos. 
 
-\end{DoxyCode}
-\mbox{\Hypertarget{class_statistics_a09c9fe8d7059df6aab872513228eb0c8}\label{class_statistics_a09c9fe8d7059df6aab872513228eb0c8}} 
-\index{Statistics@{Statistics}!set\_matches\_won@{set\_matches\_won}}
-\index{set\_matches\_won@{set\_matches\_won}!Statistics@{Statistics}}
-\doxysubsubsection{\texorpdfstring{set\_matches\_won()}{set\_matches\_won()}}
-{\footnotesize\ttfamily void Statistics\+::set\+\_\+matches\+\_\+won (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
 
 
+Definición en la línea \mbox{\hyperlink{_statistics_8hh_source_l00035}{35}} del archivo \mbox{\hyperlink{_statistics_8hh_source}{Statistics.\+hh}}.
 
-Actualizar partidos ganados. 
+\mbox{\Hypertarget{class_statistics_aac371279328f1370825e92fb408897b5}\label{class_statistics_aac371279328f1370825e92fb408897b5}} 
+\index{Statistics@{Statistics}!sets\_won@{sets\_won}}
+\index{sets\_won@{sets\_won}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{sets\_won}{sets\_won}}
+{\footnotesize\ttfamily int Statistics\+::sets\+\_\+won\hspace{0.3cm}{\ttfamily [private]}}
 
-\begin{DoxyPrecond}{Precondición}
-n \texorpdfstring{$>$}{>}= 0 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Actualiza el contenido de \textquotesingle{}this-\/\texorpdfstring{$>$}{>}matches\+\_\+won\textquotesingle{} 
-\end{DoxyPostcond}
 
 
-Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00046}{46}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
+Sets ganados. 
 
 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00046                                       \{}
-\DoxyCodeLine{00047   matches\_won = n;}
-\DoxyCodeLine{00048 \}}
 
-\end{DoxyCode}
-\mbox{\Hypertarget{class_statistics_a5dd7afe22bc74689387a27315a6039b7}\label{class_statistics_a5dd7afe22bc74689387a27315a6039b7}} 
-\index{Statistics@{Statistics}!set\_points@{set\_points}}
-\index{set\_points@{set\_points}!Statistics@{Statistics}}
-\doxysubsubsection{\texorpdfstring{set\_points()}{set\_points()}}
-{\footnotesize\ttfamily void Statistics\+::set\+\_\+points (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+Definición en la línea \mbox{\hyperlink{_statistics_8hh_source_l00038}{38}} del archivo \mbox{\hyperlink{_statistics_8hh_source}{Statistics.\+hh}}.
 
+\mbox{\Hypertarget{class_statistics_a59fd9776be1aaba070bcf07a7fe75223}\label{class_statistics_a59fd9776be1aaba070bcf07a7fe75223}} 
+\index{Statistics@{Statistics}!sets\_lost@{sets\_lost}}
+\index{sets\_lost@{sets\_lost}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{sets\_lost}{sets\_lost}}
+{\footnotesize\ttfamily int Statistics\+::sets\+\_\+lost\hspace{0.3cm}{\ttfamily [private]}}
 
 
-Obtener puntos. 
 
-\begin{DoxyPrecond}{Precondición}
-n \texorpdfstring{$>$}{>}= 0 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Actualiza los puntos contenidos en \textquotesingle{}this-\/\texorpdfstring{$>$}{>}points\textquotesingle{} 
-\end{DoxyPostcond}
+Sets perdidos. 
 
 
-Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00038}{38}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
 
+Definición en la línea \mbox{\hyperlink{_statistics_8hh_source_l00041}{41}} del archivo \mbox{\hyperlink{_statistics_8hh_source}{Statistics.\+hh}}.
 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00038                                  \{}
-\DoxyCodeLine{00039   points = n;}
-\DoxyCodeLine{00040 \}}
+\mbox{\Hypertarget{class_statistics_a764b77298e5b22d27621673424591845}\label{class_statistics_a764b77298e5b22d27621673424591845}} 
+\index{Statistics@{Statistics}!games\_won@{games\_won}}
+\index{games\_won@{games\_won}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{games\_won}{games\_won}}
+{\footnotesize\ttfamily int Statistics\+::games\+\_\+won\hspace{0.3cm}{\ttfamily [private]}}
 
-\end{DoxyCode}
-\mbox{\Hypertarget{class_statistics_a0e43fe14491540195dd01ee81f81cb49}\label{class_statistics_a0e43fe14491540195dd01ee81f81cb49}} 
-\index{Statistics@{Statistics}!set\_sets\_lost@{set\_sets\_lost}}
-\index{set\_sets\_lost@{set\_sets\_lost}!Statistics@{Statistics}}
-\doxysubsubsection{\texorpdfstring{set\_sets\_lost()}{set\_sets\_lost()}}
-{\footnotesize\ttfamily void Statistics\+::set\+\_\+sets\+\_\+lost (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
 
 
+Juegos ganados. 
 
-Actualizar sets perdidos. 
 
-\begin{DoxyPrecond}{Precondición}
-n \texorpdfstring{$>$}{>}= 0 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Actualiza el contenido de \textquotesingle{}this-\/\texorpdfstring{$>$}{>}sets\+\_\+lost\textquotesingle{} 
-\end{DoxyPostcond}
 
+Definición en la línea \mbox{\hyperlink{_statistics_8hh_source_l00044}{44}} del archivo \mbox{\hyperlink{_statistics_8hh_source}{Statistics.\+hh}}.
 
-Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00066}{66}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
+\mbox{\Hypertarget{class_statistics_a16407fea5b227ccc221b1fb38cb8a74c}\label{class_statistics_a16407fea5b227ccc221b1fb38cb8a74c}} 
+\index{Statistics@{Statistics}!games\_lost@{games\_lost}}
+\index{games\_lost@{games\_lost}!Statistics@{Statistics}}
+\doxysubsubsection{\texorpdfstring{games\_lost}{games\_lost}}
+{\footnotesize\ttfamily int Statistics\+::games\+\_\+lost\hspace{0.3cm}{\ttfamily [private]}}
 
 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00066                                     \{}
-\DoxyCodeLine{00067   sets\_lost = n;}
-\DoxyCodeLine{00068 \}}
 
-\end{DoxyCode}
-\mbox{\Hypertarget{class_statistics_a812bb705484b4bbf1cd71808dc2e15b0}\label{class_statistics_a812bb705484b4bbf1cd71808dc2e15b0}} 
-\index{Statistics@{Statistics}!set\_sets\_won@{set\_sets\_won}}
-\index{set\_sets\_won@{set\_sets\_won}!Statistics@{Statistics}}
-\doxysubsubsection{\texorpdfstring{set\_sets\_won()}{set\_sets\_won()}}
-{\footnotesize\ttfamily void Statistics\+::set\+\_\+sets\+\_\+won (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+Juegos perdidos. 
 
 
 
-Actualizar sets ganados. 
+Definición en la línea \mbox{\hyperlink{_statistics_8hh_source_l00047}{47}} del archivo \mbox{\hyperlink{_statistics_8hh_source}{Statistics.\+hh}}.
 
-\begin{DoxyPrecond}{Precondición}
-n \texorpdfstring{$>$}{>}= 0 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Actualiza el contenido de \textquotesingle{}this-\/\texorpdfstring{$>$}{>}sets\+\_\+won\textquotesingle{} 
-\end{DoxyPostcond}
-
-
-Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00062}{62}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00062                                    \{}
-\DoxyCodeLine{00063   sets\_won = n;}
-\DoxyCodeLine{00064 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_statistics_a41f54794e71c50102dc5cfb5d40297d9}\label{class_statistics_a41f54794e71c50102dc5cfb5d40297d9}} 
-\index{Statistics@{Statistics}!set\_tournaments@{set\_tournaments}}
-\index{set\_tournaments@{set\_tournaments}!Statistics@{Statistics}}
-\doxysubsubsection{\texorpdfstring{set\_tournaments()}{set\_tournaments()}}
-{\footnotesize\ttfamily void Statistics\+::set\+\_\+tournaments (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
-
-
-
-Actualizar torneos jugados. 
-
-\begin{DoxyPrecond}{Precondición}
-n \texorpdfstring{$>$}{>}= 0 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Actualiza el contenido de \textquotesingle{}this-\/\texorpdfstring{$>$}{>}tournaments\textquotesingle{} 
-\end{DoxyPostcond}
-
-
-Definición en la línea \mbox{\hyperlink{_statistics_8cc_source_l00042}{42}} del archivo \mbox{\hyperlink{_statistics_8cc_source}{Statistics.\+cc}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00042                                       \{}
-\DoxyCodeLine{00043   tournaments = n;}
-\DoxyCodeLine{00044 \}}
-
-\end{DoxyCode}
 
 
 La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}

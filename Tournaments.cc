@@ -1,14 +1,9 @@
 #include "Tournaments.hh"
 
-void Tournaments::remove_player(const string& name) {
-	map<string, Tournament>::iterator it = tournaments.begin();
-	while (it != tournaments.end()) {
-		it->second.remove_player_from_results(name);
-		++it;
-	}
-}
+// Modificadoras
 
 void Tournaments::read_starting_tournaments(int T) {
+	tournaments.clear();
 	while (T--) {
 		string t;
 		int c;
@@ -26,13 +21,6 @@ bool Tournaments::remove_tournament(const string& t, Ranking& r) { // Ranking& r
 	if (it != tournaments.end()) {
 		r.count_players();
 		map<string,int> old = it->second.get_old_results();
-		/*
-		map<string,int>::const_iterator res = old.begin();
-		while (res != old.end()) {
-			cout << res->first << ' ' << res->second << endl;
-			++res;
-		}
-		*/
 		r.add_tournament_results(old, map<string,Statistics>());
 		tournaments.erase(it);
 		return true;
@@ -56,9 +44,23 @@ void Tournaments::end_tournament(string t, Ranking& r, const Categories& ctg) {
 	r.add_tournament_results(old, results);
 }
 
+void Tournaments::remove_player(const string& name) {
+	map<string, Tournament>::iterator it = tournaments.begin();
+	while (it != tournaments.end()) {
+		it->second.remove_player_from_results(name);
+		++it;
+	}
+}
+
+
+// Consultoras
+
 int Tournaments::count_tournaments() const {
 	return tournaments.size();
 }
+
+
+// Escritoras
 
 void Tournaments::list_tournaments(const Categories& c) const {
 	cout << tournaments.size() << endl;

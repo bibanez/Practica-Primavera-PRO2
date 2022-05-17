@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Práctica PRO2 Primavera 2022: Gestión de una liga de tenis profesional<span id="projectnumber">&#160;Especificación 19-4-2022</span>
+   <div id="projectname">Práctica PRO2 Primavera 2022: Gestión de una liga de tenis profesional<span id="projectnumber">&#160;Especificación 17-5-2022</span>
    </div>
   </td>
  </tr>
@@ -64,65 +64,106 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pri-attribs">Atributos privados</a> &#124;
 <a href="class_player-members.html">Lista de todos los miembros</a>  </div>
   <div class="headertitle"><div class="title">Referencia de la Clase Player</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Contiene el nombre y puntuación de un jugador.  
+<p>Esta clase extiende la funcionalidad de <a class="el" href="class_statistics.html" title="Contiene las estadísticas de un jugador.">Statistics</a> para comprender los rankings en el circuito.  
  <a href="class_player.html#details">Más...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_player_8hh_source.html">Player.hh</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Métodos públicos</h2></td></tr>
-<tr class="memitem:a5a2790fccf10c30106370d910c96d317"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a5a2790fccf10c30106370d910c96d317">Player</a> (const string &amp;name)</td></tr>
-<tr class="memdesc:a5a2790fccf10c30106370d910c96d317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creadora por defecto.  <a href="class_player.html#a5a2790fccf10c30106370d910c96d317">Más...</a><br /></td></tr>
-<tr class="separator:a5a2790fccf10c30106370d910c96d317"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad46377ed50796f0f2d9b85fad503cb41"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ad46377ed50796f0f2d9b85fad503cb41">Player</a> (int n)</td></tr>
-<tr class="memdesc:ad46377ed50796f0f2d9b85fad503cb41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creadora.  <a href="class_player.html#ad46377ed50796f0f2d9b85fad503cb41">Más...</a><br /></td></tr>
-<tr class="separator:ad46377ed50796f0f2d9b85fad503cb41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76620b0c66411bac9974b35bedfc182c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a76620b0c66411bac9974b35bedfc182c">Player</a> (const string &amp;name, int points)</td></tr>
-<tr class="memdesc:a76620b0c66411bac9974b35bedfc182c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creadora.  <a href="class_player.html#a76620b0c66411bac9974b35bedfc182c">Más...</a><br /></td></tr>
-<tr class="separator:a76620b0c66411bac9974b35bedfc182c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf2e45581d8fd61e26328fa48d13b9b7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#adf2e45581d8fd61e26328fa48d13b9b7">Player</a> (const <a class="el" href="class_player.html">Player</a> &amp;p)</td></tr>
-<tr class="memdesc:adf2e45581d8fd61e26328fa48d13b9b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creadora.  <a href="class_player.html#adf2e45581d8fd61e26328fa48d13b9b7">Más...</a><br /></td></tr>
-<tr class="separator:adf2e45581d8fd61e26328fa48d13b9b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3febbd31e6b1fd1f49bc3e5a0b938cd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a3febbd31e6b1fd1f49bc3e5a0b938cd9">set_name</a> (const string &amp;name)</td></tr>
-<tr class="memdesc:a3febbd31e6b1fd1f49bc3e5a0b938cd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Canviar nombre.  <a href="class_player.html#a3febbd31e6b1fd1f49bc3e5a0b938cd9">Más...</a><br /></td></tr>
-<tr class="separator:a3febbd31e6b1fd1f49bc3e5a0b938cd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf61e116ff6ebf016d6a4a5423431df3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#acf61e116ff6ebf016d6a4a5423431df3">set_points</a> (int n)</td></tr>
-<tr class="memdesc:acf61e116ff6ebf016d6a4a5423431df3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Canviar puntuación.  <a href="class_player.html#acf61e116ff6ebf016d6a4a5423431df3">Más...</a><br /></td></tr>
-<tr class="separator:acf61e116ff6ebf016d6a4a5423431df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20d87708237a69339804f3bca9ff5425"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a20d87708237a69339804f3bca9ff5425">set_tmp_points</a> (int n)</td></tr>
-<tr class="memdesc:a20d87708237a69339804f3bca9ff5425"><td class="mdescLeft">&#160;</td><td class="mdescRight">Canviar puntuación temporal.  <a href="class_player.html#a20d87708237a69339804f3bca9ff5425">Más...</a><br /></td></tr>
-<tr class="separator:a20d87708237a69339804f3bca9ff5425"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc890586bab5d711200648babc4b0ff5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#acc890586bab5d711200648babc4b0ff5">Player</a> (int rk)</td></tr>
+<tr class="memdesc:acc890586bab5d711200648babc4b0ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creadora.  <a href="class_player.html#acc890586bab5d711200648babc4b0ff5">Más...</a><br /></td></tr>
+<tr class="separator:acc890586bab5d711200648babc4b0ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3544f62609a4504bc4b8d217ab4ed5e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a3544f62609a4504bc4b8d217ab4ed5e3">set_ranking</a> (int n)</td></tr>
 <tr class="memdesc:a3544f62609a4504bc4b8d217ab4ed5e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Canviar el ranking.  <a href="class_player.html#a3544f62609a4504bc4b8d217ab4ed5e3">Más...</a><br /></td></tr>
 <tr class="separator:a3544f62609a4504bc4b8d217ab4ed5e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acac978288e2453eaaf571bfd089123a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#acac978288e2453eaaf571bfd089123a2">update_player</a> ()</td></tr>
-<tr class="memdesc:acac978288e2453eaaf571bfd089123a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mueve el valor de <code>tmp</code> a <code>points</code>  <a href="class_player.html#acac978288e2453eaaf571bfd089123a2">Más...</a><br /></td></tr>
-<tr class="separator:acac978288e2453eaaf571bfd089123a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b7eb859de7cd84fca008408f9d969f9"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a7b7eb859de7cd84fca008408f9d969f9">get_name</a> () const</td></tr>
-<tr class="memdesc:a7b7eb859de7cd84fca008408f9d969f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtener nombre.  <a href="class_player.html#a7b7eb859de7cd84fca008408f9d969f9">Más...</a><br /></td></tr>
-<tr class="separator:a7b7eb859de7cd84fca008408f9d969f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af62cff981efa727fcb650e463e13e019"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#af62cff981efa727fcb650e463e13e019">get_points</a> () const</td></tr>
-<tr class="memdesc:af62cff981efa727fcb650e463e13e019"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtener puntos.  <a href="class_player.html#af62cff981efa727fcb650e463e13e019">Más...</a><br /></td></tr>
-<tr class="separator:af62cff981efa727fcb650e463e13e019"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a509cb94bfc343e2dbc8a2d54a52606ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a509cb94bfc343e2dbc8a2d54a52606ba">get_tmp_points</a> () const</td></tr>
-<tr class="memdesc:a509cb94bfc343e2dbc8a2d54a52606ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtener puntos temporales.  <a href="class_player.html#a509cb94bfc343e2dbc8a2d54a52606ba">Más...</a><br /></td></tr>
-<tr class="separator:a509cb94bfc343e2dbc8a2d54a52606ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2d04c85bd624be8b2d19e11206b1a16"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ae2d04c85bd624be8b2d19e11206b1a16">get_ranking</a> () const</td></tr>
 <tr class="memdesc:ae2d04c85bd624be8b2d19e11206b1a16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtener el ranking del jugador.  <a href="class_player.html#ae2d04c85bd624be8b2d19e11206b1a16">Más...</a><br /></td></tr>
 <tr class="separator:ae2d04c85bd624be8b2d19e11206b1a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_statistics"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_statistics')"><img src="closed.png" alt="-"/>&#160;Métodos públicos heredados desde <a class="el" href="class_statistics.html">Statistics</a></td></tr>
+<tr class="memitem:a60ddd90a571ed4c3ce8c0f6317a36d63 inherit pub_methods_class_statistics"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a60ddd90a571ed4c3ce8c0f6317a36d63">Statistics</a> ()</td></tr>
+<tr class="memdesc:a60ddd90a571ed4c3ce8c0f6317a36d63 inherit pub_methods_class_statistics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creadora por defecto.  <a href="class_statistics.html#a60ddd90a571ed4c3ce8c0f6317a36d63">Más...</a><br /></td></tr>
+<tr class="separator:a60ddd90a571ed4c3ce8c0f6317a36d63 inherit pub_methods_class_statistics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00267ff63545946e7068e1b70137050d inherit pub_methods_class_statistics"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a00267ff63545946e7068e1b70137050d">Statistics</a> (int <a class="el" href="class_statistics.html#ae2a6f6821bca9d68341591ebd2c527d7">tournaments</a>)</td></tr>
+<tr class="memdesc:a00267ff63545946e7068e1b70137050d inherit pub_methods_class_statistics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creadora por copia.  <a href="class_statistics.html#a00267ff63545946e7068e1b70137050d">Más...</a><br /></td></tr>
+<tr class="separator:a00267ff63545946e7068e1b70137050d inherit pub_methods_class_statistics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e2e905f930be0f993d0187ed8388206 inherit pub_methods_class_statistics"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a3e2e905f930be0f993d0187ed8388206">add_stats</a> (const <a class="el" href="class_statistics.html">Statistics</a> &amp;stats)</td></tr>
+<tr class="memdesc:a3e2e905f930be0f993d0187ed8388206 inherit pub_methods_class_statistics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiza las estadísticas sumando de nuevas.  <a href="class_statistics.html#a3e2e905f930be0f993d0187ed8388206">Más...</a><br /></td></tr>
+<tr class="separator:a3e2e905f930be0f993d0187ed8388206 inherit pub_methods_class_statistics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dd7afe22bc74689387a27315a6039b7 inherit pub_methods_class_statistics"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a5dd7afe22bc74689387a27315a6039b7">set_points</a> (int n)</td></tr>
+<tr class="memdesc:a5dd7afe22bc74689387a27315a6039b7 inherit pub_methods_class_statistics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtener puntos.  <a href="class_statistics.html#a5dd7afe22bc74689387a27315a6039b7">Más...</a><br /></td></tr>
+<tr class="separator:a5dd7afe22bc74689387a27315a6039b7 inherit pub_methods_class_statistics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09c9fe8d7059df6aab872513228eb0c8 inherit pub_methods_class_statistics"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a09c9fe8d7059df6aab872513228eb0c8">set_matches_won</a> (int n)</td></tr>
+<tr class="memdesc:a09c9fe8d7059df6aab872513228eb0c8 inherit pub_methods_class_statistics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualizar partidos ganados.  <a href="class_statistics.html#a09c9fe8d7059df6aab872513228eb0c8">Más...</a><br /></td></tr>
+<tr class="separator:a09c9fe8d7059df6aab872513228eb0c8 inherit pub_methods_class_statistics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e10891474345b61c7904bbd04af19e5 inherit pub_methods_class_statistics"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a3e10891474345b61c7904bbd04af19e5">set_matches_lost</a> (int n)</td></tr>
+<tr class="memdesc:a3e10891474345b61c7904bbd04af19e5 inherit pub_methods_class_statistics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualizar partidos perdidos.  <a href="class_statistics.html#a3e10891474345b61c7904bbd04af19e5">Más...</a><br /></td></tr>
+<tr class="separator:a3e10891474345b61c7904bbd04af19e5 inherit pub_methods_class_statistics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a812bb705484b4bbf1cd71808dc2e15b0 inherit pub_methods_class_statistics"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a812bb705484b4bbf1cd71808dc2e15b0">set_sets_won</a> (int n)</td></tr>
+<tr class="memdesc:a812bb705484b4bbf1cd71808dc2e15b0 inherit pub_methods_class_statistics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualizar sets ganados.  <a href="class_statistics.html#a812bb705484b4bbf1cd71808dc2e15b0">Más...</a><br /></td></tr>
+<tr class="separator:a812bb705484b4bbf1cd71808dc2e15b0 inherit pub_methods_class_statistics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e43fe14491540195dd01ee81f81cb49 inherit pub_methods_class_statistics"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a0e43fe14491540195dd01ee81f81cb49">set_sets_lost</a> (int n)</td></tr>
+<tr class="memdesc:a0e43fe14491540195dd01ee81f81cb49 inherit pub_methods_class_statistics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualizar sets perdidos.  <a href="class_statistics.html#a0e43fe14491540195dd01ee81f81cb49">Más...</a><br /></td></tr>
+<tr class="separator:a0e43fe14491540195dd01ee81f81cb49 inherit pub_methods_class_statistics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a365f32c4787f2efac6e3b0b9872c2910 inherit pub_methods_class_statistics"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a365f32c4787f2efac6e3b0b9872c2910">set_games_won</a> (int n)</td></tr>
+<tr class="memdesc:a365f32c4787f2efac6e3b0b9872c2910 inherit pub_methods_class_statistics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualizar juegos ganados.  <a href="class_statistics.html#a365f32c4787f2efac6e3b0b9872c2910">Más...</a><br /></td></tr>
+<tr class="separator:a365f32c4787f2efac6e3b0b9872c2910 inherit pub_methods_class_statistics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08824e077af9a690352935cae5c0e8ac inherit pub_methods_class_statistics"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a08824e077af9a690352935cae5c0e8ac">set_games_lost</a> (int n)</td></tr>
+<tr class="memdesc:a08824e077af9a690352935cae5c0e8ac inherit pub_methods_class_statistics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualizar juegos perdidos.  <a href="class_statistics.html#a08824e077af9a690352935cae5c0e8ac">Más...</a><br /></td></tr>
+<tr class="separator:a08824e077af9a690352935cae5c0e8ac inherit pub_methods_class_statistics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41f54794e71c50102dc5cfb5d40297d9 inherit pub_methods_class_statistics"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a41f54794e71c50102dc5cfb5d40297d9">set_tournaments</a> (int n)</td></tr>
+<tr class="memdesc:a41f54794e71c50102dc5cfb5d40297d9 inherit pub_methods_class_statistics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualizar torneos jugados.  <a href="class_statistics.html#a41f54794e71c50102dc5cfb5d40297d9">Más...</a><br /></td></tr>
+<tr class="separator:a41f54794e71c50102dc5cfb5d40297d9 inherit pub_methods_class_statistics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4faa80fa024777d57b6fa4b3559eec0a inherit pub_methods_class_statistics"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a4faa80fa024777d57b6fa4b3559eec0a">clear</a> ()</td></tr>
+<tr class="memdesc:a4faa80fa024777d57b6fa4b3559eec0a inherit pub_methods_class_statistics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Limpia las estadisticas.  <a href="class_statistics.html#a4faa80fa024777d57b6fa4b3559eec0a">Más...</a><br /></td></tr>
+<tr class="separator:a4faa80fa024777d57b6fa4b3559eec0a inherit pub_methods_class_statistics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1196c0d787e9dfe3a71161d9f25b57b inherit pub_methods_class_statistics"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#ae1196c0d787e9dfe3a71161d9f25b57b">get_points</a> () const</td></tr>
+<tr class="memdesc:ae1196c0d787e9dfe3a71161d9f25b57b inherit pub_methods_class_statistics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtener puntos.  <a href="class_statistics.html#ae1196c0d787e9dfe3a71161d9f25b57b">Más...</a><br /></td></tr>
+<tr class="separator:ae1196c0d787e9dfe3a71161d9f25b57b inherit pub_methods_class_statistics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a982df5a5d2e58a63a3af3e1d99b8fa55 inherit pub_methods_class_statistics"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a982df5a5d2e58a63a3af3e1d99b8fa55">get_tournaments</a> () const</td></tr>
+<tr class="memdesc:a982df5a5d2e58a63a3af3e1d99b8fa55 inherit pub_methods_class_statistics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtener torneos jugados.  <a href="class_statistics.html#a982df5a5d2e58a63a3af3e1d99b8fa55">Más...</a><br /></td></tr>
+<tr class="separator:a982df5a5d2e58a63a3af3e1d99b8fa55 inherit pub_methods_class_statistics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa9252dfee154d7e24bb87c61a7a0d75 inherit pub_methods_class_statistics"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#afa9252dfee154d7e24bb87c61a7a0d75">get_matches_won</a> () const</td></tr>
+<tr class="memdesc:afa9252dfee154d7e24bb87c61a7a0d75 inherit pub_methods_class_statistics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtener partidos ganados.  <a href="class_statistics.html#afa9252dfee154d7e24bb87c61a7a0d75">Más...</a><br /></td></tr>
+<tr class="separator:afa9252dfee154d7e24bb87c61a7a0d75 inherit pub_methods_class_statistics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0dba6690ee022c9ac5925a40f4355a9 inherit pub_methods_class_statistics"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#af0dba6690ee022c9ac5925a40f4355a9">get_matches_lost</a> () const</td></tr>
+<tr class="memdesc:af0dba6690ee022c9ac5925a40f4355a9 inherit pub_methods_class_statistics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtener partidos perdidos.  <a href="class_statistics.html#af0dba6690ee022c9ac5925a40f4355a9">Más...</a><br /></td></tr>
+<tr class="separator:af0dba6690ee022c9ac5925a40f4355a9 inherit pub_methods_class_statistics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8600132572eb7fc675192414d55f1c17 inherit pub_methods_class_statistics"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a8600132572eb7fc675192414d55f1c17">get_sets_won</a> () const</td></tr>
+<tr class="memdesc:a8600132572eb7fc675192414d55f1c17 inherit pub_methods_class_statistics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtener sets ganados.  <a href="class_statistics.html#a8600132572eb7fc675192414d55f1c17">Más...</a><br /></td></tr>
+<tr class="separator:a8600132572eb7fc675192414d55f1c17 inherit pub_methods_class_statistics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a262384af152cb440bcaf58544497f4 inherit pub_methods_class_statistics"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a0a262384af152cb440bcaf58544497f4">get_sets_lost</a> () const</td></tr>
+<tr class="memdesc:a0a262384af152cb440bcaf58544497f4 inherit pub_methods_class_statistics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtener sets perdidos.  <a href="class_statistics.html#a0a262384af152cb440bcaf58544497f4">Más...</a><br /></td></tr>
+<tr class="separator:a0a262384af152cb440bcaf58544497f4 inherit pub_methods_class_statistics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a364605762dea27e3b46ce081ef821df9 inherit pub_methods_class_statistics"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a364605762dea27e3b46ce081ef821df9">get_games_won</a> () const</td></tr>
+<tr class="memdesc:a364605762dea27e3b46ce081ef821df9 inherit pub_methods_class_statistics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtener juegos ganados.  <a href="class_statistics.html#a364605762dea27e3b46ce081ef821df9">Más...</a><br /></td></tr>
+<tr class="separator:a364605762dea27e3b46ce081ef821df9 inherit pub_methods_class_statistics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d8bfb495739375e83bad8a243329985 inherit pub_methods_class_statistics"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a9d8bfb495739375e83bad8a243329985">get_games_lost</a> () const</td></tr>
+<tr class="memdesc:a9d8bfb495739375e83bad8a243329985 inherit pub_methods_class_statistics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtener juegos perdidos.  <a href="class_statistics.html#a9d8bfb495739375e83bad8a243329985">Más...</a><br /></td></tr>
+<tr class="separator:a9d8bfb495739375e83bad8a243329985 inherit pub_methods_class_statistics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8985ecfe6cf78aa530287095ce57d625 inherit pub_methods_class_statistics"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_statistics.html#a8985ecfe6cf78aa530287095ce57d625">print_statistics</a> () const</td></tr>
+<tr class="memdesc:a8985ecfe6cf78aa530287095ce57d625 inherit pub_methods_class_statistics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime las estadísticas.  <a href="class_statistics.html#a8985ecfe6cf78aa530287095ce57d625">Más...</a><br /></td></tr>
+<tr class="separator:a8985ecfe6cf78aa530287095ce57d625 inherit pub_methods_class_statistics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:ac793ef1d1e7c66b3b4a81a8b4ed005a5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ac793ef1d1e7c66b3b4a81a8b4ed005a5">ranking</a></td></tr>
+<tr class="memdesc:ac793ef1d1e7c66b3b4a81a8b4ed005a5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_ranking.html" title="Contiene el ranking y las estadísticas de los jugadores en un circuito. Implementa también las funcio...">Ranking</a> del jugador.  <a href="class_player.html#ac793ef1d1e7c66b3b4a81a8b4ed005a5">Más...</a><br /></td></tr>
+<tr class="separator:ac793ef1d1e7c66b3b4a81a8b4ed005a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock"><p >Contiene el nombre y puntuación de un jugador. </p>
+<div class="textblock"><p >Esta clase extiende la funcionalidad de <a class="el" href="class_statistics.html" title="Contiene las estadísticas de un jugador.">Statistics</a> para comprender los rankings en el circuito. </p>
 
-<p class="definition">Definición en la línea <a class="el" href="_player_8hh_source.html#l00017">17</a> del archivo <a class="el" href="_player_8hh_source.html">Player.hh</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_player_8hh_source.html#l00020">20</a> del archivo <a class="el" href="_player_8hh_source.html">Player.hh</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
-<a id="a5a2790fccf10c30106370d910c96d317" name="a5a2790fccf10c30106370d910c96d317"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a2790fccf10c30106370d910c96d317">&#9670;&nbsp;</a></span>Player() <span class="overload">[1/4]</span></h2>
+<a id="acc890586bab5d711200648babc4b0ff5" name="acc890586bab5d711200648babc4b0ff5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc890586bab5d711200648babc4b0ff5">&#9670;&nbsp;</a></span>Player()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -130,35 +171,34 @@ Métodos públicos</h2></td></tr>
         <tr>
           <td class="memname">Player::Player </td>
           <td>(</td>
-          <td class="paramtype">const string &amp;&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rk</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creadora por defecto. </p>
+<p>Creadora. </p>
 <dl class="section pre"><dt>Precondición</dt><dd><em>cierto</em> </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Crea un jugador con nombre vacío y puntuación 0</dd></dl>
-<p>Creadora </p><dl class="section pre"><dt>Precondición</dt><dd><em>cierto</em> </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Crea un jugador con nombre <code>name</code> y puntuación 0 </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Crea un jugador con ranking <code>rk</code> y estadísticas vacías </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_player_8cc_source.html#l00015">15</a> del archivo <a class="el" href="_player_8cc_source.html">Player.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>                                  {</div>
-<div class="line"><span class="lineno">   16</span>  name = _name;</div>
-<div class="line"><span class="lineno">   17</span>  points = tmp = ranking = 0;</div>
-<div class="line"><span class="lineno">   18</span>}</div>
+<p class="definition">Definición en la línea <a class="el" href="_player_8cc_source.html#l00005">5</a> del archivo <a class="el" href="_player_8cc_source.html">Player.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    5</span>                     {</div>
+<div class="line"><span class="lineno">    6</span>  <a class="code hl_variable" href="class_player.html#ac793ef1d1e7c66b3b4a81a8b4ed005a5">ranking</a> = rk;</div>
+<div class="line"><span class="lineno">    7</span>}</div>
+<div class="ttc" id="aclass_player_html_ac793ef1d1e7c66b3b4a81a8b4ed005a5"><div class="ttname"><a href="class_player.html#ac793ef1d1e7c66b3b4a81a8b4ed005a5">Player::ranking</a></div><div class="ttdeci">int ranking</div><div class="ttdoc">Ranking del jugador.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8hh_source.html#l00023">Player.hh:23</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="ad46377ed50796f0f2d9b85fad503cb41" name="ad46377ed50796f0f2d9b85fad503cb41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad46377ed50796f0f2d9b85fad503cb41">&#9670;&nbsp;</a></span>Player() <span class="overload">[2/4]</span></h2>
+<h2 class="groupheader">Documentación de las funciones miembro</h2>
+<a id="a3544f62609a4504bc4b8d217ab4ed5e3" name="a3544f62609a4504bc4b8d217ab4ed5e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3544f62609a4504bc4b8d217ab4ed5e3">&#9670;&nbsp;</a></span>set_ranking()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Player::Player </td>
+          <td class="memname">void Player::set_ranking </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>n</em></td><td>)</td>
@@ -167,142 +207,14 @@ Métodos públicos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creadora. </p>
-<dl class="section pre"><dt>Precondición</dt><dd><em>cierto</em> </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Crea un jugador con nombre vacío y puntuación <code>n</code> </dd></dl>
+<p>Canviar el ranking. </p>
+<dl class="section pre"><dt>Precondición</dt><dd><code>1 &lt;= n</code> </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Canvia el valor de <code>this-&gt;ranking</code> </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_player_8cc_source.html#l00009">9</a> del archivo <a class="el" href="_player_8cc_source.html">Player.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    9</span>                    {</div>
-<div class="line"><span class="lineno">   10</span>  name = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">   11</span>  points = tmp = n;</div>
-<div class="line"><span class="lineno">   12</span>  ranking = 0;</div>
-<div class="line"><span class="lineno">   13</span>}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a76620b0c66411bac9974b35bedfc182c" name="a76620b0c66411bac9974b35bedfc182c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76620b0c66411bac9974b35bedfc182c">&#9670;&nbsp;</a></span>Player() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Player::Player </td>
-          <td>(</td>
-          <td class="paramtype">const string &amp;&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>points</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Creadora. </p>
-<dl class="section pre"><dt>Precondición</dt><dd>points &gt;= 0 </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Crea un jugador con nombre <code>name</code> y puntuación <code>points</code> </dd></dl>
-
-<p class="definition">Definición en la línea <a class="el" href="_player_8cc_source.html#l00020">20</a> del archivo <a class="el" href="_player_8cc_source.html">Player.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>                                               {</div>
-<div class="line"><span class="lineno">   21</span>  name = _name;</div>
-<div class="line"><span class="lineno">   22</span>  points = tmp = _points;</div>
-<div class="line"><span class="lineno">   23</span>  ranking = 0;</div>
-<div class="line"><span class="lineno">   24</span>}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="adf2e45581d8fd61e26328fa48d13b9b7" name="adf2e45581d8fd61e26328fa48d13b9b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf2e45581d8fd61e26328fa48d13b9b7">&#9670;&nbsp;</a></span>Player() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Player::Player </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_player.html">Player</a> &amp;&#160;</td>
-          <td class="paramname"><em>p</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Creadora. </p>
-<dl class="section pre"><dt>Precondición</dt><dd><em>cierto</em> </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Crea un jugador con los mismos parámetros que <code>p</code> </dd></dl>
-
-<p class="definition">Definición en la línea <a class="el" href="_player_8cc_source.html#l00026">26</a> del archivo <a class="el" href="_player_8cc_source.html">Player.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   26</span>                              {</div>
-<div class="line"><span class="lineno">   27</span>  name = p.<a class="code hl_function" href="class_player.html#a7b7eb859de7cd84fca008408f9d969f9">get_name</a>();</div>
-<div class="line"><span class="lineno">   28</span>  points = p.<a class="code hl_function" href="class_player.html#af62cff981efa727fcb650e463e13e019">get_points</a>();</div>
-<div class="line"><span class="lineno">   29</span>  tmp = p.<a class="code hl_function" href="class_player.html#a509cb94bfc343e2dbc8a2d54a52606ba">get_tmp_points</a>();</div>
-<div class="line"><span class="lineno">   30</span>  ranking = p.<a class="code hl_function" href="class_player.html#ae2d04c85bd624be8b2d19e11206b1a16">get_ranking</a>();</div>
-<div class="line"><span class="lineno">   31</span>}</div>
-<div class="ttc" id="aclass_player_html_a509cb94bfc343e2dbc8a2d54a52606ba"><div class="ttname"><a href="class_player.html#a509cb94bfc343e2dbc8a2d54a52606ba">Player::get_tmp_points</a></div><div class="ttdeci">int get_tmp_points() const</div><div class="ttdoc">Obtener puntos temporales.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cc_source.html#l00061">Player.cc:61</a></div></div>
-<div class="ttc" id="aclass_player_html_a7b7eb859de7cd84fca008408f9d969f9"><div class="ttname"><a href="class_player.html#a7b7eb859de7cd84fca008408f9d969f9">Player::get_name</a></div><div class="ttdeci">string get_name() const</div><div class="ttdoc">Obtener nombre.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cc_source.html#l00053">Player.cc:53</a></div></div>
-<div class="ttc" id="aclass_player_html_ae2d04c85bd624be8b2d19e11206b1a16"><div class="ttname"><a href="class_player.html#ae2d04c85bd624be8b2d19e11206b1a16">Player::get_ranking</a></div><div class="ttdeci">int get_ranking() const</div><div class="ttdoc">Obtener el ranking del jugador.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cc_source.html#l00065">Player.cc:65</a></div></div>
-<div class="ttc" id="aclass_player_html_af62cff981efa727fcb650e463e13e019"><div class="ttname"><a href="class_player.html#af62cff981efa727fcb650e463e13e019">Player::get_points</a></div><div class="ttdeci">int get_points() const</div><div class="ttdoc">Obtener puntos.</div><div class="ttdef"><b>Definition:</b> <a href="_player_8cc_source.html#l00057">Player.cc:57</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<h2 class="groupheader">Documentación de las funciones miembro</h2>
-<a id="a7b7eb859de7cd84fca008408f9d969f9" name="a7b7eb859de7cd84fca008408f9d969f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b7eb859de7cd84fca008408f9d969f9">&#9670;&nbsp;</a></span>get_name()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">string Player::get_name </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Obtener nombre. </p>
-<dl class="section pre"><dt>Precondición</dt><dd><em>cierto</em> </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Retorna el nombre del jugador en <code>this-&gt;name</code> </dd></dl>
-
-<p class="definition">Definición en la línea <a class="el" href="_player_8cc_source.html#l00053">53</a> del archivo <a class="el" href="_player_8cc_source.html">Player.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>                              {</div>
-<div class="line"><span class="lineno">   54</span>  <span class="keywordflow">return</span> name;</div>
-<div class="line"><span class="lineno">   55</span>}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="af62cff981efa727fcb650e463e13e019" name="af62cff981efa727fcb650e463e13e019"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af62cff981efa727fcb650e463e13e019">&#9670;&nbsp;</a></span>get_points()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Player::get_points </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Obtener puntos. </p>
-<dl class="section pre"><dt>Precondición</dt><dd><em>cierto</em> </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Retorna los puntos del jugador en <code>this-&gt;points</code> </dd></dl>
-
-<p class="definition">Definición en la línea <a class="el" href="_player_8cc_source.html#l00057">57</a> del archivo <a class="el" href="_player_8cc_source.html">Player.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>                             {</div>
-<div class="line"><span class="lineno">   58</span>  <span class="keywordflow">return</span> points;</div>
-<div class="line"><span class="lineno">   59</span>}</div>
+<p class="definition">Definición en la línea <a class="el" href="_player_8cc_source.html#l00012">12</a> del archivo <a class="el" href="_player_8cc_source.html">Player.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   12</span>                              {</div>
+<div class="line"><span class="lineno">   13</span>  <a class="code hl_variable" href="class_player.html#ac793ef1d1e7c66b3b4a81a8b4ed005a5">ranking</a> = n;</div>
+<div class="line"><span class="lineno">   14</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -325,171 +237,38 @@ Métodos públicos</h2></td></tr>
 <dl class="section pre"><dt>Precondición</dt><dd><em>cierto</em> </dd></dl>
 <dl class="section post"><dt>Postcondición</dt><dd>Retorna el ranking (puede que sea temporal) del jugador </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_player_8cc_source.html#l00065">65</a> del archivo <a class="el" href="_player_8cc_source.html">Player.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   65</span>                              {</div>
-<div class="line"><span class="lineno">   66</span>  <span class="keywordflow">return</span> ranking;</div>
-<div class="line"><span class="lineno">   67</span>}</div>
+<p class="definition">Definición en la línea <a class="el" href="_player_8cc_source.html#l00016">16</a> del archivo <a class="el" href="_player_8cc_source.html">Player.cc</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>                              {</div>
+<div class="line"><span class="lineno">   17</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="class_player.html#ac793ef1d1e7c66b3b4a81a8b4ed005a5">ranking</a>;</div>
+<div class="line"><span class="lineno">   18</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a509cb94bfc343e2dbc8a2d54a52606ba" name="a509cb94bfc343e2dbc8a2d54a52606ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a509cb94bfc343e2dbc8a2d54a52606ba">&#9670;&nbsp;</a></span>get_tmp_points()</h2>
+<h2 class="groupheader">Documentación de los datos miembro</h2>
+<a id="ac793ef1d1e7c66b3b4a81a8b4ed005a5" name="ac793ef1d1e7c66b3b4a81a8b4ed005a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac793ef1d1e7c66b3b4a81a8b4ed005a5">&#9670;&nbsp;</a></span>ranking</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int Player::get_tmp_points </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="memname">int Player::ranking</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Obtener puntos temporales. </p>
-<dl class="section pre"><dt>Precondición</dt><dd><em>cierto</em> </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Retorna los puntos temporales del jugador </dd></dl>
+<p><a class="el" href="class_ranking.html" title="Contiene el ranking y las estadísticas de los jugadores en un circuito. Implementa también las funcio...">Ranking</a> del jugador. </p>
 
-<p class="definition">Definición en la línea <a class="el" href="_player_8cc_source.html#l00061">61</a> del archivo <a class="el" href="_player_8cc_source.html">Player.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>                                 {</div>
-<div class="line"><span class="lineno">   62</span>  <span class="keywordflow">return</span> tmp;</div>
-<div class="line"><span class="lineno">   63</span>}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a3febbd31e6b1fd1f49bc3e5a0b938cd9" name="a3febbd31e6b1fd1f49bc3e5a0b938cd9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3febbd31e6b1fd1f49bc3e5a0b938cd9">&#9670;&nbsp;</a></span>set_name()</h2>
+<p class="definition">Definición en la línea <a class="el" href="_player_8hh_source.html#l00023">23</a> del archivo <a class="el" href="_player_8hh_source.html">Player.hh</a>.</p>
 
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Player::set_name </td>
-          <td>(</td>
-          <td class="paramtype">const string &amp;&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Canviar nombre. </p>
-<dl class="section pre"><dt>Precondición</dt><dd><em>cierto</em> </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Canvia <code>this-&gt;name</code> por <code>name</code> </dd></dl>
-
-<p class="definition">Definición en la línea <a class="el" href="_player_8cc_source.html#l00033">33</a> del archivo <a class="el" href="_player_8cc_source.html">Player.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   33</span>                                         {</div>
-<div class="line"><span class="lineno">   34</span>  name = _name;</div>
-<div class="line"><span class="lineno">   35</span>}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="acf61e116ff6ebf016d6a4a5423431df3" name="acf61e116ff6ebf016d6a4a5423431df3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf61e116ff6ebf016d6a4a5423431df3">&#9670;&nbsp;</a></span>set_points()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Player::set_points </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Canviar puntuación. </p>
-<dl class="section pre"><dt>Precondición</dt><dd><code>n &gt;= 0</code> </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Canvia el valor de <code>this-&gt;points</code> con el valor de <code>n</code> </dd></dl>
-
-<p class="definition">Definición en la línea <a class="el" href="_player_8cc_source.html#l00037">37</a> del archivo <a class="el" href="_player_8cc_source.html">Player.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                             {</div>
-<div class="line"><span class="lineno">   38</span>  points = n;</div>
-<div class="line"><span class="lineno">   39</span>}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a3544f62609a4504bc4b8d217ab4ed5e3" name="a3544f62609a4504bc4b8d217ab4ed5e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3544f62609a4504bc4b8d217ab4ed5e3">&#9670;&nbsp;</a></span>set_ranking()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Player::set_ranking </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Canviar el ranking. </p>
-<dl class="section pre"><dt>Precondición</dt><dd><code>1 &lt;= n</code> </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Canvia el valor de <code>this-&gt;ranking</code> </dd></dl>
-
-<p class="definition">Definición en la línea <a class="el" href="_player_8cc_source.html#l00045">45</a> del archivo <a class="el" href="_player_8cc_source.html">Player.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>                              {</div>
-<div class="line"><span class="lineno">   46</span>  ranking = n;</div>
-<div class="line"><span class="lineno">   47</span>}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a20d87708237a69339804f3bca9ff5425" name="a20d87708237a69339804f3bca9ff5425"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20d87708237a69339804f3bca9ff5425">&#9670;&nbsp;</a></span>set_tmp_points()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Player::set_tmp_points </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Canviar puntuación temporal. </p>
-<dl class="section pre"><dt>Precondición</dt><dd><em>cierto</em> </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd>Canvia el valor en <code>this-&gt;tmp</code> </dd></dl>
-
-<p class="definition">Definición en la línea <a class="el" href="_player_8cc_source.html#l00041">41</a> del archivo <a class="el" href="_player_8cc_source.html">Player.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                 {</div>
-<div class="line"><span class="lineno">   42</span>  tmp = n;</div>
-<div class="line"><span class="lineno">   43</span>}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="acac978288e2453eaaf571bfd089123a2" name="acac978288e2453eaaf571bfd089123a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acac978288e2453eaaf571bfd089123a2">&#9670;&nbsp;</a></span>update_player()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Player::update_player </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Mueve el valor de <code>tmp</code> a <code>points</code> </p>
-<dl class="section pre"><dt>Precondición</dt><dd><em>cierto</em> </dd></dl>
-<dl class="section post"><dt>Postcondición</dt><dd><code>points</code> contiene el previo valor de <code>tmp</code> </dd></dl>
-
-<p class="definition">Definición en la línea <a class="el" href="_player_8cc_source.html#l00049">49</a> del archivo <a class="el" href="_player_8cc_source.html">Player.cc</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>                           {</div>
-<div class="line"><span class="lineno">   50</span>  points = tmp;</div>
-<div class="line"><span class="lineno">   51</span>}</div>
-</div><!-- fragment -->
 </div>
 </div>
 <hr/>La documentación para esta clase fue generada a partir de los siguientes ficheros:<ul>

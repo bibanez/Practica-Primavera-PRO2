@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['value_0',['value',['../class_bin_tree.html#aaccb0c5b6cfe3b84dfeefc58efa24cda',1,'BinTree']]]
+  ['tournament_0',['Tournament',['../class_tournament.html#ad28a8cda268e707f934a4905070a2c6a',1,'Tournament::Tournament(int c)'],['../class_tournament.html#a87cc832c6612caebcab61d1bea7ef1ac',1,'Tournament::Tournament()']]]
 ];

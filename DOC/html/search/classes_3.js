@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ranking_0',['Ranking',['../class_ranking.html',1,'']]]
+  ['node_0',['Node',['../struct_bin_tree_1_1_node.html',1,'BinTree']]]
 ];

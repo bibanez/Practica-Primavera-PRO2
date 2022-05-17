@@ -15,6 +15,8 @@
 #include <algorithm>
 #endif
 
+using namespace std;
+
 /** @class Ranking
  * 	@brief Contiene el ranking y las estadísticas de los jugadores en un 
  *	circuito. Implementa también las funciones necesarias para actualizar este
@@ -22,10 +24,17 @@
  */
 class Ranking 
 {
+	/** @brief Facilita la lectura de los iteradores del mapa de jugadores
+	 */
 	typedef map<string,Player>::iterator Player_it;
 
 	private:
+		/** @brief Contiene las estadísticas de los jugadores y sus rankings.
+		 */
 		map<string,Player> stats; 			
+
+		/** @brief Contiene los punteros a los elementos del mapa de jugadores.
+		 */
 		vector<Player_it> ranking;
 
 		// Auxiliares 
@@ -65,18 +74,18 @@ class Ranking
 
 		/** @brief Añade un jugador
 		 *	\pre _cierto_
-		 *	\post Añade un jugador con nombre 'name' y el último ranking. Se 
+		 *	\post Añade un jugador con nombre `name` y el último ranking. Se 
 		 *	añade en el diccionario de estadísticas con todas a 0. Retorna 
-		 *	'false' si el ranking ya contiene un jugador con el mismo nombre 
-		 *	'name'.
+		 *	`false` si el ranking ya contiene un jugador con el mismo nombre 
+		 *	`name`.
 		 */
 		bool add_player(const string& name);
 
 		/** @brief Elimina un jugador
 		 *	\pre _cierto_
-		 *	\post Elimina al jugador con nombre 'name' del ranking y el 
-		 *	diccionario de estadísticas. Retorna 'false' si el ranking no 
-		 *	contiene ningún jugador con nombre 'name'.
+		 *	\post Elimina al jugador con nombre `name` del ranking y el 
+		 *	diccionario de estadísticas. Retorna `false` si el ranking no 
+		 *	contiene ningún jugador con nombre `name`.
 		 */
 		bool remove_player(const string& name);
 
@@ -98,15 +107,15 @@ class Ranking
 		
 		// Consultoras	
 
-		/** @brief Obtiene el nombre asociado al jugador con ranking 'n'
+		/** @brief Obtiene el nombre asociado al jugador con ranking `n`
 		 *	\pre `n <= P = ranking.size()`
-		 *	\post Retorna el nombre del jugador con ranking 'n'
+		 *	\post Retorna el nombre del jugador con ranking `n`
 		 */
 		string get_name(int n) const;
 
-		/** @brief Obtener el ranking asociado al jugador con id 'name'
+		/** @brief Obtener el ranking asociado al jugador con id `name`
 		 *	\pre _cierto_
-		 *	\post Si el jugador con id 'name' no existe, retorna -1. Si no,
+		 *	\post Si el jugador con id `name` no existe, retorna -1. Si no,
 		 *	retorna la posición en el ranking de modo que el jugador que esté
 		 *	en primera posición retorna 1.
 		 */
@@ -114,11 +123,11 @@ class Ranking
 		
 		/** @brief Obtiene un vector con los nombres asociados a rankings
 		 *	\pre rankings.size() <= P = ranking.size(). No hay ningún ranking
-		 *	repetido en el vector 'rankings'. El vector rankings está ordenado
+		 *	repetido en el vector `rankings`. El vector rankings está ordenado
 		 *	por orden creciente. El último valor de rankings es menor o igual al
 		 *	tamaño del ranking.
-		 *	\post Retorna un vector de nombres con cada índice 'i' asociado al 
-		 *	jugador con ranking 'rankings[i]'
+		 *	\post Retorna un vector de nombres con cada índice `i` asociado al 
+		 *	jugador con ranking `rankings[i]`
 		 */
 		vector<string> get_names_from_rankings(const vector<int>& rankings) const;
 
@@ -132,7 +141,7 @@ class Ranking
 		// Lectoras
 
 		/** @brief Lee jugadores del canal de entrada
-		 *	\pre P >= 0; En el canal de entrada hay P strings que corresponden
+		 *	\pre `P >= 0`; En el canal de entrada hay P strings que corresponden
 		 *	a los P identificadores de los jugadores
 		 *	\post Se añaden P jugadores al ranking con 0 puntos
 		 */
@@ -159,8 +168,8 @@ class Ranking
 		/** @brief Imprime un jugador
 		 *	\pre _cierto_
 		 *	\post Imprime el nombre, la posición en el ranking, los puntos y
-		 *	el resto de estadísticas del jugador con nombre 'name'. Si no hay
-		 *	ningún jugador con el nombre 'name', retorna falso.
+		 *	el resto de estadísticas del jugador con nombre `name`. Si no hay
+		 *	ningún jugador con el nombre `name`, retorna falso.
 		 */
 		bool consult_player(const string& name);
 		

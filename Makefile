@@ -24,8 +24,11 @@ Ranking.o: Ranking.cc Ranking.hh Statistics.o Player.o
 Tournaments.o: Tournaments.cc Tournaments.hh Tournament.o Ranking.o Categories.o
 	g++ -c Tournaments.cc $(OPTIONS)
 
-tar: program.cc Player.cc Player.hh Statistics.cc Statistics.hh Categories.cc Categories.hh Tournament.cc Tournament.hh Ranking.cc Ranking.hh Tournaments.cc Tournaments.hh Makefile
-	tar -cvf practica.tar program.cc Player.cc Player.hh Statistics.cc Statistics.hh Categories.cc Categories.hh Tournament.cc Tournament.hh Ranking.cc Ranking.hh Tournaments.cc Tournaments.hh Makefile
+html.zip: ./DOC/html/
+	zip -r html.zip DOC/html
+
+tar: program.cc Player.cc Player.hh Statistics.cc Statistics.hh Categories.cc Categories.hh Tournament.cc Tournament.hh Ranking.cc Ranking.hh Tournaments.cc Tournaments.hh html.zip Makefile
+	tar -cvf practica.tar program.cc Player.cc Player.hh Statistics.cc Statistics.hh Categories.cc Categories.hh Tournament.cc Tournament.hh Ranking.cc Ranking.hh Tournaments.cc Tournaments.hh html.zip Makefile
 
 clean:
 	rm *.exe

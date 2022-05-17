@@ -14,6 +14,8 @@
  *	10. listar_torneos
  *	11. listar_categorías
  *	12. fin
+ *
+ *	Autor: Bernat Ibáñez Martínez
  */
 
 /** @file main.cc

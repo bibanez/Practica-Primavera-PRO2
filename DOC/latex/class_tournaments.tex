@@ -13,7 +13,7 @@ Contiene todos los torneos del circuito y permite hacer operaciones con ellos.
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_tournaments_ac217a8c9770e82a65d4a261d5a6b1f41}{read\+\_\+starting\+\_\+tournaments}} (int T)
-\begin{DoxyCompactList}\small\item\em Creadora. \end{DoxyCompactList}\item 
+\item 
 bool \mbox{\hyperlink{class_tournaments_aaa45217324659b3ce635c12b131e53a3}{add\+\_\+tournament}} (const string \&t, int c)
 \begin{DoxyCompactList}\small\item\em Añade un torneo. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_tournaments_ab0ef3fa797244ba147d71d0c2082d28f}{remove\+\_\+tournament}} (const string \&t, \mbox{\hyperlink{class_ranking}{Ranking}} \&r)
@@ -28,16 +28,50 @@ int \mbox{\hyperlink{class_tournaments_a8eb943043644699e9213ec34cb62959d}{count\
 \begin{DoxyCompactList}\small\item\em Cuenta el número de torneos. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_tournaments_a9695a745c94203564120bab2b4ccf804}{list\+\_\+tournaments}} (const \mbox{\hyperlink{class_categories}{Categories}} \&c) const
 \begin{DoxyCompactList}\small\item\em Imprimir los torneos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ string, \mbox{\hyperlink{class_tournament}{Tournament}} $>$ \mbox{\hyperlink{class_tournaments_af96fda75ec435fa02c6595805bb92b18}{tournaments}}
+\begin{DoxyCompactList}\small\item\em Contiene los torneos, ordenados por su identificador. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descripción detallada}
 Contiene todos los torneos del circuito y permite hacer operaciones con ellos. 
 
-Definición en la línea \mbox{\hyperlink{_tournaments_8hh_source_l00022}{22}} del archivo \mbox{\hyperlink{_tournaments_8hh_source}{Tournaments.\+hh}}.
+Definición en la línea \mbox{\hyperlink{_tournaments_8hh_source_l00024}{24}} del archivo \mbox{\hyperlink{_tournaments_8hh_source}{Tournaments.\+hh}}.
 
 
 
 \doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_tournaments_ac217a8c9770e82a65d4a261d5a6b1f41}\label{class_tournaments_ac217a8c9770e82a65d4a261d5a6b1f41}} 
+\index{Tournaments@{Tournaments}!read\_starting\_tournaments@{read\_starting\_tournaments}}
+\index{read\_starting\_tournaments@{read\_starting\_tournaments}!Tournaments@{Tournaments}}
+\doxysubsubsection{\texorpdfstring{read\_starting\_tournaments()}{read\_starting\_tournaments()}}
+{\footnotesize\ttfamily void Tournaments\+::read\+\_\+starting\+\_\+tournaments (\begin{DoxyParamCaption}\item[{int}]{T }\end{DoxyParamCaption})}
+
+\begin{DoxyPrecond}{Precondición}
+T \texorpdfstring{$>$}{>}= 0; En el canal de entrada hay {\ttfamily T} pares de string t y entero c, donde t será el nombre que identifica al torneo (sin repeticiones) y c la categoría válida (entre 1 y {\ttfamily C}, de la clase main) a la que pertenece el torneo. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se borran los torneos que se encuentran en {\ttfamily this-\/\texorpdfstring{$>$}{>}tournaments} y se reemplazan con los que se encuentran en el canal de entrada. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_tournaments_8cc_source_l00005}{5}} del archivo \mbox{\hyperlink{_tournaments_8cc_source}{Tournaments.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005                                                  \{}
+\DoxyCodeLine{00006   \mbox{\hyperlink{class_tournaments_af96fda75ec435fa02c6595805bb92b18}{tournaments}}.clear();}
+\DoxyCodeLine{00007   \textcolor{keywordflow}{while} (T-\/-\/) \{}
+\DoxyCodeLine{00008     \textcolor{keywordtype}{string} t;}
+\DoxyCodeLine{00009     \textcolor{keywordtype}{int} c;}
+\DoxyCodeLine{00010     cin >> t >> c;}
+\DoxyCodeLine{00011     \mbox{\hyperlink{class_tournaments_af96fda75ec435fa02c6595805bb92b18}{tournaments}}[t] = \mbox{\hyperlink{class_tournament}{Tournament}}(c);}
+\DoxyCodeLine{00012   \}}
+\DoxyCodeLine{00013 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_tournaments_aaa45217324659b3ce635c12b131e53a3}\label{class_tournaments_aaa45217324659b3ce635c12b131e53a3}} 
 \index{Tournaments@{Tournaments}!add\_tournament@{add\_tournament}}
 \index{add\_tournament@{add\_tournament}!Tournaments@{Tournaments}}
@@ -49,179 +83,20 @@ Definición en la línea \mbox{\hyperlink{_tournaments_8hh_source_l00022}{22}} d
 Añade un torneo. 
 
 \begin{DoxyPrecond}{Precondición}
-1 \texorpdfstring{$<$}{<}= c \texorpdfstring{$<$}{<}= C 
+{\ttfamily 1 \texorpdfstring{$<$}{<}= c \texorpdfstring{$<$}{<}= C =} número máximo de categorías 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-Añade un torneo con identificador \textquotesingle{}t\textquotesingle{} y categoría \textquotesingle{}c\textquotesingle{} a \textquotesingle{}this-\/\texorpdfstring{$>$}{>}tournaments\textquotesingle{}. Retorna falso si ya existe un torneo con el identificador \textquotesingle{}t\textquotesingle{}. 
+Añade un torneo con identificador {\ttfamily t} y categoría {\ttfamily c} a {\ttfamily this-\/\texorpdfstring{$>$}{>}tournaments}. Retorna falso si ya existe un torneo con el identificador {\ttfamily t}. 
 \end{DoxyPostcond}
 
 
-Definición en la línea \mbox{\hyperlink{_tournaments_8cc_source_l00020}{20}} del archivo \mbox{\hyperlink{_tournaments_8cc_source}{Tournaments.\+cc}}.
+Definición en la línea \mbox{\hyperlink{_tournaments_8cc_source_l00015}{15}} del archivo \mbox{\hyperlink{_tournaments_8cc_source}{Tournaments.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00020                                                        \{}
-\DoxyCodeLine{00021   \textcolor{keywordflow}{return} tournaments.insert(pair<string, Tournament>(t, \mbox{\hyperlink{class_tournament}{Tournament}}(c))).second;}
-\DoxyCodeLine{00022 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_tournaments_a8eb943043644699e9213ec34cb62959d}\label{class_tournaments_a8eb943043644699e9213ec34cb62959d}} 
-\index{Tournaments@{Tournaments}!count\_tournaments@{count\_tournaments}}
-\index{count\_tournaments@{count\_tournaments}!Tournaments@{Tournaments}}
-\doxysubsubsection{\texorpdfstring{count\_tournaments()}{count\_tournaments()}}
-{\footnotesize\ttfamily int Tournaments\+::count\+\_\+tournaments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
-
-
-Cuenta el número de torneos. 
-
-\begin{DoxyPrecond}{Precondición}
-{\itshape cierto} 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Retorna el número de torneos contenidos en \textquotesingle{}this-\/\texorpdfstring{$>$}{>}tournaments\textquotesingle{} 
-\end{DoxyPostcond}
-
-
-Definición en la línea \mbox{\hyperlink{_tournaments_8cc_source_l00059}{59}} del archivo \mbox{\hyperlink{_tournaments_8cc_source}{Tournaments.\+cc}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00059                                          \{}
-\DoxyCodeLine{00060   \textcolor{keywordflow}{return} tournaments.size();}
-\DoxyCodeLine{00061 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_tournaments_aa1d6c87f03e88567c74e90ca97a91bb1}\label{class_tournaments_aa1d6c87f03e88567c74e90ca97a91bb1}} 
-\index{Tournaments@{Tournaments}!end\_tournament@{end\_tournament}}
-\index{end\_tournament@{end\_tournament}!Tournaments@{Tournaments}}
-\doxysubsubsection{\texorpdfstring{end\_tournament()}{end\_tournament()}}
-{\footnotesize\ttfamily void Tournaments\+::end\+\_\+tournament (\begin{DoxyParamCaption}\item[{string}]{t,  }\item[{\mbox{\hyperlink{class_ranking}{Ranking}} \&}]{r,  }\item[{const \mbox{\hyperlink{class_categories}{Categories}} \&}]{ctg }\end{DoxyParamCaption})}
-
-
-
-Termina un torneo. 
-
-\begin{DoxyPrecond}{Precondición}
-El torneo con identificador \textquotesingle{}t\textquotesingle{} existe y está empezado. En el canal de entrada se encuentran los resultados de los partidos en el formato correcto. Todos los jugadores del torneo se encuentran en el ranking {\ttfamily r} y la categoría del torneo se encuentra en {\ttfamily ctg}. 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Se termina el torneo \textquotesingle{}t\textquotesingle{} y se actualizan sus resultados. El ranking \textquotesingle{}r\textquotesingle{} se actualiza con los resultados del torneo. En el canal de salida hay la tabla de resultados del torneo. 
-\end{DoxyPostcond}
-
-
-Definición en la línea \mbox{\hyperlink{_tournaments_8cc_source_l00051}{51}} del archivo \mbox{\hyperlink{_tournaments_8cc_source}{Tournaments.\+cc}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00051                                                                             \{}
-\DoxyCodeLine{00052   map<string, int> old;}
-\DoxyCodeLine{00053   map<string, Statistics> results;}
-\DoxyCodeLine{00054   \textcolor{keywordtype}{int} c = tournaments[t].get\_category();}
-\DoxyCodeLine{00055   tournaments[t].end\_tournament(old, results, ctg.\mbox{\hyperlink{class_categories_a708f9b0e824e3ddd69897336eba93c90}{get\_ctg\_scores}}(c));}
-\DoxyCodeLine{00056   r.\mbox{\hyperlink{class_ranking_a63dff39266b00b2078fb0b7e900d53e7}{add\_tournament\_results}}(old, results);}
-\DoxyCodeLine{00057 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_tournaments_a9695a745c94203564120bab2b4ccf804}\label{class_tournaments_a9695a745c94203564120bab2b4ccf804}} 
-\index{Tournaments@{Tournaments}!list\_tournaments@{list\_tournaments}}
-\index{list\_tournaments@{list\_tournaments}!Tournaments@{Tournaments}}
-\doxysubsubsection{\texorpdfstring{list\_tournaments()}{list\_tournaments()}}
-{\footnotesize\ttfamily void Tournaments\+::list\+\_\+tournaments (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_categories}{Categories}} \&}]{c }\end{DoxyParamCaption}) const}
-
-
-
-Imprimir los torneos. 
-
-\begin{DoxyPrecond}{Precondición}
-{\itshape cierto} 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Se listan, por orden creciente de identificador, el nombre y la categoría de cada torneo en \textquotesingle{}this-\/\texorpdfstring{$>$}{>}tournaments\textquotesingle{} 
-\end{DoxyPostcond}
-
-
-Definición en la línea \mbox{\hyperlink{_tournaments_8cc_source_l00063}{63}} del archivo \mbox{\hyperlink{_tournaments_8cc_source}{Tournaments.\+cc}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00063                                                             \{}
-\DoxyCodeLine{00064   cout << tournaments.size() << endl;}
-\DoxyCodeLine{00065   map<string, Tournament>::const\_iterator  it = tournaments.begin();}
-\DoxyCodeLine{00066   \textcolor{keywordflow}{while} (it != tournaments.end()) \{}
-\DoxyCodeLine{00067     cout << it-\/>first << \textcolor{charliteral}{' '} << c.\mbox{\hyperlink{class_categories_aac421f34e0afd755e181b08c401a7a6a}{get\_name}}(it-\/>second.get\_category()) << endl;}
-\DoxyCodeLine{00068     ++it;}
-\DoxyCodeLine{00069   \}}
-\DoxyCodeLine{00070 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_tournaments_ac217a8c9770e82a65d4a261d5a6b1f41}\label{class_tournaments_ac217a8c9770e82a65d4a261d5a6b1f41}} 
-\index{Tournaments@{Tournaments}!read\_starting\_tournaments@{read\_starting\_tournaments}}
-\index{read\_starting\_tournaments@{read\_starting\_tournaments}!Tournaments@{Tournaments}}
-\doxysubsubsection{\texorpdfstring{read\_starting\_tournaments()}{read\_starting\_tournaments()}}
-{\footnotesize\ttfamily void Tournaments\+::read\+\_\+starting\+\_\+tournaments (\begin{DoxyParamCaption}\item[{int}]{T }\end{DoxyParamCaption})}
-
-
-
-Creadora. 
-
-\begin{DoxyPrecond}{Precondición}
-{\itshape cierto} 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Crea un conjunto de torneos vacío
-\end{DoxyPostcond}
-\begin{DoxyPrecond}{Precondición}
-T \texorpdfstring{$>$}{>}= 0; En el canal de entrada hay \textquotesingle{}T\textquotesingle{} pares de string t y entero c, donde t será el nombre que identifica al torneo (sin repeticiones) y c la categoría válida (entre 1 y {\ttfamily C}, de la clase main) a la que pertenece el torneo. 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Se borran los torneos que se encuentran en \textquotesingle{}this-\/\texorpdfstring{$>$}{>}tournaments\textquotesingle{} y se reemplazan con los que se encuentran en el canal de entrada. 
-\end{DoxyPostcond}
-
-
-Definición en la línea \mbox{\hyperlink{_tournaments_8cc_source_l00011}{11}} del archivo \mbox{\hyperlink{_tournaments_8cc_source}{Tournaments.\+cc}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00011                                                  \{}
-\DoxyCodeLine{00012   \textcolor{keywordflow}{while} (T-\/-\/) \{}
-\DoxyCodeLine{00013     \textcolor{keywordtype}{string} t;}
-\DoxyCodeLine{00014     \textcolor{keywordtype}{int} c;}
-\DoxyCodeLine{00015     cin >> t >> c;}
-\DoxyCodeLine{00016     tournaments[t] = \mbox{\hyperlink{class_tournament}{Tournament}}(c);}
-\DoxyCodeLine{00017   \}}
-\DoxyCodeLine{00018 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_tournaments_a15187a808bde2dbab6fb29e01212c50b}\label{class_tournaments_a15187a808bde2dbab6fb29e01212c50b}} 
-\index{Tournaments@{Tournaments}!remove\_player@{remove\_player}}
-\index{remove\_player@{remove\_player}!Tournaments@{Tournaments}}
-\doxysubsubsection{\texorpdfstring{remove\_player()}{remove\_player()}}
-{\footnotesize\ttfamily void Tournaments\+::remove\+\_\+player (\begin{DoxyParamCaption}\item[{const string \&}]{name }\end{DoxyParamCaption})}
-
-
-
-Eliminar jugador de todos los torneos que haya jugado. 
-
-\begin{DoxyPrecond}{Precondición}
-El jugador con id \textquotesingle{}name\textquotesingle{} existe 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondición}
-Se elimina el jugador de los resultados antiguos de los campeonatos. 
-\end{DoxyPostcond}
-
-
-Definición en la línea \mbox{\hyperlink{_tournaments_8cc_source_l00003}{3}} del archivo \mbox{\hyperlink{_tournaments_8cc_source}{Tournaments.\+cc}}.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00003                                                   \{}
-\DoxyCodeLine{00004   map<string, Tournament>::iterator it = tournaments.begin();}
-\DoxyCodeLine{00005   \textcolor{keywordflow}{while} (it != tournaments.end()) \{}
-\DoxyCodeLine{00006     it-\/>second.remove\_player\_from\_results(name);}
-\DoxyCodeLine{00007     ++it;}
-\DoxyCodeLine{00008   \}}
-\DoxyCodeLine{00009 \}}
+\DoxyCodeLine{00015                                                        \{}
+\DoxyCodeLine{00016   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_tournaments_af96fda75ec435fa02c6595805bb92b18}{tournaments}}.insert(pair<string, Tournament>(t, \mbox{\hyperlink{class_tournament}{Tournament}}(c))).second;}
+\DoxyCodeLine{00017 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_tournaments_ab0ef3fa797244ba147d71d0c2082d28f}\label{class_tournaments_ab0ef3fa797244ba147d71d0c2082d28f}} 
@@ -238,32 +113,25 @@ Elimina un torneo.
 {\itshape cierto} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-Elimina el torneo con identificador \textquotesingle{}t\textquotesingle{}. Si no existe, retorna false. 
+Elimina el torneo con identificador {\ttfamily t}. Si no existe, retorna false. 
 \end{DoxyPostcond}
 
 
-Definición en la línea \mbox{\hyperlink{_tournaments_8cc_source_l00024}{24}} del archivo \mbox{\hyperlink{_tournaments_8cc_source}{Tournaments.\+cc}}.
+Definición en la línea \mbox{\hyperlink{_tournaments_8cc_source_l00019}{19}} del archivo \mbox{\hyperlink{_tournaments_8cc_source}{Tournaments.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00024                                                                \{ \textcolor{comment}{// Ranking\& r}}
-\DoxyCodeLine{00025   map<string, Tournament>::iterator it = tournaments.find(t);}
-\DoxyCodeLine{00026   \textcolor{keywordflow}{if} (it != tournaments.end()) \{}
-\DoxyCodeLine{00027     r.\mbox{\hyperlink{class_ranking_aaa7f5ae061d8fb73a7342511a3cd2906}{count\_players}}();}
-\DoxyCodeLine{00028     map<string,int> old = it-\/>second.get\_old\_results();}
-\DoxyCodeLine{00029     \textcolor{comment}{/*}}
-\DoxyCodeLine{00030 \textcolor{comment}{    map<string,int>::const\_iterator res = old.begin();}}
-\DoxyCodeLine{00031 \textcolor{comment}{    while (res != old.end()) \{}}
-\DoxyCodeLine{00032 \textcolor{comment}{      cout << res-\/>first << ' ' << res-\/>second << endl;}}
-\DoxyCodeLine{00033 \textcolor{comment}{      ++res;}}
-\DoxyCodeLine{00034 \textcolor{comment}{    \}}}
-\DoxyCodeLine{00035 \textcolor{comment}{    */}}
-\DoxyCodeLine{00036     r.\mbox{\hyperlink{class_ranking_a9a08cb7ad56d41c6504c21d6fce9b348}{remove\_tournament\_results}}(old);}
-\DoxyCodeLine{00037     tournaments.erase(it);}
-\DoxyCodeLine{00038     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{00039   \}}
-\DoxyCodeLine{00040   \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{00041 \}}
+\DoxyCodeLine{00019                                                                \{ \textcolor{comment}{// Ranking\& r}}
+\DoxyCodeLine{00020   map<string, Tournament>::iterator it = \mbox{\hyperlink{class_tournaments_af96fda75ec435fa02c6595805bb92b18}{tournaments}}.find(t);}
+\DoxyCodeLine{00021   \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_tournaments_af96fda75ec435fa02c6595805bb92b18}{tournaments}}.end()) \{}
+\DoxyCodeLine{00022     r.\mbox{\hyperlink{class_ranking_aaa7f5ae061d8fb73a7342511a3cd2906}{count\_players}}();}
+\DoxyCodeLine{00023     map<string,int> old = it-\/>second.get\_old\_results();}
+\DoxyCodeLine{00024     r.\mbox{\hyperlink{class_ranking_a63dff39266b00b2078fb0b7e900d53e7}{add\_tournament\_results}}(old, map<string,Statistics>());}
+\DoxyCodeLine{00025     \mbox{\hyperlink{class_tournaments_af96fda75ec435fa02c6595805bb92b18}{tournaments}}.erase(it);}
+\DoxyCodeLine{00026     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00027   \}}
+\DoxyCodeLine{00028   \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00029 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_tournaments_aa7155bedfeffde88f505e909d35100ad}\label{class_tournaments_aa7155bedfeffde88f505e909d35100ad}} 
@@ -277,26 +145,164 @@ Definición en la línea \mbox{\hyperlink{_tournaments_8cc_source_l00024}{24}} d
 Empieza un torneo. 
 
 \begin{DoxyPrecond}{Precondición}
-Los jugadores en \textquotesingle{}players\textquotesingle{} estan ordenados por orden creciente de ranking. El torneo con identificador \textquotesingle{}t\textquotesingle{} existe. 
+Los jugadores en {\ttfamily players} estan ordenados por orden creciente de ranking. El torneo con identificador {\ttfamily t} existe. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-Se inicia el torneo \textquotesingle{}t\textquotesingle{} con los jugadores de \textquotesingle{}players\textquotesingle{}. En el canal de salida hay la tabla de emparejamientos de jugadores inscritos.
+Se inicia el torneo {\ttfamily t} con los jugadores de {\ttfamily players}. En el canal de salida hay la tabla de emparejamientos de jugadores inscritos.
 \end{DoxyPostcond}
-Nota\+: Cabe llamar a la función \textquotesingle{}this-\/\texorpdfstring{$>$}{>}\mbox{\hyperlink{class_tournaments_aa1d6c87f03e88567c74e90ca97a91bb1}{end\+\_\+tournament()}}\textquotesingle{} para leer los resultados del torneo 
+Nota\+: Cabe llamar a la función {\ttfamily this-\/\texorpdfstring{$>$}{>}\mbox{\hyperlink{class_tournaments_aa1d6c87f03e88567c74e90ca97a91bb1}{end\+\_\+tournament()}}} para leer los resultados del torneo. 
 
-Definición en la línea \mbox{\hyperlink{_tournaments_8cc_source_l00043}{43}} del archivo \mbox{\hyperlink{_tournaments_8cc_source}{Tournaments.\+cc}}.
+Definición en la línea \mbox{\hyperlink{_tournaments_8cc_source_l00031}{31}} del archivo \mbox{\hyperlink{_tournaments_8cc_source}{Tournaments.\+cc}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00043                                                                                  \{}
-\DoxyCodeLine{00044   map<string, Tournament>::iterator it = tournaments.find(t);}
-\DoxyCodeLine{00045   \textcolor{keywordflow}{if} (it != tournaments.end()) \{}
-\DoxyCodeLine{00046     it-\/>second.start\_tournament(players);}
-\DoxyCodeLine{00047     it-\/>second.print\_starting\_pairs();}
-\DoxyCodeLine{00048   \}}
-\DoxyCodeLine{00049 \}}
+\DoxyCodeLine{00031                                                                                  \{}
+\DoxyCodeLine{00032   map<string, Tournament>::iterator it = \mbox{\hyperlink{class_tournaments_af96fda75ec435fa02c6595805bb92b18}{tournaments}}.find(t);}
+\DoxyCodeLine{00033   \textcolor{keywordflow}{if} (it != \mbox{\hyperlink{class_tournaments_af96fda75ec435fa02c6595805bb92b18}{tournaments}}.end()) \{}
+\DoxyCodeLine{00034     it-\/>second.start\_tournament(players);}
+\DoxyCodeLine{00035     it-\/>second.print\_starting\_pairs();}
+\DoxyCodeLine{00036   \}}
+\DoxyCodeLine{00037 \}}
 
 \end{DoxyCode}
+\mbox{\Hypertarget{class_tournaments_aa1d6c87f03e88567c74e90ca97a91bb1}\label{class_tournaments_aa1d6c87f03e88567c74e90ca97a91bb1}} 
+\index{Tournaments@{Tournaments}!end\_tournament@{end\_tournament}}
+\index{end\_tournament@{end\_tournament}!Tournaments@{Tournaments}}
+\doxysubsubsection{\texorpdfstring{end\_tournament()}{end\_tournament()}}
+{\footnotesize\ttfamily void Tournaments\+::end\+\_\+tournament (\begin{DoxyParamCaption}\item[{string}]{t,  }\item[{\mbox{\hyperlink{class_ranking}{Ranking}} \&}]{r,  }\item[{const \mbox{\hyperlink{class_categories}{Categories}} \&}]{ctg }\end{DoxyParamCaption})}
+
+
+
+Termina un torneo. 
+
+\begin{DoxyPrecond}{Precondición}
+El torneo con identificador {\ttfamily t} existe y está empezado. En el canal de entrada se encuentran los resultados de los partidos en el formato correcto. Todos los jugadores del torneo se encuentran en el ranking {\ttfamily r} y la categoría del torneo se encuentra en {\ttfamily ctg}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se termina el torneo {\ttfamily t} y se actualizan sus resultados. El ranking {\ttfamily r} se actualiza con los resultados del torneo. En el canal de salida hay la tabla de resultados del torneo. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_tournaments_8cc_source_l00039}{39}} del archivo \mbox{\hyperlink{_tournaments_8cc_source}{Tournaments.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039                                                                             \{}
+\DoxyCodeLine{00040   map<string, int> old;}
+\DoxyCodeLine{00041   map<string, Statistics> results;}
+\DoxyCodeLine{00042   \textcolor{keywordtype}{int} c = \mbox{\hyperlink{class_tournaments_af96fda75ec435fa02c6595805bb92b18}{tournaments}}[t].get\_category();}
+\DoxyCodeLine{00043   \mbox{\hyperlink{class_tournaments_af96fda75ec435fa02c6595805bb92b18}{tournaments}}[t].end\_tournament(old, results, ctg.\mbox{\hyperlink{class_categories_a708f9b0e824e3ddd69897336eba93c90}{get\_ctg\_scores}}(c));}
+\DoxyCodeLine{00044   r.\mbox{\hyperlink{class_ranking_a63dff39266b00b2078fb0b7e900d53e7}{add\_tournament\_results}}(old, results);}
+\DoxyCodeLine{00045 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tournaments_a15187a808bde2dbab6fb29e01212c50b}\label{class_tournaments_a15187a808bde2dbab6fb29e01212c50b}} 
+\index{Tournaments@{Tournaments}!remove\_player@{remove\_player}}
+\index{remove\_player@{remove\_player}!Tournaments@{Tournaments}}
+\doxysubsubsection{\texorpdfstring{remove\_player()}{remove\_player()}}
+{\footnotesize\ttfamily void Tournaments\+::remove\+\_\+player (\begin{DoxyParamCaption}\item[{const string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Eliminar jugador de todos los torneos que haya jugado. 
+
+\begin{DoxyPrecond}{Precondición}
+El jugador con id {\ttfamily name} existe 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se elimina al jugador con id {\ttfamily name} de los resultados antiguos de los campeonatos. 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_tournaments_8cc_source_l00047}{47}} del archivo \mbox{\hyperlink{_tournaments_8cc_source}{Tournaments.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047                                                   \{}
+\DoxyCodeLine{00048   map<string, Tournament>::iterator it = \mbox{\hyperlink{class_tournaments_af96fda75ec435fa02c6595805bb92b18}{tournaments}}.begin();}
+\DoxyCodeLine{00049   \textcolor{keywordflow}{while} (it != \mbox{\hyperlink{class_tournaments_af96fda75ec435fa02c6595805bb92b18}{tournaments}}.end()) \{}
+\DoxyCodeLine{00050     it-\/>second.remove\_player\_from\_results(name);}
+\DoxyCodeLine{00051     ++it;}
+\DoxyCodeLine{00052   \}}
+\DoxyCodeLine{00053 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tournaments_a8eb943043644699e9213ec34cb62959d}\label{class_tournaments_a8eb943043644699e9213ec34cb62959d}} 
+\index{Tournaments@{Tournaments}!count\_tournaments@{count\_tournaments}}
+\index{count\_tournaments@{count\_tournaments}!Tournaments@{Tournaments}}
+\doxysubsubsection{\texorpdfstring{count\_tournaments()}{count\_tournaments()}}
+{\footnotesize\ttfamily int Tournaments\+::count\+\_\+tournaments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Cuenta el número de torneos. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Retorna el número de torneos contenidos en {\ttfamily this-\/\texorpdfstring{$>$}{>}tournaments} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_tournaments_8cc_source_l00058}{58}} del archivo \mbox{\hyperlink{_tournaments_8cc_source}{Tournaments.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058                                          \{}
+\DoxyCodeLine{00059   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_tournaments_af96fda75ec435fa02c6595805bb92b18}{tournaments}}.size();}
+\DoxyCodeLine{00060 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_tournaments_a9695a745c94203564120bab2b4ccf804}\label{class_tournaments_a9695a745c94203564120bab2b4ccf804}} 
+\index{Tournaments@{Tournaments}!list\_tournaments@{list\_tournaments}}
+\index{list\_tournaments@{list\_tournaments}!Tournaments@{Tournaments}}
+\doxysubsubsection{\texorpdfstring{list\_tournaments()}{list\_tournaments()}}
+{\footnotesize\ttfamily void Tournaments\+::list\+\_\+tournaments (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_categories}{Categories}} \&}]{c }\end{DoxyParamCaption}) const}
+
+
+
+Imprimir los torneos. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape cierto} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se listan, por orden creciente de identificador, el nombre y la categoría de cada torneo en {\ttfamily this-\/\texorpdfstring{$>$}{>}tournaments} 
+\end{DoxyPostcond}
+
+
+Definición en la línea \mbox{\hyperlink{_tournaments_8cc_source_l00065}{65}} del archivo \mbox{\hyperlink{_tournaments_8cc_source}{Tournaments.\+cc}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065                                                             \{}
+\DoxyCodeLine{00066   cout << \mbox{\hyperlink{class_tournaments_af96fda75ec435fa02c6595805bb92b18}{tournaments}}.size() << endl;}
+\DoxyCodeLine{00067   map<string, Tournament>::const\_iterator  it = \mbox{\hyperlink{class_tournaments_af96fda75ec435fa02c6595805bb92b18}{tournaments}}.begin();}
+\DoxyCodeLine{00068   \textcolor{keywordflow}{while} (it != \mbox{\hyperlink{class_tournaments_af96fda75ec435fa02c6595805bb92b18}{tournaments}}.end()) \{}
+\DoxyCodeLine{00069     cout << it-\/>first << \textcolor{charliteral}{' '} << c.\mbox{\hyperlink{class_categories_aac421f34e0afd755e181b08c401a7a6a}{get\_name}}(it-\/>second.get\_category()) << endl;}
+\DoxyCodeLine{00070     ++it;}
+\DoxyCodeLine{00071   \}}
+\DoxyCodeLine{00072 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{class_tournaments_af96fda75ec435fa02c6595805bb92b18}\label{class_tournaments_af96fda75ec435fa02c6595805bb92b18}} 
+\index{Tournaments@{Tournaments}!tournaments@{tournaments}}
+\index{tournaments@{tournaments}!Tournaments@{Tournaments}}
+\doxysubsubsection{\texorpdfstring{tournaments}{tournaments}}
+{\footnotesize\ttfamily map$<$string, \mbox{\hyperlink{class_tournament}{Tournament}}$>$ Tournaments\+::tournaments\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Contiene los torneos, ordenados por su identificador. 
+
+
+
+Definición en la línea \mbox{\hyperlink{_tournaments_8hh_source_l00028}{28}} del archivo \mbox{\hyperlink{_tournaments_8hh_source}{Tournaments.\+hh}}.
+
 
 
 La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
